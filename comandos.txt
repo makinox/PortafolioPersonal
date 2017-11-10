@@ -8,3 +8,4 @@ git nicelog
 git clone
 git add
 git commit -am
+git push
