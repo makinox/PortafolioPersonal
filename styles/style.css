@@ -4,16 +4,10 @@ body{
   /* background-image: url("https://daks2k3a4ib2z.cloudfront.net/58cd58bedf096f593816e18e/58d1cbabeff947c0347c9657_dotted-bg-white-grey.png");
   background-position: 50% 50%;
   background-size: 100px; */
-.fm-nav a{
-    color: #fff;
-    padding: 15px;
-    background: black;
 }
 
-.fm-nav .disabled {
-    color: rgba(255,255,255,.5);
-}
-
-.fm-nav a:hover {
-    background: rgba(255,255,255,.1);
+.row > div {
+  background: #f2f2f2;
+  margin: 10px;
+  border: 2px;
 }
