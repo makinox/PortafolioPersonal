@@ -1,0 +1,37 @@
+body{
+  /* background-image: url("https://daks2k3a4ib2z.cloudfront.net/58cd58bedf096f593816e18e/58d1cbabeff947c0347c9657_dotted-bg-white-grey.png");
+  background-position: 50% 50%;
+  background-size: 100px; */
+  background-image: /img/inicio.jpg;
+}
+
+/* .row > div {
+  background: #f2f2f2;
+  margin: 10px;
+  border: 2px;
+} */
+
+#titulo-barra {
+  color: blue;
+  background-image: url("../img/inicio.jpg");
+}
+
+#sobre-mi {
+  background-image: url("https://daks2k3a4ib2z.cloudfront.net/58cd58bedf096f593816e18e/58d1cbabeff947c0347c9657_dotted-bg-white-grey.png");
+}
+
+#slider-show {
+  background: #f2f2f2;
+}
+
+#skills {
+  background-image: url("../img/desk.jpg");
+}
+
+#contacto {
+  background-image: url("https://daks2k3a4ib2z.cloudfront.net/58cd58bedf096f593816e18e/58d1cbabeff947c0347c9657_dotted-bg-white-grey.png");
+}
+
+#pie-foot {
+  background-color: black;
+}
