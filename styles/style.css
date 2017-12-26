@@ -11,6 +11,30 @@
   padding-bottom: 240px;
 }
 
+.acerca-de-mi-columna {
+  background: #f2f2f2;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.acerca-de-mi-titulo {
+  padding-top: 140px;
+  padding-left: 60px;
+  padding-bottom: 100px;
+}
+
+.acerca-de-mi-parrafo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.super-frase {
+  background: #f2f2f2;
+  margin-bottom: 80px;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 #sobre-mi {
   background-image: url("../img/puntos.png");
 }
