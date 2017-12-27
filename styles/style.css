@@ -41,13 +41,13 @@
 }
 
 #experiencia {
-  background: #ffeded;
+  background: #86E2D5;
   transition-property: all;
-  transition-duration: .5s;
+  transition-duration: .2s;
 }
 
 #experiencia:hover {
-  background: #e4e5ff;
+  background: #36D7B7;
 }
 .titulo-experiencia {
   margin-top: 160px;
@@ -57,12 +57,12 @@
   margin-bottom: 160px;
 }
 #educacion {
-  background: #dee0de;
+  background: #89C4F4;
   transition-property: all;
-  transition-duration: .5s;
+  transition-duration: .2s;
 }
 #educacion:hover {
-  background: #e4e5ff;
+  background: #22A7F0;
 }
 .titulo-educacion {
   margin-top: 160px;
@@ -73,7 +73,13 @@
 }
 
 #skills {
-  background-image: url("../img/desk.jpg");
+  background: #EEEEEE;
+  transition-property: all;
+  transition-duration: .2s;
+}
+
+#skills:hover {
+  background: #ABB7B7;
 }
 
 .skill-titulo {
