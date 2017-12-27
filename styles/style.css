@@ -76,6 +76,14 @@
   background-image: url("../img/desk.jpg");
 }
 
+.skill-titulo {
+  margin-top: 160px;
+}
+
+.skill-carta {
+  margin-bottom: 160px;
+}
+
 .idioma-español{
   background: #f2f2f2;
 }
