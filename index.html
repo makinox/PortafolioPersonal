@@ -12,7 +12,7 @@
 </head>
 <body>
           <!-- Barra de navegacion - Inicio -->
-  <section id="titulo-barra">
+<section id="titulo-barra">
     <section id="barra-navegacion">
       <header>
         <div class="container">
@@ -56,21 +56,28 @@
 <section id="sobre-mi">
   <div class="container">
     <div class="row">
-      <div class="col-12 d-flex justify-content-center acerca-de-mi-columna">
-        <div class="col-4 acerca-de-mi-titulo">
-          <h2>Acerca de mi</h2>
-        </div>
-        <div class="col-8 acerca-de-mi-parrafo">
-          <p>Desarrollo <em><strong>aplicaciones</strong></em>, ayudando a empresas a obtener <em><strong>más valor</strong></em> para sus clientes</p>
-          <hr>
-          <p>Desde que empecé mi carrera en tecnología me di cuenta lo valiosa que era para el mundo, desde entonces he hecho lo posible por aprender los mejores procesos y lenguajes para contribuir con el mundo.<br>
+      <div class="card acerca-de-mi-columna">
+        <div class="col-12 card-body d-flex justify-content-center ">
+          <div class="col-4 acerca-de-mi-titulo">
+            <h2 class="card-title">Acerca de mi</h2>
+          </div>
+          <div class="col-8 acerca-de-mi-parrafo">
+            <p class="card-text">Desarrollo <em><strong>aplicaciones</strong></em>, ayudando a empresas a obtener <em><strong>más valor</strong></em> para sus clientes</p>
+            <hr>
+            <p class="card-text">Desde que empecé mi carrera en tecnología me di cuenta lo valiosa que era para el mundo, desde entonces he hecho lo posible por aprender los mejores procesos y lenguajes para contribuir con el mundo.<br>
               Hoy, me encanta crear aplicaciones, me gusta mucho aprender, me considero una persona autodidacta, mis conocimientos se expande recorre áreas como la seguridad informática, estructura de datos, inteligencia artificial y varios lenguajes de programación, continúa leyendo y te daré una mejor vista de lo que sé y tengo para ofrecer a tu empresa.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-12 super-frase">
-        <p>No hay inversión más rentable que la del conocimiento</p>
-        <p class="text-muted">Benjamín franklin</p>
+      <div class="card col-12 super-frase">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>No hay inversión más rentable que la del conocimiento</p>
+            <footer class="blockquote-footer"><cite title="Source Title">Benjamín franklin</cite></footer>
+          </blockquote>
+        </div>
+
       </div>
     </div>
   </div>
@@ -87,25 +94,34 @@
           <h2>Experiencia</h2>
           <hr>
         </div>
-        <div class="col-12 d-flex justify-content-between">
-          <div class="col-3">
-            <h3>Como tecnico</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-3">
-              <h3>Como tecnico</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title">Como técnico de telecomunicaciones</h3>
+              <p class="card-text">Tuve la oportunidad de laborar en la empresa AseoCoba,
+                en dicha empresa cubría las labores dedicadas al departamento de telecomunicaciones,
+                entre las cuales tenia las tareas de ofrecer soporte técnico a la totalidad de la empresa,
+                tanto en software como en hardware.</p>
               </div>
-              <div class="col-3">
-                <h3>Como tecnico</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+          </div>
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title">Como desarrollador</h3>
+              <p class="card-text">Cuento con muchos proyectos y semilleros en los cuales he trabajado,
+                sin embargo hay uno en el cual me vi completamente desafiado,
+                dicho proyecto consistía en elaborar un video juego basado en el ahorcado,
+                el cual me llevo a aprender muchísimo y me reto a trabajar bajo presión,
+                la mayoría de mis proyectos estas alojados en mi <a href="https://github.com/makinox/"target="_blank"> GitHub.</a></p>
               </div>
+          </div>
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-5">Obtén mi currículo</h3>
+              <a href="hojadevida3.docx" target="_blank" class="btn btn-primary mt-5 ">Mi currículo</a>
             </div>
           </div>
+        </div>
+        </div>
         </section>
         <!-- Experiencia - Fiinal -->
 
@@ -114,26 +130,32 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <h1>Educacion</h1>
+                <h2>Educacion</h2>
                 <hr>
               </div>
-              <div class="col-12 d-flex justify-content-between">
-                <div class="col-3">
-                  <h3>Secundaria</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                  <div class="col-3">
-                    <h3>Tecnico</h3>
+              <div class="card-group">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3>Secundaria</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
-                    <div class="col-3">
-                      <h3>Ingenieria</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3>Secundaria</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
+                </div>
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3>Secundaria</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+              </div>
                   </div>
                 </div>
               </section>
@@ -144,10 +166,31 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-12">
-                      <h1>Hobbies</h1>
+                      <h2>Hobbies</h2>
                       <hr>
                     </div>
-                    <div class="col-12">
+                    <div class="card-group">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h3>Secundaria</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h3>Secundaria</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h3>Secundaria</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -159,37 +202,54 @@
             <!-- Habilidades - Inicio -->
 <section id="skills">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Habilidades</h1>
-        <hr>
-      </div>
-      <div class="col-12 idiomas d-flex justify-content-between">
-        <div class="col">
-          <h3>Español</h3>
-          <p>Nativo</p>
+    <div class="row skills">
+      <h2 class="text-white">Habilidades</h2>
+      <div class="card-columns">
+        <div class="card">
+          <div class="card-body text-center">
+            <h3 class="card-title">Español</h3>
+            <p class="card-text">Nativo</p>
+          </div>
         </div>
-        <div class="col">
-          <h3>Ingles</h3>
-          <p>Avanzado</p>
+        <div class="card">
+          <div class="card-body text-center">
+            <h3 class="card-title">Ingles</h3>
+            <p class="card-text">Avanzado</p>
+          </div>
         </div>
-        <div class="col">
-          <h3>Frances</h3>
-          <p>Basico</p>
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">Frances</h4>
+            <p class="card-text">Basico</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 lenguajes d-flex justify-content-between">
-        <div class="col">
-          <h3>Ruby</h3>
-          <p>Avanzado</p>
+        <div class="card bg-primary text-white text-center">
+          <h3 class="card-title">JavaScrip</h3>
+          <p class="card-text">Avanzado</p>
         </div>
-        <div class="col">
-          <h3>JavaScript</h3>
-          <p>Avanzado</p>
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">Ruby</h4>
+            <p class="card-text">Avanzado</p>
+          </div>
         </div>
-        <div class="col">
-          <h3>Java</h3>
-          <p>Avanzado</p>
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">Java</h3>
+            <p class="card-text">Avanzado</p>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">HTML</h3>
+            <p class="card-text">Avanzado</p>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title">Css</h4>
+            <p class="card-text">Avanzado</p>
+          </div>
         </div>
       </div>
     </div>
@@ -199,14 +259,16 @@
 <section  id="contacto">
   <div class="container">
     <div class="row">
-      <div class="col-6">
-        <h3>Contactame</h3>
-      </div>
-      <div class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <hr>
-        <button type="button" class="btn btn-info text-white" name="button">Hola</button>
+      <div class="card col-12 contactame">
+        <div class="col-12 card-body d-flex justify-content-center">
+          <div class="col-4">
+            <h3 class="card-title">Contactame</h3>
+          </div>
+          <div class="col-8">
+            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="#" class="btn btn-primary">Contactame</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
