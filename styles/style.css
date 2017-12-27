@@ -1,10 +1,21 @@
 #titulo-barra {
   background-image: url("../img/inicio.jpg");
+  min-height: 100px;
+}
+
+#titulo-barra, #experiencia, #educacion, #skills {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
 }
 
 .barrita {
   margin-bottom: 100px;
 }
+
 .titulo-nombre {
   text-align: center;
   padding-top: 150px;
@@ -12,7 +23,6 @@
 }
 
 .acerca-de-mi-columna {
-
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -28,7 +38,6 @@
 }
 
 .super-frase {
-
   margin-bottom: 80px;
   text-align: center;
   padding-top: 120px;
@@ -44,10 +53,12 @@
   background: #86E2D5;
   transition-property: all;
   transition-duration: .2s;
+  min-height: 100px;
 }
 
 #experiencia:hover {
   background: #36D7B7;
+  min-height: 100px;
 }
 .titulo-experiencia {
   margin-top: 160px;
@@ -60,9 +71,11 @@
   background: #89C4F4;
   transition-property: all;
   transition-duration: .2s;
+  min-height: 100px;
 }
 #educacion:hover {
   background: #22A7F0;
+  min-height: 100px;
 }
 .titulo-educacion {
   margin-top: 160px;
@@ -76,10 +89,12 @@
   background: #EEEEEE;
   transition-property: all;
   transition-duration: .2s;
+  min-height: 100px;
 }
 
 #skills:hover {
   background: #ABB7B7;
+  min-height: 100px;
 }
 
 .skill-titulo {
@@ -88,10 +103,6 @@
 
 .skill-carta {
   margin-bottom: 160px;
-}
-
-.idioma-español{
-  background: #f2f2f2;
 }
 
 #contacto {
