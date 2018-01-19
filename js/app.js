@@ -1,13 +1,13 @@
 'use strict'
-$(document).ready(function(){
-    $(".button a").click(function(){
-        $(".overlay").fadeToggle(400)
-        $("nav").toggleClass('visible')
-        $(this).toggleClass('btn-open').toggleClass('btn-close')
-    })
-    $(".overlay a").click(function(){
-      $(".overlay").fadeToggle(400)
-      $("nav").toggleClass('visible')
-      $(".button a").toggleClass('btn-open').toggleClass('btn-close')
-    })
+
+let faded = () => {
+  $('.overlay').fadeToggle(200)
+  $('nav').toggleClass('visible')
+  $('body').toggleClass('rueda')
+  $('.button a').toggleClass('btn-open').toggleClass('btn-close')
+}
+
+$(document).ready(() => {
+  $('.button a').click(faded)
+  $('.overlay a').click(faded)
 })

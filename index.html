@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Portafiolio personal 2.0">
   <meta name="author" content="Jesus Bossa">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
@@ -21,50 +21,52 @@
     <section id="barra-navegacion">
       <header>
         <nav class="visible">
-      		<ul>
-      			<li>
-      				<a href="#sobre-mi" class="btn btn-primary logo">hola</a>
-      			</li>
-      		</ul>
-      		<div class="button">
-      			<a class="btn-open" href="#"></a>
-      		</div>
-      	</nav>
-      	<div class="overlay">
-      		<div class="wrap">
-      			<ul class="wrap-nav">
-      				<li>
-      					<a href="#sobre-mi">Acerca de</a>
-      					<ul>
-      						<li>
-      							<a href="#frase">Algo para recordar</a>
-      						</li>
-      					</ul>
-      				</li>
-      				<li>
-      					<a href="#slider-show">Habilidades</a>
-      					<ul>
-      						<li>
-      							<a href="#experiencia">Experiencia</a>
-      						</li>
+          <ul>
+            <li>
+              <a href="#titulo-barra" class="navbar-brand logo">
+                <img  src="img/logo.svg" alt="Logo" width="50" height="50">
+              </a>
+            </li>
+          </ul>
+          <div class="button">
+            <a class="btn-open" href="#"></a>
+          </div>
+        </nav>
+        <div class="overlay ">
+          <div class="wrap container">
+            <ul class="wrap-nav row ">
+              <li class="col-12">
+                <a href="#sobre-mi">Acerca de</a>
+                <ul>
                   <li>
-      							<a href="#educacion">Educación</a>
-      						</li>
+                    <a href="#frase">Algo para recordar</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-12">
+                <a href="#slider-show">Habilidades</a>
+                <ul>
                   <li>
-      							<a href="#skills">Conocimientos</a>
-      						</li>
-      					</ul>
-      				</li>
-      				<li>
-      					<a href="#contacto">Contacto</a>
-      					<ul>
-      						<li>
-      							<a href="#contacto">Contactame</a>
-      						</li>
-      					</ul>
-      				</li>
-      			</ul>
-      	</div>
+                    <a href="#experiencia">Experiencia</a>
+                  </li>
+                  <li>
+                    <a href="#educacion">Educación</a>
+                  </li>
+                  <li>
+                    <a href="#skills">Conocimientos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-12">
+                <a href="#contacto">Contacto</a>
+                <ul>
+                  <li>
+                    <a href="#contacto">Contactame</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
       </header>
     </section>
     <!-- Barra de navegacion - Fin -->
@@ -73,7 +75,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 titulo-nombre">
-            <h1>JESÚS BOSSA</h1>
+            <h1 class="titulog">JESÚS BOSSA</h1>
             <p class="titulos">Técnico de Telecomunicaciones y Desarrollador de Software</p>
             <a href="#sobre-mi" class="btn btn-light border-primary">Ver Portafolio</a>
           </div>
@@ -88,7 +90,7 @@
       <div class="row">
         <div class="card acerca-de-mi-columna">
           <div class="col-auto card-body">
-            <h3 class="card-titulo acerca-de-mi-titulo">Acerca de mi</h3>
+            <h3 class="card-titulo acerca-de-mi-titulo titulog">Acerca de mi</h3>
             <p class="card-text">Desarrollo
               <em>
                 <strong>aplicaciones</strong>
@@ -97,12 +99,9 @@
                 <strong>más valor</strong>
               </em> para sus clientes</p>
             <hr>
-            <p class="card-text">Desde que empecé mi carrera en tecnología me di cuenta lo valiosa que era para el mundo, desde entonces he hecho
-              lo posible por aprender los mejores procesos y lenguajes para contribuir con el mundo.
-              <br> Hoy, me encanta crear aplicaciones, me gusta mucho aprender, me considero una persona autodidacta, mis conocimientos
-              se expande recorre áreas como la seguridad informática, estructura de datos, inteligencia artificial y varios
-              lenguajes de programación, continúa leyendo y te daré una mejor vista de lo que sé y tengo para ofrecer a tu
-              empresa.
+            <p class="card-text">Desde que empecé mi carrera en tecnología me di cuenta lo valiosa que era para el mundo, desde entonces he hecho lo posible por aprender los mejores procesos y lenguajes para contribuir con el mundo.
+              <br> Hoy, me encanta crear aplicaciones, me gusta mucho aprender, me considero una persona autodidacta, mis conocimientos se expande recorre áreas como la seguridad informática, estructura de datos, inteligencia artificial y varios lenguajes
+              de programación, continúa leyendo y te daré una mejor vista de lo que sé y tengo para ofrecer a tu empresa.
             </p>
 
           </div>
@@ -129,7 +128,7 @@
     <section id="experiencia">
       <div class="container">
         <div class="row">
-          <div class="col-12 titulo-experiencia">
+          <div class="col-12 titulo-experiencia titulog">
             <h2>Experiencia</h2>
             <hr>
           </div>
@@ -137,18 +136,15 @@
             <div class="card">
               <div class="card-body text-center">
                 <h3 class="card-title">Como técnico de telecomunicaciones</h3>
-                <p class="card-text">Tuve la oportunidad de laborar en la empresa AseoCoba, en dicha empresa cubría las labores dedicadas al departamento
-                  de telecomunicaciones, entre las cuales tenia las tareas de ofrecer soporte técnico a la totalidad de la
-                  empresa, tanto en software como en hardware.</p>
+                <p class="card-text">Tuve la oportunidad de laborar en la empresa AseoCoba, en dicha empresa cubría las labores dedicadas al departamento de telecomunicaciones, entre las cuales tenia las tareas de ofrecer soporte técnico a la totalidad de la empresa, tanto
+                  en software como en hardware.</p>
               </div>
             </div>
             <div class="card">
               <div class="card-body text-center">
                 <h3 class="card-title">Como desarrollador</h3>
-                <p class="card-text">Cuento con muchos proyectos y semilleros en los cuales he trabajado, sin embargo hay uno en el cual me vi
-                  completamente desafiado, dicho proyecto consistía en elaborar un video juego basado en el ahorcado, el
-                  cual me llevo a aprender muchísimo y me reto a trabajar bajo presión, la mayoría de mis proyectos estas
-                  alojados en mi
+                <p class="card-text">Cuento con muchos proyectos y semilleros en los cuales he trabajado, sin embargo hay uno en el cual me vi completamente desafiado, dicho proyecto consistía en elaborar un video juego basado en el ahorcado, el cual me llevo a aprender muchísimo
+                  y me reto a trabajar bajo presión, la mayoría de mis proyectos estas alojados en mi
                   <a href="https://github.com/makinox/" target="_blank"> GitHub.</a>
                 </p>
               </div>
@@ -168,7 +164,7 @@
     <section id="educacion">
       <div class="container">
         <div class="row">
-          <div class="col-12 titulo-educacion">
+          <div class="col-12 titulo-educacion titulog">
             <h2>Educacion</h2>
             <hr>
           </div>
@@ -226,7 +222,7 @@
   <section id="skills">
     <div class="container">
       <div class="row skills">
-        <div class="col-12 skill-titulo">
+        <div class="col-12 skill-titulo titulog">
           <h2>Conocimientos</h2>
           <hr>
         </div>
@@ -308,7 +304,7 @@
       <div class="row">
         <div class="card col-12 contactame">
           <div class="col-12 card-body text-center">
-            <h3 class="card-title contactame-titulo">Contactame</h3>
+            <h3 class="card-title contactame-titulo titulog">Contactame</h3>
             <p class="card-text">Te gustaría trabajar juntos o simplemente hablar sobre un proyecto? No dudes en contactarme.</p>
             <a href="mailto:jesusbossa@protonmail.com" class="btn btn-primary">Envíame un correo</a>
           </div>
@@ -332,8 +328,7 @@
 
   <script src="js/tether.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 
