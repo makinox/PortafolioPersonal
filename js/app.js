@@ -1,7 +1,7 @@
 'use strict'
 
 let faded = () => {
-  $('.overlay').fadeToggle(400)
+  $('.overlay').fadeToggle(500)
   $('nav').toggleClass('visible')
   $('body').toggleClass('rueda')
   $('#cuerpo').toggleClass('gaus')

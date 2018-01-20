@@ -10,6 +10,14 @@ body {
   font-weight: bold;
 }
 
+.gtitulo {
+  font-family: 'Roboto Slab', serif;
+}
+
+.gparrafo {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .rueda {
   overflow: hidden;
 }
