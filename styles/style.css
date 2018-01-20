@@ -65,7 +65,7 @@ nav .lista li {
 nav .lista li a {
   color: #00649F;
   display: inline-block;
-  padding: 1em 3em;
+  padding: 2px 20px;;
   text-decoration: none;
   transition-property: all .2s linear 0s;
   -moz-transition: all .2s linear 0s;
@@ -76,6 +76,9 @@ nav .lista li a {
 
 nav ul li a:hover {
   color: #00DBE7;
+  border: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: inherit;
 }
 
 
@@ -282,22 +285,23 @@ nav ul li a:hover {
 }
 
 #educacion {
-  background: #89C4F4;
+  background: #bdc3c7;
   transition-property: all;
   transition-duration: .2s;
   min-height: 100px;
 }
 
 #educacion:hover, #educacion .active {
-  background: #22A7F0;
+  background: #fff;
   min-height: 100px;
 }
 
 .titulo-educacion {
   margin-top: 160px;
+  margin-bottom: 20px;
 }
 
-.carta-educacion {
+.time-educacion {
   margin-bottom: 160px;
 }
 
