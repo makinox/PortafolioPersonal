@@ -118,7 +118,6 @@ nav ul li a:hover {
   height: 100%;
   width: 100%;
   background: #97ECC5;
-  overflow: auto;
   z-index: 99;
 }
 
@@ -179,6 +178,10 @@ nav ul li a:hover {
 }
 
 /* barra de navegacion - final */
+
+.gaus {
+  filter: blur(6px);
+}
 
 #titulo {
   background-image: url("../img/inicio2.jpg");
