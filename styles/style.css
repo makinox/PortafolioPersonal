@@ -39,9 +39,9 @@ li {
 nav {
   width: 100%;
   height: auto;
-  box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
-  -moz-box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
-  -webkit-box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
+  box-shadow: -2px -7px 47px 9px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -2px -7px 47px 9px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: -2px -7px 47px 9px rgba(0, 0, 0, 0.35);
 }
 
 .logo {
@@ -83,14 +83,12 @@ nav ul li a:hover {
   border-color: inherit;
 }
 
-
 /*styling open close button*/
-@media screen and (max-width: 768px){
 
+@media screen and (max-width: 768px) {
   .lista {
     display: none;
   }
-
   .button {
     display: inline;
     position: absolute;
@@ -99,11 +97,9 @@ nav ul li a:hover {
     z-index: 999;
     font-size: 30px;
   }
-
   .button a {
     text-decoration: none;
   }
-
   .btn-open:after {
     color: #00649F;
     content: "\f0c9";
@@ -113,11 +109,9 @@ nav ul li a:hover {
     -webkit-transition: all .2s linear 0s;
     -o-transition: all .2s linear 0s;
   }
-
   .btn-open:hover:after {
     color: #00DBE7;
   }
-
   .btn-close:after {
     color: #00649F;
     content: "\f00d";
@@ -127,11 +121,9 @@ nav ul li a:hover {
     -webkit-transition: all .2s linear 0s;
     -o-transition: all .2s linear 0s;
   }
-
   .btn-close:hover:after {
     color: #00DBE7;
   }
-
 }
 
 /*overlay*/
@@ -334,12 +326,151 @@ nav ul li a:hover {
   margin-top: 160px;
 }
 
-.skill-carta {
-  margin-bottom: 160px;
+.cartas div{
+  padding: 50px;
+  margin: 16px 2px;
+  text-align: center;
+  background: #fff;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.cartas div h3 {
+  position: relative;
+  left: 16px;
+  max-width: inherit;
+  min-width: inherit;
+}
+
+#stars {
+  display: none;
+  background: #ecf0f1;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+#stars:hover {
+  background: #9b59b6;
+}
+
+.rojoc {
+  border-color: #e74c3c;
+  color: #e74c3c;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.rojoc:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.azulc {
+  border-color: #3498db;
+  color: #3498db;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
 }
 
 .azulc:hover {
-  color: black;
+  background: #3498db;
+  color: white;
+}
+
+.verdec {
+  border-color: #27ae60;
+  color: #27ae60;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.verdec:hover {
+  background: #27ae60;
+  color: white;
+}
+
+.amarilloc {
+  border-color: #f1c40f;
+  color: #f1c40f;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.amarilloc:hover {
+  background: #f1c40f;
+  color: white;
+}
+
+.grayc {
+  border-color: #95a5a6;
+  color: #95a5a6;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.grayc:hover {
+  background: #95a5a6;
+  color: white;
+}
+
+.aguac {
+  border-color: #1abc9c;
+  color: #1abc9c;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.aguac:hover {
+  background: #1abc9c;
+  color: white;
+}
+
+.grassc {
+  border-color: #2ecc71;
+  color: #2ecc71;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+}
+
+.grassc:hover {
+  background: #2ecc71;
+  color: white;
 }
 
 #contacto {

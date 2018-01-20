@@ -11,4 +11,5 @@ let faded = () => {
 $(document).ready(() => {
   $('.button a').click(faded)
   $('.overlay a').click(faded)
+  $('.cartas div').click(card)
 })
