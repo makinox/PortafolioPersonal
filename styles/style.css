@@ -37,9 +37,11 @@ li {
 }
 
 nav {
-
   width: 100%;
   height: auto;
+  box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
+  -moz-box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
+  -webkit-box-shadow: -2px -7px 47px 9px rgba(0,0,0,0.35);
 }
 
 .logo {
@@ -65,7 +67,7 @@ nav .lista li {
 nav .lista li a {
   color: #00649F;
   display: inline-block;
-  padding: 2px 20px;;
+  padding: 2px 20px;
   text-decoration: none;
   transition-property: all .2s linear 0s;
   -moz-transition: all .2s linear 0s;
@@ -76,11 +78,10 @@ nav .lista li a {
 
 nav ul li a:hover {
   color: #00DBE7;
-  border: 0px 0px 1px 0px;
-  border-style: solid;
+  border-bottom: 1px;
+  border-bottom-style: inset;
   border-color: inherit;
 }
-
 
 
 /*styling open close button*/
@@ -269,6 +270,10 @@ nav ul li a:hover {
   transition-property: all;
   transition-duration: .2s;
   min-height: 100px;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
 }
 
 #experiencia:hover, #experiencia .active {
@@ -289,6 +294,10 @@ nav ul li a:hover {
   transition-property: all;
   transition-duration: .2s;
   min-height: 100px;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
 }
 
 #educacion:hover, #educacion .active {
@@ -306,14 +315,18 @@ nav ul li a:hover {
 }
 
 #skills {
-  background: #EEEEEE;
+  background: #00BBF0;
   transition-property: all;
   transition-duration: .2s;
   min-height: 100px;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
 }
 
 #skills:hover, #skills .active {
-  background: #ABB7B7;
+  background: #D9FAFF;
   min-height: 100px;
 }
 
@@ -323,6 +336,10 @@ nav ul li a:hover {
 
 .skill-carta {
   margin-bottom: 160px;
+}
+
+.azulc:hover {
+  color: black;
 }
 
 #contacto {
