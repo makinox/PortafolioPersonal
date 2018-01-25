@@ -3,13 +3,12 @@
 let faded = () => {
   $('.overlay').fadeToggle(500)
   $('nav').toggleClass('visible')
-  $('body').toggleClass('rueda')
+  // $('body').toggleClass('rueda')
   $('#cuerpo').toggleClass('gaus')
-  $('.button a').toggleClass('btn-open').toggleClass('btn-close')
+  $('.button i').toggleClass('btn-open').toggleClass('btn-close')
 }
 
 $(document).ready(() => {
-  $('.button a').click(faded)
+  $('.button i').click(faded)
   $('.overlay a').click(faded)
-  $('.cartas div').click(card)
 })

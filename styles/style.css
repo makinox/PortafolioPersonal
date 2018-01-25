@@ -8,6 +8,7 @@ body {
   font-style: bold;
   font-size: 40px;
   font-weight: bold;
+  color: #00204A;
 }
 
 .gtitulo {
@@ -85,6 +86,12 @@ nav ul li a:hover {
 
 /*styling open close button*/
 
+@media screen and (min-width: 768px) {
+  .button i {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .lista {
     display: none;
@@ -93,17 +100,18 @@ nav ul li a:hover {
     display: inline;
     position: absolute;
     right: 50px;
-    top: 6px;
+    top: 18px;
     z-index: 999;
     font-size: 30px;
   }
-  .button a {
+  .button i {
+    color: #00649F;
     text-decoration: none;
+    cursor: pointer;
+    position: fixed;
   }
   .btn-open:after {
     color: #00649F;
-    content: "\f0c9";
-    font-family: "FontAwesome";
     transition-property: all .2s linear 0s;
     -moz-transition: all .2s linear 0s;
     -webkit-transition: all .2s linear 0s;
@@ -114,8 +122,6 @@ nav ul li a:hover {
   }
   .btn-close:after {
     color: #00649F;
-    content: "\f00d";
-    font-family: "FontAwesome";
     transition-property: all .2s linear 0s;
     -moz-transition: all .2s linear 0s;
     -webkit-transition: all .2s linear 0s;
@@ -134,7 +140,7 @@ nav ul li a:hover {
   top: 0;
   height: 100%;
   width: 100%;
-  background: #97ECC5;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 99;
 }
 
@@ -216,10 +222,7 @@ nav ul li a:hover {
 
 .titulo-nombre {
   margin-top: 120px;
-}
-
-.barrita {
-  margin-bottom: 100px;
+  color: black;
 }
 
 .titulo-nombre {
@@ -239,9 +242,8 @@ nav ul li a:hover {
   padding-bottom: 20px;
 }
 
-.acerca-de-mi-parrafo {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.acerca-de-mi-parrafo em {
+  color: #005792;
 }
 
 .super-frase {
@@ -258,19 +260,12 @@ nav ul li a:hover {
 }
 
 #experiencia {
-  background: #86E2D5;
-  transition-property: all;
-  transition-duration: .2s;
-  min-height: 100px;
-  transition-property: all .2s linear 0s;
-  -moz-transition: all .2s linear 0s;
-  -webkit-transition: all .2s linear 0s;
-  -o-transition: all .2s linear 0s;
+  background: #00BBF0;
 }
 
-#experiencia:hover, #experiencia .active {
-  background: #36D7B7;
-  min-height: 100px;
+.subtitulo-exp {
+  font-family: 'Roboto Slab', serif;
+  color: #00204A;
 }
 
 .titulo-experiencia {
@@ -282,23 +277,11 @@ nav ul li a:hover {
 }
 
 #educacion {
-  background: #bdc3c7;
-  transition-property: all;
-  transition-duration: .2s;
-  min-height: 100px;
-  transition-property: all .2s linear 0s;
-  -moz-transition: all .2s linear 0s;
-  -webkit-transition: all .2s linear 0s;
-  -o-transition: all .2s linear 0s;
-}
-
-#educacion:hover, #educacion .active {
   background: #fff;
-  min-height: 100px;
 }
 
 .titulo-educacion {
-  margin-top: 160px;
+  margin-top: 120px;
   margin-bottom: 20px;
 }
 
@@ -307,19 +290,7 @@ nav ul li a:hover {
 }
 
 #skills {
-  background: #00BBF0;
-  transition-property: all;
-  transition-duration: .2s;
-  min-height: 100px;
-  transition-property: all .2s linear 0s;
-  -moz-transition: all .2s linear 0s;
-  -webkit-transition: all .2s linear 0s;
-  -o-transition: all .2s linear 0s;
-}
-
-#skills:hover, #skills .active {
   background: #D9FAFF;
-  min-height: 100px;
 }
 
 .skill-titulo {
@@ -344,21 +315,6 @@ nav ul li a:hover {
   left: 16px;
   max-width: inherit;
   min-width: inherit;
-}
-
-#stars {
-  display: none;
-  background: #ecf0f1;
-  transition-property: all;
-  transition-duration: .2s;
-  transition-property: all .2s linear 0s;
-  -moz-transition: all .2s linear 0s;
-  -webkit-transition: all .2s linear 0s;
-  -o-transition: all .2s linear 0s;
-}
-
-#stars:hover {
-  background: #9b59b6;
 }
 
 .rojoc {
@@ -484,12 +440,16 @@ nav ul li a:hover {
 .contactame {
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 180px;
-  margin-bottom: 180px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 
 .contactame-titulo {
   margin-bottom: 20px;
+}
+
+#contacto hr {
+  visibility: hidden;
 }
 
 #pie-foot {
