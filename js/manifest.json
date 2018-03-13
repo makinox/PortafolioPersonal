@@ -1,0 +1,12 @@
+{
+  "short_name": "Portafolio",
+  "name": "Jesus Bossa portafolio personal",
+  "icons": [
+    {
+      "src": "../img/logo.svg",
+      "type": "image/svg",
+      "sizes": "15x15"
+    }
+  ],
+  "start_url": "index.html?launcher=true"
+}
