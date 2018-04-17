@@ -60,4 +60,19 @@ gulp.task('icons', () => {
     .pipe(size({title: 'icons'}))
 })
 
+gulp.task('serve', () => {
+  browserSync.init({
+    server: {
+      baseDir: '.'
+    }
+  })
+})
+
+gulp.task('watch', () => {
+  gulp.watch('./dist/styles/*', ['styles'], browserSync.reload)
+  gulp.watch('*.html').on('change', browserSync.reload)
+  gulp.watch('./dist/styles/*').on('change', browserSync.reload)
+})
+
+// gulp.task('default', ['watch', 'serve'])
 gulp.task('default', ['styles', 'assets', 'images', 'icons', 'build'])
