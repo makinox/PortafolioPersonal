@@ -1,5 +1,11 @@
 /* barra de navegacion - inicio */
 
+$color1: #4252B2;
+$color2: #34F6F2;
+$color3: #78E3FD;
+$color4: #D1F5FF;
+$color5: #EEF8FF;
+
 ul {
   margin: 0;
   padding: 0;
@@ -15,7 +21,7 @@ li {
 nav {
   width: 100%;
   height: auto;
-  box-shadow: -2px -7px 47px 9px rgba(0, 0, 0, 0.35);
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 .logo {
@@ -39,7 +45,7 @@ nav .lista li {
 }
 
 nav .lista li a {
-  color: #00649F;
+  color: $color1;
   display: inline-block;
   padding: 2px 20px;
   text-decoration: none;
@@ -48,7 +54,7 @@ nav .lista li a {
 }
 
 nav ul li a:hover {
-  color: #00DBE7;
+  color: $color4;
   border-bottom: 1px;
   border-bottom-style: inset;
   border-color: inherit;
@@ -75,24 +81,24 @@ nav ul li a:hover {
     font-size: 30px;
   }
   .button i {
-    color: #00649F;
+    color: $color1;
     text-decoration: none;
     cursor: pointer;
     position: fixed;
   }
   .btn-open:after {
-    color: #00649F;
+    color: $color1;
     transition-property: all .2s linear 0s;
   }
   .btn-open:hover:after {
-    color: #00DBE7;
+    color: $color4;
   }
   .btn-close:after {
-    color: #00649F;
+    color: $color1;
     transition-property: all .2s linear 0s;
   }
   .btn-close:hover:after {
-    color: #00DBE7;
+    color: $color4;
   }
 }
 
@@ -128,7 +134,7 @@ nav ul li a:hover {
 }
 
 .wrap ul.wrap-nav li a {
-  color: #00649F;
+  color: $color1;
   display: block;
   padding: 8px 0;
   font-family: 'Roboto Slab', serif;
@@ -138,7 +144,7 @@ nav ul li a:hover {
 }
 
 .wrap ul.wrap-nav li a:hover {
-  color: #00DBE7;
+  color: $color4;
 }
 
 .wrap ul.wrap-nav ul {
@@ -154,11 +160,11 @@ nav ul li a:hover {
 .wrap ul.wrap-nav ul li a {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #01AAC1;
+  color: $color3;
 }
 
 .wrap ul.wrap-nav ul li a:hover {
-  color: #00DBE7;
+  color: $color4;
 }
 
 /* barra de navegacion - final */
