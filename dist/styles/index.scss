@@ -91,6 +91,11 @@ $color5: #EEF8FF;
   border-style: solid;
   border-width: thin;
   border-radius: 5px;
+  border: none;
+  background-color: $color5;
+  background: $color5;
+  // border-color: #fafafa;
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 // .btn-curriculo {
