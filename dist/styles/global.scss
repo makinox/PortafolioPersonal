@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+$font1: 'Montserrat', sans-serif;
+$font2: 'Open Sans', sans-serif;
+
 body {
   position: relative;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font2;
 }
 
 .titulog {
-  font-family: 'Roboto Slab', serif;
+  font-family: $font1;
   font-style: bold;
   font-size: 40px;
   font-weight: bold;
@@ -12,7 +16,7 @@ body {
 }
 
 .gtitulo {
-  font-family: 'Roboto Slab', serif;
+  font-family: $font1;
 }
 
 .gparrafo {
