@@ -25,12 +25,14 @@ $color5: #EEF8FF;
 .titulo-nombre {
   margin-top: 120px;
   color: black;
-}
-
-.titulo-nombre {
+  background-color: #fff;
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 160px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 240px;
+  margin-bottom: 130px;
+  border-radius: 1%;
+  background-color: rgba($color: #fff, $alpha: 0.7)
 }
 
 // .card {
@@ -54,7 +56,7 @@ $color5: #EEF8FF;
 }
 
 .acerca-de-mi-parrafo em {
-  color: $color2;
+  color: $color1;
 }
 
 .super-frase {
@@ -85,7 +87,7 @@ $color5: #EEF8FF;
 
 #experiencia {
   // background: $color4;
-  background: linear-gradient(#fff, $color4, #fefefe);
+  background: linear-gradient(#fff, $color3, #fefefe);
 }
 
 .subtitulo-exp {
