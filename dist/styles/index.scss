@@ -47,7 +47,7 @@ $color5: #EEF8FF;
 
 .acerca-de-mi-columna {
   margin-top: 100px;
-  margin-bottom: 60px;
+  // margin-bottom: 20px;
   padding-bottom: 60px;
 }
 
@@ -56,13 +56,13 @@ $color5: #EEF8FF;
   padding-bottom: 20px;
 }
 
-.acerca-de-mi-parrafo em {
+.acerca-de-mi-parrafo em, strong {
   color: $color1;
 }
 
 .super-frase {
   margin-top: 180px;
-  margin-bottom: 100px;
+  margin-bottom: 160px;
   text-align: center;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -129,7 +129,7 @@ $color5: #EEF8FF;
 }
 
 .titulo-educacion {
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -140,6 +140,10 @@ $color5: #EEF8FF;
 
 #skills {
   background: linear-gradient(#fefefe, $color3, #fff);
+}
+
+.skill-titulo {
+  margin-top: 100px;
 }
 
 #contacto {
