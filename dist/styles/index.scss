@@ -11,10 +11,6 @@ $color5: #EEF8FF;
 #titulo {
   background-image: url("./inicio2.jpg");
   min-height: 80px;
-  padding-bottom: 140px;
-}
-
-#titulo {
   position: relative;
   background-position: center;
   background-size: cover;
@@ -22,17 +18,22 @@ $color5: #EEF8FF;
   background-attachment: fixed;
 }
 
+.fadeOut-titulo {
+  background: linear-gradient(rgba(40, 40, 40, 0.01),rgba(40, 40, 40, 0.3),rgba(40, 40, 40, 0.5),rgba(40, 40, 40, 0.7),rgba(40, 40, 40, 1));
+  padding: 30px;
+}
+
 .titulo-nombre {
-  margin-top: 120px;
   color: black;
   background-color: #fff;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 240px;
-  margin-bottom: 130px;
+  margin-bottom: 210px;
   border-radius: 5px;
-  background-color: rgba($color: #fff, $alpha: 0.7)
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  box-shadow: 1px 3px 5px 0px rgba(22, 22, 22, 0.35);
 }
 
 // .card {
@@ -128,7 +129,7 @@ $color5: #EEF8FF;
 }
 
 .titulo-educacion {
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 
@@ -153,7 +154,7 @@ $color5: #EEF8FF;
 .contactame {
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 160px;
 }
 
