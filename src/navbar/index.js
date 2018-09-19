@@ -17,7 +17,6 @@ export default () => (
                 <li>Contactame</li>
             </div>
         </nav>
-        {/* // ! en 300 quitar el logo */}
         <style jsx>
             {`
             nav {
@@ -32,7 +31,6 @@ export default () => (
 
             nav li {
                 display: inline;
-                border: 1px solid red;
                 color: rgba(0,0,0, .7);
                 transition: 0.3s ease;
                 cursor: pointer;
@@ -46,9 +44,12 @@ export default () => (
                 width: 35px;                
             }
 
-            @media screen and (max-width: 370px) {
+            @media screen and (max-width: 479px) {
+                nav {
+                    grid-template-columns: repeat(4, auto);
+                }
                 nav div:first-of-type {
-                    display: none
+                    display: none;
                 }
             }
             `
