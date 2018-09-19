@@ -9,6 +9,14 @@ export default class extends React.Component {
     render(){
         return (
             <div>
+                <style jsx global>
+                    {`
+                        body {
+                            font-family: system-ui;
+                            margin: 0;
+                        }
+                    `}
+                </style>
                 <Navbar />
                 <Hero />
                 <About />
