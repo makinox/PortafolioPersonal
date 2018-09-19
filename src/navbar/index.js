@@ -2,7 +2,7 @@ export default () => (
     <header>
         <nav>
             <div>
-                <li><img src="https://jesusbossa.com/public/logo.svg" alt="" /></li>
+                <li><img src="https://jesusbossa.com/public/logo.svg" alt="Logo de jesús bossa" /></li>
             </div>
             <div>
                 <li>Acerca</li>
@@ -52,8 +52,7 @@ export default () => (
                     display: none;
                 }
             }
-            `
-            }
+            `}
         </style>
     </header>
 )
