@@ -23,12 +23,9 @@ export default () => (
             nav {
                 background-color: #fff;
                 padding: 15px;
-                box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .1)
-            }
-
-            nav {
+                box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .1);
                 display: grid;
-                grid-template-columns: minmax(auto, 600px) repeat(4, auto);
+                grid-template-columns: minmax(auto, 800px) repeat(4, auto);
                 grid-gap: 10px;
                 align-items: center;
             }
@@ -46,8 +43,13 @@ export default () => (
             }
 
             nav li img {
-                width: 35px;
-                
+                width: 35px;                
+            }
+
+            @media screen and (max-width: 370px) {
+                nav div:first-of-type {
+                    display: none
+                }
             }
             `
             }

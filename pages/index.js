@@ -1,3 +1,4 @@
+import Head from '../src/head/index'
 import Navbar from '../src/navbar/index'
 import Hero from '../src/hero(1)/index'
 import About from '../src/about(2)/index'
@@ -9,14 +10,7 @@ export default class extends React.Component {
     render(){
         return (
             <div>
-                <style jsx global>
-                    {`
-                        body {
-                            font-family: system-ui;
-                            margin: 0;
-                        }
-                    `}
-                </style>
+                <Head />
                 <Navbar />
                 <Hero />
                 <About />
