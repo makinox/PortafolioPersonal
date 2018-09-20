@@ -32,6 +32,11 @@ export default () => (
                     margin: 20px;
                     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
                 }
+                @media screen and (max-width: 479px) {
+                    .item {
+                        margin: 5px;
+                    }
+                }
 
                 hr {
                     width: 80%;
