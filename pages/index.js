@@ -5,6 +5,7 @@ import About from '../src/about(2)/index'
 import Exp from '../src/experience(3)/index'
 import Studies from '../src/studies(4)/index'
 import Contact from '../src/contact(5)/index'
+import Footer from '../src/footer/index'
 
 export default class extends React.Component {
     render(){
@@ -17,6 +18,7 @@ export default class extends React.Component {
                 <Exp />
                 <Studies />
                 <Contact />
+                <Footer />
             </div>
         )
     }
