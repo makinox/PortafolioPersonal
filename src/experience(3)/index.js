@@ -1,67 +1,84 @@
 export default () => (
     <section>
+        <div className="title">
+            <h2>Un par de cosas que he echo.</h2>
+        </div>
         <div className="container">
-            <div className="item title">
-                <div>
-                    <h2>Un par de cosas que he echo.</h2>
-                </div>
-            </div>
-            <div className="item proyect">
+            <div className="item">
                 <div className="card">
                     <div className="card-header">
                         <h4>Un titulo</h4>
+                        <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <p>Primer</p>
+                            <img src='https://placem.at/things?w=160&h=100' alt="" />
                         </div>
                         <div className="card-item card-last">
-                            <p>Comer pollos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="item proyect">
-                <div className="card">
-                    <div className="card-header">
-                        <h4>Un titulo</h4>
-                    </div>
-                    <div className="card-body">
-                        <div className="card-item card-first">
-                            <p>Primer</p>
-                        </div>
-                        <div className="card-item card-last">
-                            <p>Comer pollos</p>
+                            <ul>
+                                <li>Vanilla</li>
+                                <li>cssGrid</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="item proyect">
+            <div className="item">
                 <div className="card">
                     <div className="card-header">
                         <h4>Un titulo</h4>
+                        <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <p>Primer</p>
+                            <img src='https://placem.at/things?w=160&h=100' alt="" />
                         </div>
                         <div className="card-item card-last">
-                            <p>Comer pollos</p>
+                            <ul>
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>Bootstrap</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="item proyect">
+            <div className="item">
                 <div className="card">
                     <div className="card-header">
                         <h4>Un titulo</h4>
+                        <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <p>Primer</p>
+                            <img src='https://placem.at/things?w=160&h=100' alt="" />
                         </div>
                         <div className="card-item card-last">
-                            <p>Comer pollos</p>
+                            <ul>
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>cssGrid</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <div className="card">
+                    <div className="card-header">
+                        <h4>Un titulo</h4>
+                        <p>Proyecto en producción</p>
+                    </div>
+                    <div className="card-body">
+                        <div className="card-item card-first">
+                            <img src='https://placem.at/things?w=160&h=100' alt="" />
+                        </div>
+                        <div className="card-item card-last">
+                            <ul>
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>cssGrid</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -69,24 +86,27 @@ export default () => (
         </div>
         <style jsx>
             {`
+                .title {
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+
                 .container {
                     border: 1px blue solid;
                     display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-gap: 20px;
-                    grid-template-areas: "title title title"
-                                            "space space space"
-                                            ". . .";
+                    grid-template-columns:  repeat(auto-fit , minmax(auto, 340px));
+                    grid-gap: 10px;
+                    justify-content: center;
+                }
+                
+                @media (min-width: 1059px) and (max-width: 1391px)  {
+                    .item:last-of-type {
+                        display: none;
+                    }
                 }
 
-                .item {
-                    border: 1px red solid;
-                    margin: 10px;
-                }
-
-                .title {
-                    grid-area: title;
-                    text-align: center;
+                .card {
+                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
                 }
 
                 .card-body {
@@ -95,10 +115,21 @@ export default () => (
                     grid-gap: 10px;
                 }
 
+                .card-header h4 {
+                    padding: 20px 0 0px 20px;
+                    margin: 0;
+                }
+
+                .card-header p {
+                    padding: 8px 20px;
+                    margin: 0;
+                    color: #5f6368;
+                }
+
                 .card-item {
-                    border: 1px green solid;
                     margin: 10px;
                 }
+
             `}
         </style>
     </section>
