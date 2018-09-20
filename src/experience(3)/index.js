@@ -1,7 +1,7 @@
 export default () => (
     <section>
         <div className="title">
-            <h2>Un par de cosas que he echo.</h2>
+            <h2>Un par de cosas que he hecho.</h2>
         </div>
         <div className="container">
             <div className="item">
@@ -97,9 +97,10 @@ export default () => (
                     grid-template-columns:  repeat(auto-fit , minmax(auto, 340px));
                     grid-gap: 10px;
                     justify-content: center;
+                    padding: 20px;
                 }
                 
-                @media (min-width: 1059px) and (max-width: 1391px)  {
+                @media (min-width: 1098px) and (max-width: 1391px)  {
                     .item:last-of-type {
                         display: none;
                     }
@@ -107,7 +108,6 @@ export default () => (
 
                 .card {
                     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, .3);
-                    // border: 1px #f0f0f0 solid;
                     border-radius: 5px;
                 }
 
