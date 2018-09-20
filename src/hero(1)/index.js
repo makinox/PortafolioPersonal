@@ -17,7 +17,7 @@ export default () => (
                     display: grid;
                     grid-template-columns: repeat(2, minmax(auto, auto));
                     justify-content: center;
-                    border: 1px blue solid;
+                    border: 1px yellow solid;
                     padding: 25vh;
                     grid-gap: 20px;
                 }
