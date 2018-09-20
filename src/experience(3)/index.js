@@ -106,7 +106,9 @@ export default () => (
                 }
 
                 .card {
-                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+                    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, .3);
+                    // border: 1px #f0f0f0 solid;
+                    border-radius: 5px;
                 }
 
                 .card-body {
@@ -121,7 +123,7 @@ export default () => (
                 }
 
                 .card-header p {
-                    padding: 8px 20px;
+                    padding: 0px 10px 10px 20px;
                     margin: 0;
                     color: #5f6368;
                 }

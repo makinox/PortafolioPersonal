@@ -30,7 +30,7 @@ export default () => (
                 .item {
                     padding: 20px;
                     margin: 20px;
-                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+                    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, .3);
                 }
                 @media screen and (max-width: 479px) {
                     .item {
