@@ -8,7 +8,7 @@ export default () => (
                 </div>
             </div>
             <div className="item">
-                <img src={require('../../assets/img1.svg')} alt="Ilustración"/>
+                <img src={require('../../static/img1.svg')} alt="Ilustración"/>
             </div>
         </div>
         <style jsx>

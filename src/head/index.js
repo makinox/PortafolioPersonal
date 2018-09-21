@@ -7,9 +7,13 @@ export default () => (
       <title>Jesús Bossa | Ingeniero de software</title>
     </Head>
     <style jsx global>{`
+        * {
+            margin: 0
+          }
+
         body {
             font-family: system-ui;
-            margin: 0;
+            min-height: 100%;
         }
     `}</style>
   </div>

@@ -13,12 +13,17 @@ export default () => (
 
             h2 {
                 text-align: center;
+                padding: 15px 0;
+                background-color: white;
+                box-shadow: 0 4px 4px 0 rgba(0,0,0,0.6);
             }
 
             .container {
                 display: grid;
                 grid-template-columns:  repeat(auto-fit , minmax(auto, 300px));
                 justify-content: center;
+                padding: 180px;
+                box-shadow: inset  0 0 200px 0 rgba(0,0,0,0.6);
             }
 
             .item {
