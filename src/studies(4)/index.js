@@ -58,7 +58,7 @@ export default () => (
                 <div>
                     <h4>Puedes encontrar todos los soportes aquí</h4>
                     <div className="btn">
-                        <a href="#">Certificados</a>
+                        <a href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing" target="_blank">Certificados</a>
                     </div>
                 </div>
             </div>
@@ -68,12 +68,12 @@ export default () => (
                 .card {
                     position: relative;
                     display: block;
-                    transition: 5s ease;
+                    padding: 3% 0;
                 }
 
                 .card-background {
                     display: grid;
-                    grid-template-columns:  minmax(auto, 1080px);
+                    grid-template-columns:  minmax(auto, 80%);
                     justify-content: center;
                 }
 
@@ -93,11 +93,15 @@ export default () => (
                     display: inline-block;
                     text-decoration: none;
                     color: white;
-                    border: 1px #0A75EF solid;
+                    border: 1px #022ED8 solid;
                     padding: 10px 45px;
                     background-color: #022ED8;
                     border-radius: 20px;
                     box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .3);
+                }
+
+                a:hover {
+                    background-color: #170AFF;
                 }
                 
                 a:active {
@@ -118,16 +122,19 @@ export default () => (
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    display: none;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    transition: 5s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s, visibility 0s 0.3s;
                 }
 
                 .card:hover .card-overlay {
-                    display: flex;
-                    transition: 5s ease;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity 0.3s;
                 }
 
                 h4, h2 {
