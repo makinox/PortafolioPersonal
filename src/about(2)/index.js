@@ -2,19 +2,15 @@ export default () => (
     <section>
         <div className="container">
             <div className="item">
-                <div className="card">
-                    <div className="card-header">
-                        <h2>Un poco sobre mi ...</h2>
-                        <hr align="left"/>
-                        <p>Soy un chico de colombia que le gusta mucho programar, normalmente curioso por todo aquello bello que ofrece la tecnologia.</p>
-                        <p>Me gusta mucho desarrollar, diseñar y construir proyectos, me considero muy afortunado por sertirme tan apasionado por
-                            lo que hago y construir el futuro.
+                <div>
+                    <h2>Un poco sobre mi ...</h2>
+                    <hr align="left" />
+                    <p>Soy un chico de colombia que le gusta mucho programar, normalmente curioso por todo aquello bello que ofrece la tecnología.</p>
+                    <p>Durante los dos ulimos años, me he dedicado a  desarrollar e innovar proyectos en tecnología.</p>
+                    <p>Trabajo en frontend, backend y devop, arquitecto sofware y lo diseño convirtiendolo en productos y servicios
+                        increibles.
                         </p>
-                        <p>Trabajo en frontend, backend y devop, arquitecto sofware y lo diseño convirtiendolo en productos y servicios
-                            increibles.
-                        </p>
-                        <p>Probablemente quieras saber mas, continua leyendo.</p>
-                    </div>
+                    <p>Probablemente quieras saber mas, continua leyendo.</p>
                 </div>
             </div>
         </div>
@@ -40,6 +36,14 @@ export default () => (
 
                 hr {
                     width: 80%;
+                }
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    margin: 10px 0;
                 }
             `}
         </style>

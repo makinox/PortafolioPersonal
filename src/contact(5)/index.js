@@ -6,7 +6,7 @@ export default () => (
         <div className="container">
             <div className="item">
                 <h3>Hablemos un rato</h3>
-                <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>           
+                <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>
             </div>
         </div>
         <style jsx>{`
