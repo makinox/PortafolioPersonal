@@ -14,8 +14,7 @@ export default () => (
             .banner {
                 background: black;
                 background-color: white;
-                box-shadow: -7px 5px 4px 1px rgba(0,0,0,0.6);
-                border-bottom-left-radius: 15px;
+                box-shadow: 1px 5px 5px 0 rgba(0,0,0,0.6);
                 padding: 20px 0;
             }
 
@@ -32,7 +31,7 @@ export default () => (
                 display: grid;
                 grid-template-columns:  repeat(auto-fit , minmax(auto, 300px));
                 justify-content: center;
-                padding: 220px;
+                padding: 220px 0px;
                 box-shadow: inset  0 0 200px 0 rgba(0,0,0,0.6);
             }
 
