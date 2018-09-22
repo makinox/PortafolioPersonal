@@ -1,28 +1,38 @@
 export default () => (
     <section>
-        <div>
+        <div className="banner">
             <h2>Contacto</h2>
         </div>
         <div className="container">
             <div className="item">
-                <h4>You cant see me</h4>
-                <a href='mailto:me@jesusbossa.com'>Hablemos</a>           
+                <h3>Hablemos un rato</h3>
+                <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>           
             </div>
         </div>
         <style jsx>{`
 
+            .banner {
+                background: black;
+                background-color: white;
+                box-shadow: -7px 5px 4px 1px rgba(0,0,0,0.6);
+                border-bottom-left-radius: 15px;
+                padding: 20px 0;
+            }
+
             h2 {
                 text-align: center;
-                padding: 15px 0;
-                background-color: white;
-                box-shadow: 0 4px 4px 0 rgba(0,0,0,0.6);
+            }
+
+            h3 {
+                padding: 20px 0;
+                color: white;
             }
 
             .container {
                 display: grid;
                 grid-template-columns:  repeat(auto-fit , minmax(auto, 300px));
                 justify-content: center;
-                padding: 180px;
+                padding: 220px;
                 box-shadow: inset  0 0 200px 0 rgba(0,0,0,0.6);
             }
 
