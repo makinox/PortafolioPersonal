@@ -37,7 +37,6 @@ export default () => (
             }
 
             .item {
-                border: 1px red solid;
                 justify-content: center;
                 text-align: center;
                 padding-bottom: 40px;
@@ -47,11 +46,15 @@ export default () => (
                 display: inline-block;
                 text-decoration: none;
                 color: white;
-                border: 1px #0A75EF solid;
+                border: 1px #022ED8 solid;
                 padding: 10px 45px;
                 background-color: #022ED8;
                 border-radius: 20px;
                 box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .3);
+            }
+
+            a:hover {
+                background-color: #170AFF;
             }
             
             a:active {
