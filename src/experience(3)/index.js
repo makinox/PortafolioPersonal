@@ -1,3 +1,8 @@
+import img1 from '../../static/exp/img1.jpg'
+import img2 from '../../static/exp/img2.jpg'
+import img3 from '../../static/exp/img3.jpg'
+import img4 from '../../static/exp/img4.jpg'
+
 export default () => (
     <section>
         <div className="title">
@@ -7,17 +12,18 @@ export default () => (
             <div className="item">
                 <div className="card">
                     <div className="card-header">
-                        <h4>Un titulo</h4>
+                        <h4>Regypos</h4>
                         <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <img src='https://placem.at/things?w=160&h=100' alt="" />
+                            <a href="https://www.regypos.com/" target="_blanck"><img src={img1} alt="Regypos creado por Jesus bossa" /></a>
                         </div>
                         <div className="card-item card-last">
                             <ul>
-                                <li>Vanilla</li>
-                                <li>cssGrid</li>
+                                <li>React</li>
+                                <li>Bootstrap</li>
+                                <li>PWA</li>
                             </ul>
                         </div>
                     </div>
@@ -26,18 +32,19 @@ export default () => (
             <div className="item">
                 <div className="card">
                     <div className="card-header">
-                        <h4>Un titulo</h4>
+                        <h4>Inventario</h4>
                         <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <img src='https://placem.at/things?w=160&h=100' alt="" />
+                            <a href="https://inventory.regypos.com/" target="_blanck"><img src={img2} alt="Inventario creado por Jesus bossa" /></a>
                         </div>
                         <div className="card-item card-last">
                             <ul>
                                 <li>React</li>
                                 <li>Redux</li>
                                 <li>Bootstrap</li>
+                                <li>PWA</li>
                             </ul>
                         </div>
                     </div>
@@ -46,18 +53,18 @@ export default () => (
             <div className="item">
                 <div className="card">
                     <div className="card-header">
-                        <h4>Un titulo</h4>
+                        <h4>Utopia</h4>
                         <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <img src='https://placem.at/things?w=160&h=100' alt="" />
+                            <a href="https://utopia1.herokuapp.com/" target="_blank"><img src={img3} alt="Aplicacion de utopia creada por Jesus bossa" /></a>
                         </div>
                         <div className="card-item card-last">
                             <ul>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>cssGrid</li>
+                                <li>Vanilla</li>
+                                <li>Bootstrap</li>
+                                <li>PWA</li>
                             </ul>
                         </div>
                     </div>
@@ -66,18 +73,18 @@ export default () => (
             <div className="item">
                 <div className="card">
                     <div className="card-header">
-                        <h4>Un titulo</h4>
+                        <h4>Priorize</h4>
                         <p>Proyecto en producción</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <img src='https://placem.at/things?w=160&h=100' alt="" />
+                        <a href="https://priorizex.firebaseapp.com/" target="_blank"><img src={img4} alt="Aplicacion para tareas por hacer" /></a>
                         </div>
                         <div className="card-item card-last">
                             <ul>
                                 <li>React</li>
-                                <li>Redux</li>
-                                <li>cssGrid</li>
+                                <li>Bootstrap</li>
+                                <li>Retina display</li>
                             </ul>
                         </div>
                     </div>
@@ -88,16 +95,15 @@ export default () => (
             {`
                 .title {
                     text-align: center;
-                    padding-bottom: 10px;
+                    padding: 20px;
                 }
 
                 .container {
-                    border: 1px blue solid;
                     display: grid;
                     grid-template-columns:  repeat(auto-fit , minmax(auto, 340px));
                     grid-gap: 10px;
                     justify-content: center;
-                    padding: 20px;
+                    padding: 5% 0;
                 }
                 
                 @media (min-width: 1098px) and (max-width: 1391px)  {
@@ -130,6 +136,10 @@ export default () => (
 
                 .card-item {
                     margin: 10px;
+                }
+
+                img {
+                    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, .3);
                 }
 
             `}

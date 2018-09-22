@@ -24,34 +24,34 @@ import img22 from '../../static/tech/Img22.svg'
 
 export default () => (
     <section>
-        <div>
+        <div className="banner">
             <h2>Que sé hasta ahora</h2>
         </div>
         <div className="card">
             <div className="card-background">
                 <div className="card-container">
-                    <div><img src={img1} alt="" /></div>
-                    <div><img src={img2} alt="" /></div>
-                    <div><img src={img3} alt="" /></div>
-                    <div><img src={img4} alt="" /></div>
-                    <div><img src={img5} alt="" /></div>
-                    <div><img src={img6} alt="" /></div>
-                    <div><img src={img7} alt="" /></div>
-                    <div><img src={img8} alt="" /></div>
-                    <div><img src={img9} alt="" /></div>
-                    <div><img src={img10} alt="" /></div>
-                    <div><img src={img11} alt="" /></div>
-                    <div><img src={img12} alt="" /></div>
-                    <div><img src={img13} alt="" /></div>
-                    <div><img src={img14} alt="" /></div>
-                    <div><img src={img15} alt="" /></div>
-                    <div><img src={img16} alt="" /></div>
-                    <div><img src={img17} alt="" /></div>
-                    <div><img src={img18} alt="" /></div>
-                    <div><img src={img19} alt="" /></div>
-                    <div><img src={img20} alt="" /></div>
-                    <div><img src={img21} alt="" /></div>
-                    <div><img src={img22} alt="" /></div>
+                    <div><img src={img1} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img2} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img3} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img4} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img5} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img6} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img7} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img8} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img9} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img10} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img11} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img12} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img13} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img14} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img15} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img16} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img17} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img18} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img19} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img20} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img21} alt="Logo de tecnologia dominada por jesús bossa" /></div>
+                    <div><img src={img22} alt="Logo de tecnologia dominada por jesús bossa" /></div>
                 </div>
             </div>
             <div className="card-overlay">
@@ -68,7 +68,8 @@ export default () => (
                 .card {
                     position: relative;
                     display: block;
-                    padding: 3% 0;
+                    padding: 4% 0;
+                    margin: 2% 0;
                 }
 
                 .card-background {
@@ -138,7 +139,12 @@ export default () => (
                 }
 
                 h4, h2 {
+                    padding: 10px;
                     text-align: center;
+                }
+
+                h4 {
+                    text-shadow: 2px 2px #000000;
                 }
 
                 img {

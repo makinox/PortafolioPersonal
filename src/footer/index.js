@@ -17,6 +17,14 @@ export default () => (
                     color: #8b8b8b;
                     text-decoration: none;
                 }
+
+                a:hover {
+                    color: #b8b8b8;
+                }
+
+                a:active {
+                    color: white;
+                }
         `}</style>
     </footer>
 )
