@@ -7,15 +7,18 @@ import Studies from '../src/studies(4)/index'
 import Contact from '../src/contact(5)/index'
 import Footer from '../src/footer/index'
 import img1 from '../static/footer/img1.jpg'
+import form1 from '../static/hero/form1.svg'
 
 export default class extends React.Component {
     render(){
         return (
             <div>
                 <Head />
-                <Navbar />
-                <Hero />
-                <About />
+                <section className="initial">
+                    <Navbar />
+                    <Hero />
+                    <About />
+                </section>
                 <Exp />
                 <Studies />
                 <section className="final">
@@ -23,6 +26,13 @@ export default class extends React.Component {
                     <Footer />
                 </section>
                 <style>{`
+
+                    .initial {
+                        background-image: url(${form1});
+                        background-repeat: no-repeat;
+                        background-position-x: 200%;
+                        background-size: 70%;
+                    }
 
                     .final {
                         background-image: url(${img1});

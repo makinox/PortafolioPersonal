@@ -14,8 +14,7 @@ export default () => (
                 </div>
             </div>
         </div>
-        <style jsx>
-            {`
+        <style jsx>{`
                 .container {
                     display: grid;
                     grid-template-columns: minmax(auto, 900px);
@@ -26,6 +25,7 @@ export default () => (
                 .item {
                     padding: 20px;
                     margin: 10px 0;
+                    background-color: #fff;
                     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, .3);
                 }
                 @media screen and (max-width: 479px) {

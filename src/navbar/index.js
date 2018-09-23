@@ -20,7 +20,7 @@ export default () => (
         <style jsx>
             {`
             nav {
-                background-color: #fff;
+                background-color: rgba(255, 255, 255, .9);
                 padding: 15px;
                 box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .1);
                 display: grid;

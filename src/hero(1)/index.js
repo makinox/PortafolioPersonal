@@ -1,3 +1,5 @@
+import img1 from '../../static/hero/img1.svg'
+
 export default () => (
     <section>
         <div className="container">
@@ -8,16 +10,14 @@ export default () => (
                 </div>
             </div>
             <div className="item">
-                <img src={require('../../static/img1.svg')} alt="Ilustración"/>
+                <img src={img1} alt="Ilustración de Jesús david bossa"/>
             </div>
         </div>
-        <style jsx>
-            {`
+        <style jsx>{`
                 .container {
                     display: grid;
                     grid-template-columns: repeat(2, minmax(auto, auto));
                     justify-content: center;
-                    border: 1px yellow solid;
                     padding: 25vh;
                     grid-gap: 20px;
                 }
@@ -32,7 +32,6 @@ export default () => (
                     width: 100%;
                     font-size: 80px;
                 }
-            `}
-        </style>
+            `}</style>
     </section>
 )
