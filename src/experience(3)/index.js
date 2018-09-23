@@ -2,6 +2,7 @@ import img1 from '../../static/exp/img1.jpg'
 import img2 from '../../static/exp/img2.jpg'
 import img3 from '../../static/exp/img3.jpg'
 import img4 from '../../static/exp/img4.jpg'
+import img5 from '../../static/exp/img5.png'
 
 export default () => (
     <section>
@@ -74,7 +75,7 @@ export default () => (
                 <div className="card">
                     <div className="card-header">
                         <h4>Priorize</h4>
-                        <p>Proyecto en producción</p>
+                        <p>Proyecto personal</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
@@ -84,18 +85,35 @@ export default () => (
                             <ul>
                                 <li>React</li>
                                 <li>Bootstrap</li>
-                                <li>Retina display</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <div className="card">
+                    <div className="card-header">
+                        <h4>MovieApp</h4>
+                        <p>Proyecto en producción</p>
+                    </div>
+                    <div className="card-body">
+                        <div className="card-item card-first">
+                        <a href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40makinox/movieplayer-7392818119eeadcbdd885a0622b7063e-signed.apk"><img src={img5} width={120} height={90} alt="Aplicacion para tareas por hacer" /></a>
+                        </div>
+                        <div className="card-item card-last">
+                            <ul>
+                                <li>React-native</li>
+                                <li>Redux</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <style jsx>
-            {`
+        <style jsx>{`
                 .title {
                     text-align: center;
-                    padding: 20px;
+                    padding: 4%;
                 }
 
                 .container {
@@ -104,12 +122,6 @@ export default () => (
                     grid-gap: 10px;
                     justify-content: center;
                     padding: 5% 0;
-                }
-                
-                @media (min-width: 1098px) and (max-width: 1391px)  {
-                    .item:last-of-type {
-                        display: none;
-                    }
                 }
 
                 .card {
