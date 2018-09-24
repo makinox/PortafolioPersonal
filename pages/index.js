@@ -26,12 +26,21 @@ export default class extends React.Component {
                     <Footer />
                 </section>
                 <style>{`
-
                     .initial {
                         background-image: url(${form1});
                         background-repeat: no-repeat;
-                        background-position-x: 200%;
+                        background-position-x: 210%;
+                        background-position-y: 20%;
                         background-size: 70%;
+                    }
+
+                    @media (max-width: 575.98px) {
+                        
+                        .initial {
+                            background-position-x: 340%;
+                            background-size: 80%;
+                        }
+                        
                     }
 
                     .final {

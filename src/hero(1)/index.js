@@ -1,5 +1,3 @@
-import img1 from '../../static/hero/img1.svg'
-
 export default () => (
     <section>
         <div className="container">
@@ -9,29 +7,28 @@ export default () => (
                     <p>Ingeniero de software</p>
                 </div>
             </div>
-            <div className="item">
-                <img src={img1} alt="Ilustración de Jesús david bossa"/>
-            </div>
         </div>
         <style jsx>{`
                 .container {
                     display: grid;
-                    grid-template-columns: repeat(2, minmax(auto, auto));
+                    grid-template-columns: minmax(auto, auto);
                     justify-content: center;
-                    padding: 25vh;
-                    grid-gap: 20px;
+                    padding: 15% 0;
                 }
 
                 .item {
-                    border: 1px red solid;
                     text-align: center;
                     padding: 20px;
                 }
 
-                img {
-                    width: 100%;
-                    font-size: 80px;
+                h1 {
+                    font-size: 45px;
                 }
+
+                p {
+                    font-size: 25px;
+                }
+
             `}</style>
     </section>
 )
