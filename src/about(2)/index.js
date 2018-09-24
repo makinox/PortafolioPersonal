@@ -5,12 +5,10 @@ export default () => (
                 <div>
                     <h2>Un poco sobre mi ...</h2>
                     <hr align="left" />
-                    <p>Soy un chico de colombia que le gusta mucho programar, normalmente curioso por todo aquello fantastico que ofrece la tecnología.</p>
-                    <p>Durante los dos ulimos años, me he dedicado a  desarrollar e innovar proyectos en tecnología, contribuyendo al desarrollo y futuro de la tecnologia.</p>
-                    <p>Trabajo en frontend, backend y devop. Construyo sofware y lo diseño convirtiendolo en productos y servicios
-                        increibles.
-                        </p>
-                    <p>Dejame mostrarte de que hablo.</p>
+                    <p>Soy un chico de Colombia que le gusta mucho programar, normalmente curioso por todo aquello fantástico que ofrece la tecnología.</p>
+                    <p>Durante los dos últimos años, me he dedicado a desarrollar e innovar proyectos en tecnología, contribuyendo a su desarrollo y futuro.</p>
+                    <p>Trabajo en frontend, backend y devop. Construyo y diseño diferentes tipos de software convirtiéndolos en productos y servicios increíbles.</p>
+                    <p>Déjame mostrarte.</p>
                 </div>
             </div>
         </div>

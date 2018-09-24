@@ -15,10 +15,16 @@ export default () => (
                     justify-content: center;
                     padding: 15% 0;
                 }
-
+                
                 .item {
                     text-align: center;
-                    padding: 20px;
+                    padding: 5% 0;
+                }
+
+                @media (max-width: 575.98px) {
+                    .item {
+                        padding: 20% 0;
+                    }
                 }
 
                 h1 {

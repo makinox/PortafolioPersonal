@@ -18,7 +18,7 @@ export default () => (
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
-                            <a href="https://www.regypos.com/" target="_blanck"><img src={img1} alt="Regypos creado por Jesus bossa" /></a>
+                            <a href="https://www.regypos.com/" target="_blanck"><img src={img1} height={90} alt="Regypos creado por Jesus bossa" /></a>
                         </div>
                         <div className="card-item card-last">
                             <ul>

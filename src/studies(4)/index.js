@@ -75,6 +75,7 @@ export default () => (
                 .card-background {
                     display: grid;
                     grid-template-columns:  minmax(auto, 80%);
+                    grid-template-rows: minmax(auto, 50%);
                     justify-content: center;
                 }
 
@@ -85,6 +86,9 @@ export default () => (
                 }
 
                 @media (max-width: 566px)  {
+                    .card-background {
+                        grid-template-columns:  minmax(auto, 100%);                        
+                    }
                     .card-container {
                         grid-template-columns: repeat(auto-fit , minmax(auto, 80px));
                     }
