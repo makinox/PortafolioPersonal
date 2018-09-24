@@ -5,7 +5,7 @@ import img4 from '../../static/exp/img4.jpg'
 import img5 from '../../static/exp/img5.png'
 
 export default () => (
-    <section>
+    <section id="experience">
         <div className="title">
             <h2>Un par de cosas que he hecho.</h2>
         </div>

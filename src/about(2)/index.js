@@ -1,6 +1,6 @@
 export default () => (
     <section>
-        <div className="container">
+        <div className="container" id="about">
             <div className="item">
                 <div>
                     <h2>Un poco sobre mi ...</h2>

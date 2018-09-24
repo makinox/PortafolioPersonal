@@ -1,20 +1,22 @@
+import img1 from '../../static/navbar/logo.svg'
+
 export default () => (
     <header>
         <nav>
             <div>
-                <li><img src="https://jesusbossa.com/public/logo.svg" alt="Logo de jesús bossa" /></li>
+                <a href="#"><img src={img1} alt="Logo de jesús bossa" /></a>
             </div>
             <div>
-                <li>Acerca</li>
+                <a href="#about">Acerca</a>
             </div>
             <div>
-                <li>Experiencia</li>
+                <a href="#experience">Experiencia</a>
             </div>
             <div>
-                <li>Educación</li>
+                <a href="#studies">Educación</a>
             </div>
             <div>
-                <li>Contactame</li>
+                <a href="#contact">Contactame</a>
             </div>
         </nav>
         <style jsx>
@@ -29,18 +31,19 @@ export default () => (
                 align-items: center;
             }
 
-            nav li {
+            nav a {
                 display: inline;
                 color: rgba(0,0,0, .7);
                 transition: 0.3s ease;
                 cursor: pointer;
+                text-decoration: none;
             }
 
-            nav li:hover {
+            nav a:hover {
                 color: rgb(0,0,0)
             }
 
-            nav li img {
+            nav a img {
                 width: 35px;                
             }
 

@@ -1,5 +1,5 @@
 export default () => (
-    <section>
+    <section id="contact">
         <div className="banner">
             <h2>Contacto</h2>
         </div>

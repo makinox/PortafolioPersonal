@@ -23,7 +23,7 @@ import img22 from '../../static/tech/Img22.svg'
 
 
 export default () => (
-    <section>
+    <section id="studies">
         <div className="banner">
             <h2>Que sé hasta ahora</h2>
         </div>
