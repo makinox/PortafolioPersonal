@@ -14,6 +14,7 @@ export default () => (
       <meta name="keywords" content="desarrollo, software, react, app, aplicaciones, moviles, android, iphone, ipad, windows, redux, construccion, arquitectura de software, ingeniero de software" />
 
       <meta name="author" content="Jesús Bossa" />
+      <link rel="shortcut icon" href="./static/navbar/logo.ico" />
       <meta name="description" content="Jesús david bossa, ingeniero de software especializado en frontend" />
     </Head>
     <style jsx global>{`
