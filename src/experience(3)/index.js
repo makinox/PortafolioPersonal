@@ -7,7 +7,7 @@ import img5 from '../../static/exp/img5.png'
 export default () => (
     <section id="experience">
         <div className="title">
-            <h2>Un par de cosas que he hecho.</h2>
+            <h2>Un par de cosas que he hecho</h2>
         </div>
         <div className="container">
             <div className="item">
