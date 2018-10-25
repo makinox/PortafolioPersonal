@@ -20,12 +20,13 @@ import img19 from '../../static/tech/Img19.svg'
 import img20 from '../../static/tech/Img20.svg'
 import img21 from '../../static/tech/Img21.svg'
 import img22 from '../../static/tech/Img22.svg'
+import message from '../lang/messages'
 
 
-export default () => (
+export default (props) => (
     <section id="studies">
         <div className="banner">
-            <h2>Que sé hasta ahora</h2>
+            <h2>{message[props.lang]['edu.title']}</h2>
         </div>
         <div className="card">
             <div className="card-background">
@@ -56,9 +57,9 @@ export default () => (
             </div>
             <div className="card-overlay">
                 <div>
-                    <h4>Puedes encontrar todos los soportes aquí</h4>
+                    <h4>{message[props.lang]['edu.sub']}</h4>
                     <div className="btn">
-                        <a href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing" target="_blank">Certificados</a>
+                        <a href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing" target="_blank">{message[props.lang]['edu.button']}</a>
                     </div>
                 </div>
             </div>
@@ -74,8 +75,7 @@ export default () => (
 
                 .card-background {
                     display: grid;
-                    grid-template-columns:  minmax(auto, 80%);
-                    grid-template-rows: minmax(auto, 50%);
+                    grid-template-columns:  minmax(auto, .8fr);
                     justify-content: center;
                 }
 
@@ -87,7 +87,7 @@ export default () => (
 
                 @media (max-width: 566px)  {
                     .card-background {
-                        grid-template-columns:  minmax(auto, 100%);                        
+                        grid-template-columns:  minmax(auto, 1fr);                        
                     }
                     .card-container {
                         grid-template-columns: repeat(auto-fit , minmax(auto, 80px));

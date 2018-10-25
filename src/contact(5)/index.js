@@ -1,11 +1,13 @@
-export default () => (
+import message from '../lang/messages'
+
+export default (props) => (
     <section id="contact">
         <div className="banner">
-            <h2>Contacto</h2>
+            <h2>{message[props.lang]['contact.title']}</h2>
         </div>
         <div className="container">
             <div className="item">
-                <h3>Hablemos un rato</h3>
+                <h3>{message[props.lang]['contact.sub']}</h3>
                 <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>
             </div>
         </div>

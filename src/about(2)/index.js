@@ -1,14 +1,16 @@
-export default () => (
+import message from '../lang/messages'
+
+export default (props) => (
     <section>
         <div className="container" id="about">
             <div className="item">
                 <div>
-                    <h2>Un poco sobre mi ...</h2>
+                    <h2>{message[props.lang]['about.title']}</h2>
                     <hr align="left" />
-                    <p>Soy un chico de Colombia que le gusta mucho programar, normalmente curioso por todo aquello fantástico que ofrece la tecnología.</p>
-                    <p>Durante los dos últimos años, me he dedicado a desarrollar e innovar proyectos en tecnología, contribuyendo a su desarrollo y futuro.</p>
-                    <p>Trabajo en frontend, backend y devop. Construyo y diseño diferentes tipos de software convirtiéndolos en productos y servicios increíbles.</p>
-                    <p>Déjame mostrarte.</p>
+                    <p>{message[props.lang]['about.p1']}</p>
+                    <p>{message[props.lang]['about.p2']}</p>
+                    <p>{message[props.lang]['about.p3']}</p>
+                    <p>{message[props.lang]['about.p4']}</p>
                 </div>
             </div>
         </div>

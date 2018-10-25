@@ -10,20 +10,29 @@ import img1 from '../static/footer/img1.jpg'
 import form1 from '../static/hero/form1.svg'
 
 export default class extends React.Component {
+
+    state = {
+        lang: 'en'
+    }
+
+    handleChange = (e) => {
+        this.setState({lang: e.target.value})
+    }
+
     render(){
         return (
             <div>
                 <Head />
                 <section className="initial">
-                    <Navbar />
-                    <Hero />
-                    <About />
+                    <Navbar change={this.handleChange} />
+                    <Hero lang={this.state.lang}/>
+                    <About lang={this.state.lang}/>
                 </section>
-                <Exp />
-                <Studies />
+                <Exp lang={this.state.lang}/>
+                <Studies lang={this.state.lang}/>
                 <section className="final">
-                    <Contact />
-                    <Footer />
+                    <Contact lang={this.state.lang}/>
+                    <Footer lang={this.state.lang}/>
                 </section>
                 <style>{`
                     .initial {

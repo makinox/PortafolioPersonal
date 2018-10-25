@@ -4,7 +4,7 @@ export default () => (
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta name="theme-color" content="#000000"></meta>
       <title>Jesús Bossa | Ingeniero de software</title>
 
@@ -15,7 +15,7 @@ export default () => (
 
       <meta name="author" content="Jesús Bossa" />
       <link rel="shortcut icon" href="./static/navbar/logo.ico" />
-      <meta name="description" content="Jesús david bossa, ingeniero de software especializado en frontend" />
+      <meta name="description" content="Jesús david bossa. Ingeniero de software especializado en frontend" />
     </Head>
     <style jsx global>{`
         * {

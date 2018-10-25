@@ -3,18 +3,19 @@ import img2 from '../../static/exp/img2.jpg'
 import img3 from '../../static/exp/img3.jpg'
 import img4 from '../../static/exp/img4.jpg'
 import img5 from '../../static/exp/img5.png'
+import message from '../lang/messages'
 
-export default () => (
+export default (props) => (
     <section id="experience">
         <div className="title">
-            <h2>Un par de cosas que he hecho</h2>
+            <h2>{message[props.lang]['exp.title']}</h2>
         </div>
         <div className="container">
             <div className="item">
                 <div className="card">
                     <div className="card-header">
                         <h4>Regypos</h4>
-                        <p>Proyecto en producción</p>
+                        <p>{message[props.lang]['exp.sub1']}</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
@@ -34,7 +35,7 @@ export default () => (
                 <div className="card">
                     <div className="card-header">
                         <h4>Inventario</h4>
-                        <p>Proyecto en producción</p>
+                        <p>{message[props.lang]['exp.sub1']}</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
@@ -55,7 +56,7 @@ export default () => (
                 <div className="card">
                     <div className="card-header">
                         <h4>Utopia</h4>
-                        <p>Proyecto en producción</p>
+                        <p>{message[props.lang]['exp.sub1']}</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
@@ -75,7 +76,7 @@ export default () => (
                 <div className="card">
                     <div className="card-header">
                         <h4>Priorize</h4>
-                        <p>Proyecto personal</p>
+                        <p>{message[props.lang]['exp.sub2']}</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
@@ -94,7 +95,7 @@ export default () => (
                 <div className="card">
                     <div className="card-header">
                         <h4>MovieApp</h4>
-                        <p>Proyecto en producción</p>
+                        <p>{message[props.lang]['exp.sub1']}</p>
                     </div>
                     <div className="card-body">
                         <div className="card-item card-first">
