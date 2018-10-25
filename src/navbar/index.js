@@ -1,4 +1,5 @@
 import img1 from '../../static/navbar/logo.svg'
+import message from '../lang/messages'
 
 export default (props) => (
     <header>
@@ -7,16 +8,16 @@ export default (props) => (
                 <a href="#"><img src={img1} alt="Logo de jesús bossa" /></a>
             </div>
             <div>
-                <a href="#about">Acerca</a>
+                <a href="#about">{message[props.lang]['nav.about']}</a>
             </div>
             <div>
-                <a href="#experience">Experiencia</a>
+                <a href="#experience">{message[props.lang]['nav.exp']}</a>
             </div>
             <div>
-                <a href="#studies">Educación</a>
+                <a href="#studies">{message[props.lang]['nav.edu']}</a>
             </div>
             <div>
-                <a href="#contact">Contactame</a>
+                <a href="#contact">{message[props.lang]['nav.contact']}</a>
             </div>
             <div>
                 <select onChange={props.change} name="lang">

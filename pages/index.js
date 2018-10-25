@@ -24,7 +24,7 @@ export default class extends React.Component {
             <div>
                 <Head />
                 <section className="initial">
-                    <Navbar change={this.handleChange} />
+                    <Navbar change={this.handleChange} lang={this.state.lang}/>
                     <Hero lang={this.state.lang}/>
                     <About lang={this.state.lang}/>
                 </section>
