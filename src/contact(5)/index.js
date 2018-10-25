@@ -1,4 +1,7 @@
 import message from '../lang/messages'
+import Ico1 from '../../static/media/instagram.svg'
+import Ico2 from '../../static/media/twitter.svg'
+import Ico3 from '../../static/media/linkedin.svg'
 
 export default (props) => (
     <section id="contact">
@@ -9,6 +12,11 @@ export default (props) => (
             <div className="item">
                 <h3>{message[props.lang]['contact.sub']}</h3>
                 <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>
+                <div className="media">
+                    <a target="_blank" href="https://www.instagram.com/jesus.david7" ><img src={Ico1} alt="Jesus bossa instagram"/></a>
+                    <a target="_blank" href="https://twitter.com/jesMakinox"><img src={Ico2} alt="Jesus bossa twitter"/></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/makinox/"><img src={Ico3} alt="Jesus bossa linkedin"/></a>
+                </div>
             </div>
         </div>
         <style jsx>{`
@@ -62,6 +70,16 @@ export default (props) => (
                 background-color: #0A6BE8;
                 box-shadow: 3px 3px 10px 0px rgba(2, 46, 214, .3);
             }
+
+            .media a {
+                cursor: pointer;
+                width: 20px;
+                padding: 6px 10px;
+                margin: 10px 5px;
+                border-radius: 50%;
+            }
+
+            
 
         `}</style>
     </section>
