@@ -1,0 +1,16 @@
+env:
+  porta:
+  -  secure: Bhd6OLEJx4dZ+1RTVe2kQjALDtRSWMI3AxWzSj2MwSSyS2OPehewzH8EAkGr2QJP+Su6xgQZn/2ERVNe6X1RH2NaWeUv5srXJH6h/pz6L9pTHya4G+4zUnLcVUtRjW9pjgu5pedRvixjOGg5D5jHYVtSiB4PLX44ku9VjXbIda9Y2ZkzmXb85j01yN3vtyzfMVlm4VdO9Hui6wF65/PeFxVniCr1MPvxHDAg2+OGybyA016NkH1DHpgTENi7DHlkXw6GkzhzIW+6d2fpaj6RY6dozVA/urqERrvqIrPfx9gFV2NoSZ9kSxQLpABb5Kxf+qogiQIfwjTcqtI6Jd1nnjfZi14yyKbpGZgMKucLM/WEOJNmv8EYvVb4RewkpGD5HDzRVj3ldaokKPu12amU6N/8i7vrFc/nFYR7WxCpqfVg5n9sMffxVfWnsbx5nLzZlTtZWCKWNOJJfx5FE5nwBnJgbRz5vv+YvzudIk6A4mf/uL2PHbWiH4z5KSwNS+RVOfvoYGW6Wyz25Uwwrv3TIfI4kgh3QuaErIRm56HXvThQFTJYvyx5imu2rS0V3KGOJBdv7Fi5+s2C0VDE3Vks6Pa9jCaGxbD7LX5LOt1FBlXEizHaASKqdWOxc9obxrDGCNd89jrCRC4GKBygpMtKXhf2EtC7HxdXEI1SaaJS7J8=
+language: node_js
+node_js:
+- '11'
+jobs:
+  include:
+  - stage: Installing dependencies
+    script: yarn install
+  - stage: Deploy
+    if: branch = master
+    script:
+    - npm install -g firebase-tools
+    - yarn build
+    - firebase deploy --token $porta
