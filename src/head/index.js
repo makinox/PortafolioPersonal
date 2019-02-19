@@ -1,6 +1,6 @@
 import Head from 'next/head'
 export default () => (
-  <div>
+  <>
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -9,6 +9,7 @@ export default () => (
       <title>Jesús Bossa | Ingeniero de software</title>
 
       <meta name="robots" content="index, follow" />
+      <meta name="robots" href="./static/robots.txt" />
       <meta name="revisit-after" content="3 days" />
 
       <meta name="keywords" content="desarrollo, software, react, app, aplicaciones, moviles, android, iphone, ipad, windows, redux, construccion, arquitectura de software, ingeniero de software" />
@@ -27,5 +28,5 @@ export default () => (
             min-height: 100%;
         }
     `}</style>
-  </div>
+  </>
 )
