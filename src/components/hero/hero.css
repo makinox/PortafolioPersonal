@@ -1,0 +1,25 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: minmax(auto, auto);
+  justify-content: center;
+  padding: 15% 0;
+}
+
+.hero-item {
+  text-align: center;
+  padding: 5% 0;
+}
+
+@media (max-width: 575.98px) {
+  .hero-item {
+      padding: 20% 0;
+  }
+}
+
+h1 {
+  font-size: 45px;
+}
+
+p {
+  font-size: 25px;
+}

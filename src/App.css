@@ -1,0 +1,25 @@
+.app-initial {
+  background-image: url(${form1});
+  background-repeat: no-repeat;
+  background-position-x: 210%;
+  background-position-y: 20%;
+  background-size: 70%;
+}
+
+@media (max-width: 575.98px) {
+  
+  .app-initial {
+      background-position-x: 340%;
+      background-size: 80%;
+  }
+  
+}
+
+.app-final {
+  background-image: url(${img1});
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
