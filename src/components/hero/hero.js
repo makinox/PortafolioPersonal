@@ -1,4 +1,5 @@
-import {React} from 'react'
+import React from 'react'
+import './hero.css'
 import message from '../lang/messages'
 
 export default (props) => (

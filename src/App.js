@@ -1,5 +1,5 @@
-import {React, Component} from 'react'
-
+import React from 'react'
+import './App.css'
 import Navbar from './components/navbar/navbar'
 import Hero from './components/hero/hero'
 import About from './components/about/about'
@@ -8,7 +8,7 @@ import Studies from './components/studies/studies'
 import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
 
-export default class extends Component {
+export default class extends React.Component {
 
 	state = {
 		lang: 'en'
@@ -33,6 +33,6 @@ export default class extends Component {
 					<Footer lang={this.state.lang} />
 				</section>
 			</>
-        )
+		)
 	}
 }

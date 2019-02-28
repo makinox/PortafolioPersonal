@@ -1,5 +1,5 @@
 .app-initial {
-  background-image: url(${form1});
+  background-image: url('./assets//hero/form1.svg');
   background-repeat: no-repeat;
   background-position-x: 210%;
   background-position-y: 20%;
@@ -16,7 +16,7 @@
 }
 
 .app-final {
-  background-image: url(${img1});
+  background-image: url('./assets/footer/img1.jpg');
   position: relative;
   background-position: center;
   background-size: cover;

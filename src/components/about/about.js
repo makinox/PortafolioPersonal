@@ -1,10 +1,11 @@
-import {React} from 'react'
+import React from 'react'
+import './about.css'
 import message from '../lang/messages'
 
 export default (props) => (
     <section>
-        <div className="container" id="about">
-            <div className="item">
+        <div className="about-container" id="about">
+            <div className="about-item">
                 <div>
                     <h2>{message[props.lang]['about.title']}</h2>
                     <hr align="left" />

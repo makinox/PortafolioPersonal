@@ -10,16 +10,16 @@
   padding: 5% 0;
 }
 
+.hero-item h1 {
+  font-size: 45px;
+}
+
+.hero-item p {
+  font-size: 25px;
+}
+
 @media (max-width: 575.98px) {
   .hero-item {
       padding: 20% 0;
   }
-}
-
-h1 {
-  font-size: 45px;
-}
-
-p {
-  font-size: 25px;
 }

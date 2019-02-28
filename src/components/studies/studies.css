@@ -1,32 +1,32 @@
-.card {
+.studies-card {
   position: relative;
   display: block;
   padding: 4% 0;
   margin: 2% 0;
 }
 
-.card-background {
+.studies-card-background {
   display: grid;
   grid-template-columns:  minmax(auto, .8fr);
   justify-content: center;
 }
 
-.card-container {
+.studies-card-container {
   display: grid;
   grid-template-columns:  repeat(auto-fit , minmax(auto, 110px));
   justify-content: center;
 }
 
 @media (max-width: 566px)  {
-  .card-background {
+  .studies-card-background {
       grid-template-columns:  minmax(auto, 1fr);                        
   }
-  .card-container {
+  .studies-card-container {
       grid-template-columns: repeat(auto-fit , minmax(auto, 80px));
   }
 }
 
-a {
+.studies-btn a {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -37,21 +37,21 @@ a {
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .3);
 }
 
-a:hover {
+.studies-btn a:hover {
   background-color: #170AFF;
 }
 
-a:active {
+.studies-btn a:active {
   background-color: #0A6BE8;
   box-shadow: 3px 3px 10px 0px rgba(2, 46, 214, .3);
 }
 
-.btn {
+.studies-btn {
   display: grid;
   justify-content: center;
 }
 
-.card-overlay {
+.studies-card-overlay {
   background: rgba(0,0,0, .6);
   position: absolute;
   color: white;
@@ -68,25 +68,25 @@ a:active {
   transition: opacity 0.3s, visibility 0s 0.3s;
 }
 
-.card:hover .card-overlay {
+.studies-card:hover .studies-card-overlay {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s;
 }
 
-h4, h2 {
+.studies-card-overlay h4, .studies-banner h2 {
   padding: 10px;
   text-align: center;
 }
 
-h4 {
+.studies-card-overlay h4 {
   text-shadow: 2px 2px #000000;
 }
 
-img {
+.studies-card-container img {
   cursor: pointer;
 }
 
-img:hover {
+.studies-card-container img:hover {
   transform: scale(1.05);
 }
