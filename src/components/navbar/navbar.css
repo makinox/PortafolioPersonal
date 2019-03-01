@@ -28,7 +28,8 @@ header nav select {
   border: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  cursor: pointer
+  cursor: pointer;
+  color: rgba(0,0,0, .7);
 }
 
 @media screen and (max-width: 479px) {

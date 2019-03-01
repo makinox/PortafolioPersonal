@@ -23,8 +23,8 @@ export default (props) => (
 			</div>
 			<div>
 				<select onChange={props.change} name="lang">
-					<option value="en" defaultValue>en</option>
-					<option value="es">es</option>
+					<option value="es" defaultValue>English</option>
+					<option value="en">Español</option>
 				</select>
 			</div>
 		</nav>
