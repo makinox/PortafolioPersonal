@@ -21,7 +21,7 @@ export default (props) => (
                     </div>
                     <div className="experience-card-body">
                         <div className="experience-card-item experience-card-first">
-                            <a href="https://www.regypos.com/" target="_blanck"><img src={img1} height={90} alt="Regypos creado por Jesus bossa" /></a>
+                            <a href="https://www.regypos.com/" target="_blanck"><img src={img1} alt="Regypos creado por Jesus bossa" /></a>
                         </div>
                         <div className="experience-card-item experience-card-last">
                             <ul>
@@ -47,7 +47,6 @@ export default (props) => (
                             <ul>
                                 <li>React</li>
                                 <li>Redux</li>
-                                <li>Bootstrap</li>
                                 <li>PWA</li>
                             </ul>
                         </div>
@@ -101,7 +100,7 @@ export default (props) => (
                     </div>
                     <div className="experience-card-body">
                         <div className="experience-card-item experience-card-first">
-                        <a href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40makinox/movieplayer-7392818119eeadcbdd885a0622b7063e-signed.apk"><img src={img5} width={120} height={90} alt="Aplicacion para tareas por hacer" /></a>
+                        <a href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40makinox/movieplayer-7392818119eeadcbdd885a0622b7063e-signed.apk"><img src={img5} width={120} alt="Aplicacion para tareas por hacer" /></a>
                         </div>
                         <div className="experience-card-item experience-card-last">
                             <ul>

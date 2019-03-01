@@ -3,7 +3,7 @@ import './about.css'
 import message from '../lang/messages'
 
 export default (props) => (
-    <section>
+    <section className="about">
         <div className="about-container" id="about">
             <div className="about-item">
                 <div>

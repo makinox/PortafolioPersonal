@@ -9,7 +9,13 @@
   padding: 20px;
   margin: 10px 0;
   background-color: #fff;
-  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
+  transition: all .5s;
+}
+
+.about-item:hover {
+  box-shadow: 0 1px 30px 1px rgba(0, 0, 0, .3);
+  transform: scale(1.1)
 }
 
 .about-item hr {
