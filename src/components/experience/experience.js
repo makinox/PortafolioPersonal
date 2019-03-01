@@ -86,7 +86,6 @@ export default (props) => (
                         <div className="experience-card-item experience-card-last">
                             <ul>
                                 <li>React</li>
-                                <li>Bootstrap</li>
                             </ul>
                         </div>
                     </div>
