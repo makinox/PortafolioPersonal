@@ -16,8 +16,8 @@ export default (props) => (
                 <a href='mailto:me@jesusbossa.com'>me@jesusbossa.com</a>
                 <div className="contact-media">
                     <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jesus.david7" ><img src={Ico1} alt="Jesus bossa instagram"/></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox"><img src={Ico2} alt="Jesus bossa twitter"/></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/"><img src={Ico3} alt="Jesus bossa linkedin"/></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox"><img src={Ico2} alt="Jesus bossa twitter"/></a>
                 </div>
             </div>
         </div>
