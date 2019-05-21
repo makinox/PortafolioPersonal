@@ -22,7 +22,7 @@ export default (props) => (
 				<a href="#contact">{message[props.lang]['nav.contact']}</a>
 			</div>
 			<div>
-				<select onChange={props.change} name="lang">
+				<select onChange={props.change} name="lang" aria-label="lang-changer">
 					<option value="en" defaultValue>EN</option>
 					<option value="es">ES</option>
 				</select>
