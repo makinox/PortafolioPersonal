@@ -6,7 +6,7 @@
 .experience-container {
   display: grid;
   grid-template-columns:  repeat(auto-fit , minmax(auto, 340px));
-  grid-gap: 10px;
+  grid-gap: 10px 40px;
   justify-content: center;
   padding: 5% 0;
 }
