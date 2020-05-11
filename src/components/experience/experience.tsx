@@ -6,56 +6,56 @@ import { Title, Container, Subtitle, Card, Image, CardBody, Description, CardWra
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "experience-img1.jpg" }) {
+      img1: file(relativePath: { eq: "experience/experience-img1.jpg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img2: file(relativePath: { eq: "experience-img2.jpg" }) {
+      img2: file(relativePath: { eq: "experience/experience-img2.jpg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img3: file(relativePath: { eq: "experience-img3.jpg" }) {
+      img3: file(relativePath: { eq: "experience/experience-img3.jpg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img4: file(relativePath: { eq: "experience-img4.jpg" }) {
+      img4: file(relativePath: { eq: "experience/experience-img4.jpg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img5: file(relativePath: { eq: "experience-img5.png" }) {
+      img5: file(relativePath: { eq: "experience/experience-img5.png" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img6: file(relativePath: { eq: "experience-img6.jpeg" }) {
+      img6: file(relativePath: { eq: "experience/experience-img6.jpeg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img7: file(relativePath: { eq: "experience-img7.jpeg" }) {
+      img7: file(relativePath: { eq: "experience/experience-img7.jpeg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      img8: file(relativePath: { eq: "experience-img8.jpeg" }) {
+      img8: file(relativePath: { eq: "experience/experience-img8.jpeg" }) {
         childImageSharp {
           fixed(width: 120, height: 90) {
             ...GatsbyImageSharpFixed
@@ -67,7 +67,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
 
   return (
     <section id="experience">
-      {console.log(data)}
+      {/* {console.log(data)} */}
       <Title>
         <h2>{getMessage(lang, 'exp.title')}</h2>
       </Title>
@@ -83,13 +83,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img1.childImageSharp.fixed} alt="Regypos creado por Jesus bossa" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>React</li>
                 <li>Bootstrap</li>
                 <li>PWA</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -104,13 +104,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img2.childImageSharp.fixed} alt="Inventario creado por Jesus bossa" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>React</li>
                 <li>Redux</li>
                 <li>PWA</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -125,13 +125,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img3.childImageSharp.fixed} alt="Aplicacion de utopia creada por Jesus bossa" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>Vanilla</li>
                 <li>Bootstrap</li>
                 <li>PWA</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -146,11 +146,11 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img4.childImageSharp.fixed} alt="Aplicacion para tareas por hacer" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>React</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -165,12 +165,12 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img5.childImageSharp.fixed} alt="Aplicacion para tareas por hacer" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>React-native</li>
                 <li>Redux</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -185,12 +185,12 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img6.childImageSharp.fixed} alt="Aplicacion de viajes" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>Flutter</li>
                 <li>BLoC</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -205,13 +205,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img7.childImageSharp.fixed} alt="Aplicacion de viajes" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>Ionic</li>
                 <li>Capacitor</li>
                 <li>Angular</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
 
@@ -226,13 +226,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 <Image fixed={data.img8.childImageSharp.fixed} alt="Aplicacion de viajes" />
               </a>
             </CardWrapper>
-            <div>
+            <CardWrapper>
               <ul>
                 <li>Ionic</li>
                 <li>Cordova</li>
                 <li>Angular</li>
               </ul>
-            </div>
+            </CardWrapper>
           </CardBody>
         </Card>
       </Container>
