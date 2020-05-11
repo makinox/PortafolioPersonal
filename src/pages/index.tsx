@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SEO, Navbar, Hero, About } from '../components/';
+import { SEO, Navbar, Hero, About, Experience } from '../components/';
 
 const IndexPage = () => (
   <>
@@ -8,6 +8,7 @@ const IndexPage = () => (
     <Navbar lang="en" change={() => {}} />
     <Hero lang="en" />
     <About lang="en" />
+    <Experience lang="en" />
 
     <Link to="/home/">Go to home</Link>
   </>
