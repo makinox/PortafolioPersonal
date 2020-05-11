@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import SEO from '../components/seo';
-import { Navbar } from '../components/navbar/navbar';
+import { SEO, Navbar, Hero } from '../components/';
 
 const IndexPage = () => (
   <>
     <Navbar lang="en" change={() => {}} />
+    <Hero lang="en" />
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
 
     <Link to="/home/">Go to home</Link>
   </>

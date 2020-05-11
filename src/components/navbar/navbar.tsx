@@ -3,7 +3,7 @@ import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Nav, LogoDiv, Anchor, Image, Select } from './styles';
 
-export const Navbar = ({ lang, change }: { lang: 'en' | 'es'; change: any }) => {
+export default ({ lang, change }: { lang: 'en' | 'es'; change: any }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "logo.svg" }) {
