@@ -1,7 +1,7 @@
 import React from 'react';
 import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Banner, Anchor, Container, Item, Subtitle, BannerTitle, Button } from './style';
+import { Banner, Anchor, Container, Item, Subtitle, BannerTitle, Button } from './styles';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
 
   return (
     <section id="contact">
-      {console.log(data)}
+      {/* {console.log(data)} */}
       <Banner>
         <BannerTitle>{getMessage(lang, 'contact.title')}</BannerTitle>
       </Banner>

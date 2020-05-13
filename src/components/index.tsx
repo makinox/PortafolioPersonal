@@ -6,3 +6,4 @@ export { default as Experience } from './experience/experience';
 export { default as Studies } from './studies/studies';
 export { default as Contact } from './contact/contact';
 export { default as Footer } from './footer/footer';
+export { Top } from './top/top';
