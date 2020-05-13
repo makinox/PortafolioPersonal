@@ -51,7 +51,7 @@ const message = {
     'edu.button': 'Certificados',
 
     'contact.title': 'Contacto',
-    'contact.sub': 'Hablemos un rato',
+    'contact.sub': 'Háblemos',
   },
 };
 
