@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 15px;
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
   display: grid;

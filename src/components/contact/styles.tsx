@@ -13,7 +13,7 @@ export const BannerTitle = styled.h2`
 
 export const Subtitle = styled.h3`
   padding: 20px 0;
-  color: white;
+  color: #000;
   font-size: 25px;
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top } from '../components/';
+import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top, Bottom } from '../components/';
 
 const IndexPage = () => (
   <>
@@ -11,8 +11,10 @@ const IndexPage = () => (
     </Top>
     <Experience lang="en" />
     <Studies lang="en" />
-    <Contact lang="en" />
-    <Footer />
+    <Bottom>
+      <Contact lang="en" />
+      <Footer />
+    </Bottom>
   </>
 );
 

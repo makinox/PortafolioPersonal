@@ -6,13 +6,13 @@ export const Footer = styled.footer`
 `;
 
 export const Title = styled.h2`
-  color: #8b8b8b;
+  color: #fff;
   opacity: 0.4;
   font-size: 20px;
 `;
 
 export const Anchor = styled.a`
-  color: #8b8b8b;
+  color: #fff;
   text-decoration: none;
 
   &:hover {
