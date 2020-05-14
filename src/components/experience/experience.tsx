@@ -62,6 +62,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img9: file(relativePath: { eq: "experience/experience-img9.jpeg" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -129,6 +136,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img7',
       imgAlt: 'Aplicacion de diario y notas por Jesus bossa',
       techList: ['Ionic', 'Capacitor', 'Angular'],
+    },
+    {
+      subtitle: 'Financial',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/financial',
+      imgName: 'img9',
+      imgAlt: 'Aplicacion de finanzas por Jesus bossa',
+      techList: ['Ios', 'Storyboards', 'Pods'],
     },
   ];
 
