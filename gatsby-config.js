@@ -3,6 +3,7 @@ module.exports = {
     title: `Portfolio`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    siteUrl: 'https://jesusbossa.dev/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +28,14 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://jesusbossa.dev',
+        sitemap: 'https://jesusbossa.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
