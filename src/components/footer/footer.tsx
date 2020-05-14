@@ -4,7 +4,7 @@ import { Footer, Anchor, Title } from './style';
 export default () => (
   <Footer>
     <Title>
-      2020 -{' '}
+      {new Date().getFullYear()} -{' '}
       <Anchor href="https://twitter.com/jesMakinox" target="_blank" rel="noopener noreferrer">
         Jesús Bossa
       </Anchor>
