@@ -68,5 +68,11 @@ module.exports = {
         clientsClaim: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Open Sans`, `Roboto`],
+      },
+    },
   ],
 };
