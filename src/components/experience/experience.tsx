@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { getMessage } from '../../lang/messages';
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Title, Container, Subtitle, Card, Image, CardBody, Description, CardWrapper } from './styles';
+import { Title, Container, Subtitle, Card, Image, CardBody, Description, CardWrapper, MoreButton, MoreContainer } from './styles';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -113,6 +114,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       techList: ['React-native', 'Redux'],
     },
     {
+      subtitle: 'Trips',
+      description: 'exp.sub1',
+      ref: 'https://drive.google.com/open?id=16xQ6AhcL--BtdMiLrOAjFTo5G4kvPevU',
+      imgName: 'img6',
+      imgAlt: 'Aplicacion de viajes por Jesus bossa',
+      techList: ['Flutter', 'BLoC'],
+    },
+    {
       subtitle: 'Priorize',
       description: 'exp.sub1',
       ref: 'https://priorize.jesusbossa.dev/',
@@ -127,14 +136,6 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img8',
       imgAlt: 'Aplicacion de red social por Jesus bossa',
       techList: ['Ionic', 'Cordova', 'Angular'],
-    },
-    {
-      subtitle: 'Trips',
-      description: 'exp.sub1',
-      ref: 'https://drive.google.com/open?id=16xQ6AhcL--BtdMiLrOAjFTo5G4kvPevU',
-      imgName: 'img6',
-      imgAlt: 'Aplicacion de viajes por Jesus bossa',
-      techList: ['Flutter', 'BLoC'],
     },
     {
       subtitle: 'Darys',
@@ -162,6 +163,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     },
   ];
 
+  const [limit, useLimit] = useState(5);
+
   proyects.reverse();
 
   return (
@@ -170,29 +173,39 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         <h2>{getMessage(lang, 'exp.title')}</h2>
       </Title>
       <Container>
-        {proyects.map((el, index) => (
-          <Card key={index}>
-            <div>
-              <Subtitle>{el.subtitle}</Subtitle>
-              <Description>{getMessage(lang, 'exp.sub1')}</Description>
-            </div>
-            <CardBody>
-              <CardWrapper>
-                <a href={el.ref} target="_blanck">
-                  <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
-                </a>
-              </CardWrapper>
-              <CardWrapper>
-                <ul>
-                  {el.techList.map((te, idx) => (
-                    <li key={idx}>{te}</li>
-                  ))}
-                </ul>
-              </CardWrapper>
-            </CardBody>
-          </Card>
-        ))}
+        {proyects.map((el, index) => {
+          if (index > limit) {
+            return;
+          }
+          return (
+            <Card key={index}>
+              <div>
+                <Subtitle>{el.subtitle}</Subtitle>
+                <Description>{getMessage(lang, 'exp.sub1')}</Description>
+              </div>
+              <CardBody>
+                <CardWrapper>
+                  <a href={el.ref} target="_blanck">
+                    <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
+                  </a>
+                </CardWrapper>
+                <CardWrapper>
+                  <ul>
+                    {el.techList.map((te, idx) => (
+                      <li key={idx}>{te}</li>
+                    ))}
+                  </ul>
+                </CardWrapper>
+              </CardBody>
+            </Card>
+          );
+        })}
       </Container>
+      <MoreContainer>
+        <MoreButton onClick={() => (limit === 5 ? useLimit(11) : useLimit(5))}>
+          {limit === 5 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        </MoreButton>
+      </MoreContainer>
     </section>
   );
 };

@@ -10,9 +10,10 @@ export const Container = styled.div`
 export const Item = styled.div`
   padding: 20px;
   margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s;
   background-color: #fff;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s;
 
   &:hover {
     box-shadow: 0 1px 30px 1px rgba(0, 0, 0, 0.3);

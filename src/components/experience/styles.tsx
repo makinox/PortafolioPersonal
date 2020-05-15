@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5% 0;
+  padding: 5% 0 2% 0;
 `;
 
 export const Card = styled.div`
@@ -56,4 +56,15 @@ export const Image = styled(GatsbyImage)`
     box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
   }
+`;
+
+export const MoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const MoreButton = styled.span`
+  cursor: pointer;
+  font-size: 35px;
+  color: #022ed8;
 `;
