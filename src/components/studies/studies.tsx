@@ -104,28 +104,9 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       <Card>
         <CardBackground>
           <CardContainer>
-            <img src={data.img1.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img2.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img3.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img4.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img5.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img6.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img7.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img8.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img9.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img10.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img11.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img12.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img13.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img14.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img15.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img16.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img17.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img18.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img19.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img20.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img21.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-            <img src={data.img22.publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+            {Object.keys(data).map((el: any, index: number) => (
+              <img key={index} src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+            ))}
           </CardContainer>
         </CardBackground>
         <Overlay>
