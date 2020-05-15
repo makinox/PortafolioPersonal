@@ -69,6 +69,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img10: file(relativePath: { eq: "experience/experience-img10.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -98,20 +105,20 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       techList: ['VanillaJS', 'PWA'],
     },
     {
-      subtitle: 'Priorize',
-      description: 'exp.sub1',
-      ref: 'https://priorize.jesusbossa.dev/',
-      imgName: 'img4',
-      imgAlt: 'Aplicacion para tareas basicas por Jesus bossa',
-      techList: ['ReactJS', 'PWA'],
-    },
-    {
       subtitle: 'MovieApp',
       description: 'exp.sub1',
       ref: 'https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40makinox/movieplayer-7392818119eeadcbdd885a0622b7063e-signed.apk',
       imgName: 'img5',
       imgAlt: 'Aplicacion para ver trailers de peliculas por Jesus bossa',
       techList: ['React-native', 'Redux'],
+    },
+    {
+      subtitle: 'Priorize',
+      description: 'exp.sub1',
+      ref: 'https://priorize.jesusbossa.dev/',
+      imgName: 'img4',
+      imgAlt: 'Aplicacion para tareas basicas por Jesus bossa',
+      techList: ['ReactJS', 'PWA'],
     },
     {
       subtitle: 'Factiffy',
@@ -144,6 +151,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img9',
       imgAlt: 'Aplicacion de finanzas por Jesus bossa',
       techList: ['Ios', 'Storyboards', 'Pods'],
+    },
+    {
+      subtitle: 'Petigram',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/petigram',
+      imgName: 'img10',
+      imgAlt: 'Aplicacion de mascotas por Jesus bossa',
+      techList: ['React', 'Hooks', 'GraphQl'],
     },
   ];
 
