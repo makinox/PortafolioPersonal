@@ -9,6 +9,6 @@ Used:
 - Gatsby
 - PWA (Workbox)
 
-Link to the app [link to portfolio!](https://jesusbossa.dev/)
+Link to [portfolio!](https://jesusbossa.dev/)
 
-<!-- ![Image of petigram](./readme/petgram.png) -->
+![Image of petigram](./src/images/preview.png)
