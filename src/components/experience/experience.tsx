@@ -77,6 +77,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img11: file(relativePath: { eq: "experience/experience-img11.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -161,9 +168,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgAlt: 'Aplicacion de mascotas por Jesus bossa',
       techList: ['React', 'Hooks', 'GraphQl'],
     },
+    {
+      subtitle: 'Cereno',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/Cereno',
+      imgName: 'img11',
+      imgAlt: 'Aplicacion de restaurantes por Jesus bossa',
+      techList: ['React', 'Gatsby', 'GraphQl'],
+    },
   ];
 
-  const [limit, useLimit] = useState(5);
+  const [limit, useLimit] = useState(6);
 
   proyects.reverse();
 
