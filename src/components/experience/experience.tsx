@@ -217,8 +217,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         })}
       </Container>
       <MoreContainer>
-        <MoreButton onClick={() => (limit === 5 ? useLimit(11) : useLimit(5))}>
-          {limit === 5 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        <MoreButton onClick={() => (limit === 6 ? useLimit(11) : useLimit(6))}>
+          {limit === 6 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
         </MoreButton>
       </MoreContainer>
     </section>
