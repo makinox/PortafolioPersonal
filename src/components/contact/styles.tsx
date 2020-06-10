@@ -72,3 +72,8 @@ export const Button = styled.a`
     transform: scale(1.3);
   }
 `;
+
+export const ContactMedia = styled.div`
+  display: flex;
+  justify-content: center;
+`;
