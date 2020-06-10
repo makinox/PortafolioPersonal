@@ -84,6 +84,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img12: file(relativePath: { eq: "experience/experience-img12.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -176,9 +183,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgAlt: 'Aplicacion de restaurantes por Jesus bossa',
       techList: ['React', 'Gatsby', 'GraphQl'],
     },
+    {
+      subtitle: 'Blog',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/blog',
+      imgName: 'img12',
+      imgAlt: 'Blog por Jesus bossa',
+      techList: ['React', 'Gatsby', 'GraphQl'],
+    },
   ];
 
-  const [limit, useLimit] = useState(6);
+  const [limit, useLimit] = useState(7);
 
   proyects.reverse();
 
@@ -217,8 +232,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         })}
       </Container>
       <MoreContainer>
-        <MoreButton onClick={() => (limit === 6 ? useLimit(11) : useLimit(6))}>
-          {limit === 6 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        <MoreButton onClick={() => (limit === 7 ? useLimit(11) : useLimit(7))}>
+          {limit === 7 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
         </MoreButton>
       </MoreContainer>
     </section>

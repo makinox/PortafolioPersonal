@@ -32,17 +32,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           <Subtitle>{getMessage(lang, 'contact.sub')}</Subtitle>
           <Anchor href="mailto:x@jesusbossa.dev">x@jesusbossa.dev</Anchor>
           <ContactMedia>
-            <Button target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jesus.david7">
-              <img src={data.Ico1.publicURL} alt="Jesus bossa instagram" />
-            </Button>
-            <Button target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/">
-              <img src={data.Ico2.publicURL} alt="Jesus bossa linkedin" />
+            <Button target="_blank" rel="noopener noreferrer" href="https://github.com/makinox">
+              <FaGithub />
             </Button>
             <Button target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox">
               <img src={data.Ico3.publicURL} alt="Jesus bossa twitter" />
             </Button>
-            <Button target="_blank" rel="noopener noreferrer" href="https://github.com/makinox">
-              <FaGithub />
+            <Button target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/">
+              <img src={data.Ico2.publicURL} alt="Jesus bossa linkedin" />
+            </Button>
+            <Button target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jesus.david7">
+              <img src={data.Ico1.publicURL} alt="Jesus bossa instagram" />
             </Button>
           </ContactMedia>
         </Item>
