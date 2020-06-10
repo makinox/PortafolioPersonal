@@ -55,7 +55,7 @@ export const Anchor = styled.a`
 export const Button = styled.a`
   cursor: pointer;
   width: 30px;
-  height: 30px;
+  height: 22px;
   border-radius: 50%;
   padding: 15px;
   margin: 10px 10px;

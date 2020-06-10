@@ -2,6 +2,7 @@ import React from 'react';
 import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Banner, Anchor, Container, Item, Subtitle, BannerTitle, Button, ContactMedia } from './styles';
+import { FaGithub } from 'react-icons/fa';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -39,6 +40,9 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
             </Button>
             <Button target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox">
               <img src={data.Ico3.publicURL} alt="Jesus bossa twitter" />
+            </Button>
+            <Button target="_blank" rel="noopener noreferrer" href="https://github.com/makinox">
+              <FaGithub />
             </Button>
           </ContactMedia>
         </Item>
