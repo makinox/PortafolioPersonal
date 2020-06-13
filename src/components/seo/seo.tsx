@@ -9,7 +9,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?: string; lang?: string; meta?: Array<any>; title: string }) => {
+const SEO = ({
+  description = '',
+  lang = 'en',
+  meta = [],
+  title,
+  image,
+  pathname = '/',
+}: {
+  description?: string;
+  lang?: string;
+  meta?: Array<any>;
+  title: string;
+  image: string;
+  pathname: string;
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +32,8 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?
             title
             description
             author
+            keywords
+            siteUrl
           }
         }
       }
@@ -25,14 +41,21 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={`${site.siteMetadata.title} | ${title}`}
       titleTemplate={`${site.siteMetadata.title} | %s`}
+      link={[
+        {
+          rel: 'canonical',
+          href: canonical,
+        },
+      ]}
       meta={[
         {
           name: `description`,
@@ -40,7 +63,7 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${site.siteMetadata.title} | ${title}`,
         },
         {
           property: `og:description`,
@@ -49,6 +72,10 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           name: `twitter:card`,
@@ -60,11 +87,15 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: { description?
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${site.siteMetadata.title} | ${title}`,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: 'keywords',
+          content: site.siteMetadata.keywords.join(','),
         },
       ].concat(meta)}
     />

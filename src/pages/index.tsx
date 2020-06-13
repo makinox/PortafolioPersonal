@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top, Bottom } from '../components/';
+import { graphql } from 'gatsby';
 
-const IndexPage = () => {
+const IndexPage = ({ data }: { data: any }) => {
   const [lang, useLang] = useState<'en' | 'es'>('en');
   const getLang = (e: any) => useLang(e.target.value);
+  console.log(data.placeholderImage.publicURL);
 
   return (
     <>
-      <SEO title="Jesús Bossa" />
+      <SEO title="Jesús Bossa" image={data.placeholderImage.publicURL} pathname=" " />
       <Top>
         <Navbar lang={lang} change={getLang} />
         <Hero lang={lang} />
@@ -24,3 +26,11 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "preview.png" }) {
+      publicURL
+    }
+  }
+`;
