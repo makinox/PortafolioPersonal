@@ -48,7 +48,7 @@ const SEO = ({
       htmlAttributes={{
         lang,
       }}
-      title={`${site.siteMetadata.title} | ${title}`}
+      title={`${title}`}
       titleTemplate={`${site.siteMetadata.title} | %s`}
       link={[
         {
