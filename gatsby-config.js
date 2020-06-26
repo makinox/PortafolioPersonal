@@ -5,6 +5,7 @@ module.exports = {
     author: `Jesús Bossa`,
     siteUrl: 'https://jesusbossa.dev/',
     keywords: ['Portafolio', 'Portfolio', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
+    image: '/preview.png',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

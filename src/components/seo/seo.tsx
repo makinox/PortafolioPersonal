@@ -34,6 +34,7 @@ const SEO = ({
             author
             keywords
             siteUrl
+            image
           }
         }
       }
@@ -42,6 +43,7 @@ const SEO = ({
 
   const metaDescription = description || site.siteMetadata.description;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const pathImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
 
   return (
     <Helmet
@@ -74,8 +76,16 @@ const SEO = ({
           content: `website`,
         },
         {
+          name: `image`,
+          content: pathImage,
+        },
+        {
           property: `og:image`,
-          content: image,
+          content: pathImage,
+        },
+        {
+          name: `twitter:image`,
+          content: pathImage,
         },
         {
           name: `twitter:card`,
