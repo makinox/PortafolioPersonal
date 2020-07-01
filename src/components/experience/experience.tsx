@@ -91,6 +91,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img13: file(relativePath: { eq: "experience/experience-img13.jpg" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -184,6 +191,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       techList: ['React', 'Gatsby', 'GraphQl'],
     },
     {
+      subtitle: 'Moose',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/mouse',
+      imgName: 'img13',
+      imgAlt: 'Museo interactivo por Jesus bossa',
+      techList: ['React', 'Gatsby', 'GraphQl'],
+    },
+    {
       subtitle: 'Blog',
       description: 'exp.sub1',
       ref: 'https://github.com/makinox/blog',
@@ -193,7 +208,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     },
   ];
 
-  const [limit, useLimit] = useState(7);
+  const [limit, useLimit] = useState(8);
 
   proyects.reverse();
 
@@ -232,8 +247,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         })}
       </Container>
       <MoreContainer>
-        <MoreButton onClick={() => (limit === 7 ? useLimit(11) : useLimit(7))}>
-          {limit === 7 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        <MoreButton onClick={() => (limit === 8 ? useLimit(11) : useLimit(8))}>
+          {limit === 8 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
         </MoreButton>
       </MoreContainer>
     </section>
