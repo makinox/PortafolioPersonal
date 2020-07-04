@@ -98,6 +98,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img14: file(relativePath: { eq: "experience/experience-img14.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -199,6 +206,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       techList: ['React', 'Gatsby', 'GraphQl'],
     },
     {
+      subtitle: 'Preview',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/shVideo',
+      imgName: 'img14',
+      imgAlt: 'App de videos por Jesus bossa',
+      techList: ['Angular', 'Custom', 'PWA'],
+    },
+    {
       subtitle: 'Blog',
       description: 'exp.sub1',
       ref: 'https://github.com/makinox/blog',
@@ -208,7 +223,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     },
   ];
 
-  const [limit, useLimit] = useState(8);
+  const [limit, useLimit] = useState(9);
 
   proyects.reverse();
 
@@ -247,8 +262,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         })}
       </Container>
       <MoreContainer>
-        <MoreButton onClick={() => (limit === 8 ? useLimit(11) : useLimit(8))}>
-          {limit === 8 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        <MoreButton onClick={() => (limit === 9 ? useLimit(14) : useLimit(9))}>
+          {limit === 9 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
         </MoreButton>
       </MoreContainer>
     </section>
