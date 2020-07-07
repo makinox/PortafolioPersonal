@@ -200,7 +200,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     {
       subtitle: 'Moose',
       description: 'exp.sub1',
-      ref: 'https://github.com/makinox/mouse',
+      ref: 'https://github.com/makinox/Moose',
       imgName: 'img13',
       imgAlt: 'Museo interactivo por Jesus bossa',
       techList: ['React', 'Gatsby', 'GraphQl'],
