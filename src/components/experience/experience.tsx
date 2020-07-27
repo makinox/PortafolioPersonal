@@ -203,7 +203,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       ref: 'https://github.com/makinox/Moose',
       imgName: 'img13',
       imgAlt: 'Museo interactivo por Jesus bossa',
-      techList: ['React', 'Gatsby', 'GraphQl'],
+      techList: ['React-Native', 'Gatsby', 'GraphQl'],
     },
     {
       subtitle: 'Preview',
