@@ -105,6 +105,13 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img15: file(relativePath: { eq: "experience/experience-img15.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -206,6 +213,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       techList: ['React-Native', 'Gatsby', 'GraphQl'],
     },
     {
+      subtitle: 'Memory Game',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/Memory-game/',
+      imgName: 'img15',
+      imgAlt: 'Juego de memoria por Jesus bossa',
+      techList: ['Vanilla'],
+    },
+    {
       subtitle: 'Preview',
       description: 'exp.sub1',
       ref: 'https://github.com/makinox/shVideo',
@@ -223,7 +238,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     },
   ];
 
-  const [limit, useLimit] = useState(9);
+  const [limit, useLimit] = useState(10);
 
   proyects.reverse();
 
@@ -262,8 +277,8 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         })}
       </Container>
       <MoreContainer>
-        <MoreButton onClick={() => (limit === 9 ? useLimit(14) : useLimit(9))}>
-          {limit === 9 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+        <MoreButton onClick={() => (limit === 10 ? useLimit(15) : useLimit(10))}>
+          {limit === 10 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
         </MoreButton>
       </MoreContainer>
     </section>

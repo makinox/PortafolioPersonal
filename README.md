@@ -11,4 +11,4 @@ Used:
 
 Link to [portfolio!](https://jesusbossa.dev/)
 
-![Image of petigram](./src/images/preview.png)
+![Image of portfolio](./src/images/preview.png)
