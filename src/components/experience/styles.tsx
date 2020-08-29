@@ -77,7 +77,10 @@ export const CardInfoContainer = styled.div`
   background-color: #fff;
   position: absolute;
   border-radius: 5px;
-  top: 0;
+  /* top: 30%;
+  bottom: 30%; */
+  /* left: 30%;
+  right: 30%; */
   min-width: 300px;
   display: none;
   width: auto;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getMessage } from '../../lang/messages';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineInfoCircle } from 'react-icons/ai';
 import { graphql, useStaticQuery } from 'gatsby';
+import { FluidContainer } from '../';
 import {
   Title,
   Container,
@@ -34,7 +35,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img1Big: file(relativePath: { eq: "experience/experience-img1.jpg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -48,7 +49,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img2Big: file(relativePath: { eq: "experience/experience-img2.jpg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -62,7 +63,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img3Big: file(relativePath: { eq: "experience/experience-img3.jpg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -76,7 +77,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img4Big: file(relativePath: { eq: "experience/experience-img4.jpg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -90,7 +91,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img5Big: file(relativePath: { eq: "experience/experience-img5.png" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -104,7 +105,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img6Big: file(relativePath: { eq: "experience/experience-img6.jpeg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -118,7 +119,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img7Big: file(relativePath: { eq: "experience/experience-img7.jpeg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -132,7 +133,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img8Big: file(relativePath: { eq: "experience/experience-img8.jpeg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -146,7 +147,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       }
       img9Big: file(relativePath: { eq: "experience/experience-img9.jpeg" }) {
         childImageSharp {
-          fixed(width: 500, height: 200) {
+          fixed(width: 300, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -396,67 +397,69 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
   proyects.reverse();
 
   return (
-    <section id="experience">
-      <Title>
-        <h2>{getMessage(lang, 'exp.title')}</h2>
-      </Title>
-      <Container>
-        {proyects.map((el, index) => {
-          if (index > limit) {
-            return;
-          }
-          return (
-            <Card key={index}>
-              <div>
-                <Subtitle>{el.subtitle}</Subtitle>
-                <Description>{getMessage(lang, 'exp.sub1')}</Description>
-              </div>
-              <CardBody>
-                <CardWrapper>
-                  <a href={el.ref} target="_blanck">
-                    <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
-                  </a>
-                </CardWrapper>
-              </CardBody>
-              <CardInfo>
-                <CardInfoButton>
-                  <AiOutlineInfoCircle />
-                  <span>More info</span>
-                </CardInfoButton>
+    <FluidContainer>
+      <section id="experience">
+        <Title>
+          <h2>{getMessage(lang, 'exp.title')}</h2>
+        </Title>
+        <Container>
+          {proyects.map((el, index) => {
+            if (index > limit) {
+              return;
+            }
+            return (
+              <Card key={index}>
+                <div>
+                  <Subtitle>{el.subtitle}</Subtitle>
+                  <Description>{getMessage(lang, 'exp.sub1')}</Description>
+                </div>
+                <CardBody>
+                  <CardWrapper>
+                    <a href={el.ref} target="_blanck">
+                      <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
+                    </a>
+                  </CardWrapper>
+                </CardBody>
+                <CardInfo>
+                  <CardInfoButton>
+                    <AiOutlineInfoCircle />
+                    <span>More info</span>
+                  </CardInfoButton>
 
-                <CardInfoContainer>
-                  <CardInfoShow>
-                    <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
-                    <CardInfoList>
-                      {el.techList.map((te, idx) => (
-                        <li key={idx}>{te}</li>
-                      ))}
-                    </CardInfoList>
-                  </CardInfoShow>
+                  <CardInfoContainer>
+                    <CardInfoShow>
+                      <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
+                      <CardInfoList>
+                        {el.techList.map((te, idx) => (
+                          <li key={idx}>{te}</li>
+                        ))}
+                      </CardInfoList>
+                    </CardInfoShow>
 
-                  <CardInfoFooter>
-                    {el.app && (
-                      <CardInfoFooterLink target="_blank" href={el.app}>
-                        App link
-                      </CardInfoFooterLink>
-                    )}
-                    {el.repo && (
-                      <CardInfoFooterLink target="_blank" href={el.repo}>
-                        Repo access
-                      </CardInfoFooterLink>
-                    )}
-                  </CardInfoFooter>
-                </CardInfoContainer>
-              </CardInfo>
-            </Card>
-          );
-        })}
-      </Container>
-      <MoreContainer>
-        <MoreButton onClick={() => (limit === 10 ? useLimit(15) : useLimit(10))}>
-          {limit === 10 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
-        </MoreButton>
-      </MoreContainer>
-    </section>
+                    <CardInfoFooter>
+                      {el.app && (
+                        <CardInfoFooterLink target="_blank" href={el.app}>
+                          App link
+                        </CardInfoFooterLink>
+                      )}
+                      {el.repo && (
+                        <CardInfoFooterLink target="_blank" href={el.repo}>
+                          Repo access
+                        </CardInfoFooterLink>
+                      )}
+                    </CardInfoFooter>
+                  </CardInfoContainer>
+                </CardInfo>
+              </Card>
+            );
+          })}
+        </Container>
+        <MoreContainer>
+          <MoreButton onClick={() => (limit === 10 ? useLimit(15) : useLimit(10))}>
+            {limit === 10 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
+          </MoreButton>
+        </MoreContainer>
+      </section>
+    </FluidContainer>
   );
 };
