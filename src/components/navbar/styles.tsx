@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav`
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 15px;
+export const Header = styled.header`
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
-  display: grid;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 5;
+`;
+
+export const Nav = styled.nav`
   grid-template-columns: minmax(auto, 800px) repeat(5, auto);
-  grid-gap: 10px;
   align-items: center;
+  grid-gap: 10px;
+  padding: 10px 10px 6px 10px;
+  display: grid;
 
   @media screen and (max-width: 479px) {
     grid-template-columns: repeat(5, auto);
@@ -35,6 +42,7 @@ export const Select = styled.select`
   -webkit-appearance: none;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
 `;
 
 export const LogoDiv = styled.div`
