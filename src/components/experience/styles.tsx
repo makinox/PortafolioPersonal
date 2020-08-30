@@ -19,12 +19,14 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  display: block;
-  border-radius: 5px;
-  background-color: #fff;
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
   transition: all 0.3s;
+  height: min-content;
+  border-radius: 5px;
+  display: block;
   margin: 20px;
+
   &:hover {
     box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3);
   }
@@ -32,6 +34,7 @@ export const Card = styled.div`
 
 export const Subtitle = styled.h4`
   padding: 20px 0 0px 20px;
+  text-align: center;
   margin: 0;
 `;
 
@@ -46,8 +49,9 @@ export const CardWrapper = styled.div`
 
 export const Description = styled.p`
   padding: 0px 10px 10px 20px;
-  margin: 0;
+  text-align: center;
   color: #5f6368;
+  margin: 0;
 `;
 
 export const Image = styled(GatsbyImage)<ItemProps>`
