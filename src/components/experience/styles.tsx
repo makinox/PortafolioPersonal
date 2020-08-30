@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import GatsbyImage from 'gatsby-image';
 
 interface ItemProps {
   readonly fixed?: string;
+  readonly view?: boolean;
 }
 
 export const Title = styled.div`
@@ -24,10 +25,9 @@ export const Card = styled.div`
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
   margin: 20px;
-  /* &:hover {
-    transform: scale(1.07);
+  &:hover {
     box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3);
-  } */
+  }
 `;
 
 export const Subtitle = styled.h4`
@@ -52,13 +52,19 @@ export const Description = styled.p`
 
 export const Image = styled(GatsbyImage)<ItemProps>`
   height: auto;
+  width: auto;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: all 0.3s;
-  /* &:hover {
+
+  @media (max-width: 580px) {
+    max-width: 200px;
+    max-height: 150px;
+  }
+
+  &:hover {
     box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
-  } */
+  }
 `;
 
 export const MoreContainer = styled.div`
@@ -76,23 +82,34 @@ export const CardInfo = styled.div`
   position: relative;
 `;
 
-export const CardInfoContainer = styled.div`
+export const CardInfoContainer = styled.div<ItemProps>`
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   position: absolute;
   border-radius: 5px;
-  /* top: 30%;
-  bottom: 30%; */
-  /* left: 30%;
-  right: 30%; */
   min-width: 300px;
   display: none;
   width: auto;
+  top: 30%;
   z-index: 6;
 
   &:hover {
     display: block;
   }
+
+  @media (max-width: 580px) {
+    left: 0%;
+    right: 0%;
+    max-width: 300px;
+  }
+
+  ${(props) => {
+    const alignment = !props.view ? `left: 0;` : 'right: 0;';
+
+    return css`
+      ${alignment}
+    `;
+  }}
 `;
 
 export const CardInfoButton = styled.div`
@@ -101,7 +118,7 @@ export const CardInfoButton = styled.div`
   cursor: pointer;
   color: #022ed8;
   display: flex;
-  margin: 10px 0;
+  margin: 10px;
 
   &:hover + ${CardInfoContainer} {
     display: block;
@@ -116,12 +133,23 @@ export const CardInfoButton = styled.div`
   }
 `;
 
-export const CardInfoList = styled.ul`
-  margin: 0 20px;
+export const CardInfoList = styled.div`
+  margin: 20px;
+`;
+
+export const CardInfoListItem = styled.div`
+  display: inline-flex;
+  padding: 0 5px;
+  border-right: 1px solid #afafaf;
+
+  &:last-of-type {
+    border: none;
+  }
 `;
 
 export const CardInfoShow = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 20px;

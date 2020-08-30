@@ -21,10 +21,12 @@ import {
   CardInfo,
   CardInfoList,
   CardInfoFooterLink,
+  CardInfoListItem,
 } from './styles';
 
 const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) => {
   const element = useRef(null);
+  const [view, useView] = useState(false);
 
   useEffect(() => {
     checkViewPort();
@@ -32,16 +34,9 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
 
   function checkViewPort() {
     const bounding = element.current.getBoundingClientRect();
-    // console.log(bounding);
-
-    let out: any = {};
-    out.top = bounding.top < 0;
-    out.left = bounding.left < 0;
-    out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
-    out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
-    out.any = out.top || out.left || out.bottom || out.right;
-    out.all = out.top && out.left && out.bottom && out.right;
-    console.log(out);
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    const isOffViewport = bounding.right + 200 > windowWidth;
+    useView(isOffViewport);
   }
 
   return (
@@ -62,13 +57,13 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
           <AiOutlineInfoCircle />
           <span>More info</span>
         </CardInfoButton>
-
-        <CardInfoContainer ref={element}>
+        {/* {console.log(view)} */}
+        <CardInfoContainer ref={element} view={view}>
           <CardInfoShow>
             <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
             <CardInfoList>
               {el.techList.map((te: any, idx: any) => (
-                <li key={idx}>{te}</li>
+                <CardInfoListItem key={idx}>{te}</CardInfoListItem>
               ))}
             </CardInfoList>
           </CardInfoShow>
