@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import GatsbyImage from 'gatsby-image';
 
+interface ItemProps {
+  readonly fixed?: string;
+}
+
 export const Title = styled.div`
   text-align: center;
   padding: 4%;
@@ -46,7 +50,7 @@ export const Description = styled.p`
   color: #5f6368;
 `;
 
-export const Image = styled(GatsbyImage)`
+export const Image = styled(GatsbyImage)<ItemProps>`
   height: auto;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
   border-radius: 5px;

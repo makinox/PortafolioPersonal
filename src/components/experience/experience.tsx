@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { getMessage } from '../../lang/messages';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineInfoCircle } from 'react-icons/ai';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -22,6 +22,74 @@ import {
   CardInfoList,
   CardInfoFooterLink,
 } from './styles';
+
+const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) => {
+  const element = useRef(null);
+
+  useEffect(() => {
+    checkViewPort();
+  }, []);
+
+  function checkViewPort() {
+    const bounding = element.current.getBoundingClientRect();
+    // console.log(bounding);
+
+    let out: any = {};
+    out.top = bounding.top < 0;
+    out.left = bounding.left < 0;
+    out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+    out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+    out.any = out.top || out.left || out.bottom || out.right;
+    out.all = out.top && out.left && out.bottom && out.right;
+    console.log(out);
+  }
+
+  return (
+    <Card ref={element}>
+      <div>
+        <Subtitle>{el.subtitle}</Subtitle>
+        <Description>{getMessage(lang, 'exp.sub1')}</Description>
+      </div>
+      <CardBody>
+        <CardWrapper>
+          <a href={el.ref} target="_blanck">
+            <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
+          </a>
+        </CardWrapper>
+      </CardBody>
+      <CardInfo>
+        <CardInfoButton>
+          <AiOutlineInfoCircle />
+          <span>More info</span>
+        </CardInfoButton>
+
+        <CardInfoContainer ref={element}>
+          <CardInfoShow>
+            <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
+            <CardInfoList>
+              {el.techList.map((te: any, idx: any) => (
+                <li key={idx}>{te}</li>
+              ))}
+            </CardInfoList>
+          </CardInfoShow>
+
+          <CardInfoFooter>
+            {el.app && (
+              <CardInfoFooterLink target="_blank" href={el.app}>
+                App link
+              </CardInfoFooterLink>
+            )}
+            {el.repo && (
+              <CardInfoFooterLink target="_blank" href={el.repo}>
+                Repo access
+              </CardInfoFooterLink>
+            )}
+          </CardInfoFooter>
+        </CardInfoContainer>
+      </CardInfo>
+    </Card>
+  );
+};
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -407,51 +475,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
             if (index > limit) {
               return;
             }
-            return (
-              <Card key={index}>
-                <div>
-                  <Subtitle>{el.subtitle}</Subtitle>
-                  <Description>{getMessage(lang, 'exp.sub1')}</Description>
-                </div>
-                <CardBody>
-                  <CardWrapper>
-                    <a href={el.ref} target="_blanck">
-                      <Image fixed={data[el.imgName].childImageSharp.fixed} alt={el.imgAlt} />
-                    </a>
-                  </CardWrapper>
-                </CardBody>
-                <CardInfo>
-                  <CardInfoButton>
-                    <AiOutlineInfoCircle />
-                    <span>More info</span>
-                  </CardInfoButton>
-
-                  <CardInfoContainer>
-                    <CardInfoShow>
-                      <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
-                      <CardInfoList>
-                        {el.techList.map((te, idx) => (
-                          <li key={idx}>{te}</li>
-                        ))}
-                      </CardInfoList>
-                    </CardInfoShow>
-
-                    <CardInfoFooter>
-                      {el.app && (
-                        <CardInfoFooterLink target="_blank" href={el.app}>
-                          App link
-                        </CardInfoFooterLink>
-                      )}
-                      {el.repo && (
-                        <CardInfoFooterLink target="_blank" href={el.repo}>
-                          Repo access
-                        </CardInfoFooterLink>
-                      )}
-                    </CardInfoFooter>
-                  </CardInfoContainer>
-                </CardInfo>
-              </Card>
-            );
+            return <CardComponent data={data} el={el} lang={lang} key={index} />;
           })}
         </Container>
         <MoreContainer>
