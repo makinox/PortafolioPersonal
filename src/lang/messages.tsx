@@ -18,6 +18,9 @@ const message = {
     'exp.title': "A couple of things I've done",
     'exp.sub1': 'Project in production',
     'exp.sub2': 'Personal project',
+    'exp.sub3': 'More info',
+    'exp.sub4': 'App access',
+    'exp.sub5': 'Repo access',
 
     'edu.title': 'What I have learned so far',
     'edu.sub': 'You can find all the supports here',
@@ -45,6 +48,9 @@ const message = {
     'exp.title': 'Un par de cosas que he hecho',
     'exp.sub1': 'Proyecto en producción',
     'exp.sub2': 'Proyecto personal',
+    'exp.sub3': 'Mas información',
+    'exp.sub4': 'Aplicación',
+    'exp.sub5': 'Repositorio',
 
     'edu.title': 'Que sé hasta ahora',
     'edu.sub': 'Puedes encontrar todos los soportes aquí',

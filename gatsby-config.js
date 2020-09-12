@@ -51,7 +51,7 @@ module.exports = {
         runtimeCaching: [
           {
             urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `CacheFirst`,
+            handler: `NetworkFirst`,
           },
           {
             urlPattern: /^https?:.*\page-data\/.*\/page-data\.json/,

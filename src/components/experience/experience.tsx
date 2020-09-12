@@ -22,6 +22,7 @@ import {
   CardInfoList,
   CardInfoFooterLink,
   CardInfoListItem,
+  CardInfoSpan,
 } from './styles';
 
 const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) => {
@@ -55,7 +56,7 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
       <CardInfo>
         <CardInfoButton>
           <AiOutlineInfoCircle />
-          <span>More info</span>
+          <CardInfoSpan>{getMessage(lang, 'exp.sub3')}</CardInfoSpan>
         </CardInfoButton>
         {/* {console.log(view)} */}
         <CardInfoContainer ref={element} view={view}>
@@ -71,12 +72,12 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
           <CardInfoFooter>
             {el.app && (
               <CardInfoFooterLink target="_blank" href={el.app}>
-                App link
+                {getMessage(lang, 'exp.sub4')}
               </CardInfoFooterLink>
             )}
             {el.repo && (
               <CardInfoFooterLink target="_blank" href={el.repo}>
-                Repo access
+                {getMessage(lang, 'exp.sub5')}
               </CardInfoFooterLink>
             )}
           </CardInfoFooter>

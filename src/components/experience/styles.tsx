@@ -33,7 +33,7 @@ export const Card = styled.div`
 `;
 
 export const Subtitle = styled.h4`
-  padding: 20px 0 0px 20px;
+  padding: 20px 0px 0px 0px;
   text-align: center;
   margin: 0;
 `;
@@ -48,7 +48,7 @@ export const CardWrapper = styled.div`
 `;
 
 export const Description = styled.p`
-  padding: 0px 10px 10px 20px;
+  padding: 0px 10px 10px 10px;
   text-align: center;
   color: #5f6368;
   margin: 0;
@@ -135,6 +135,10 @@ export const CardInfoButton = styled.div`
   &:focus + ${CardInfoContainer} {
     display: block;
   }
+`;
+
+export const CardInfoSpan = styled.span`
+  margin-left: 5px;
 `;
 
 export const CardInfoList = styled.div`
