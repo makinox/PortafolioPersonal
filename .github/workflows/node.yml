@@ -16,14 +16,11 @@ jobs:
         os: [macOS-latest, windows-latest, ubuntu-latest]
 
     steps:
-      # - name: Setup repo
       - uses: actions/checkout@v2
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
       - name: Cache Node.js modules
         uses: actions/cache@v2
         with:
@@ -32,12 +29,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
-
       - name: Running instal process
       - run: npm ci
-
       - name: Running building
       - run: npm run build --if-present
-
       - name: Running tests
       - run: npm test
