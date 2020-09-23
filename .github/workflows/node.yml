@@ -33,7 +33,7 @@ jobs:
       - name: Running tests
         run: npm test
 
-      - name: Deploy to Firebase - ${{ secrets.ProjectName }}
+      - name: Deploy to Firebase ${{ secrets.PROJECTNAME }}
         uses: doonstore/firebase-deploy@v1
         with:
           params: --only hosting
