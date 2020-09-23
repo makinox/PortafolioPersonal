@@ -34,9 +34,8 @@ jobs:
         run: npm test
 
       - name: Deploy to Firebase ${{ secrets.PROJECTNAME }}
-        uses: doonstore/firebase-deploy@v1
+        uses: w9jds/firebase-action@master
         with:
-          params: --only hosting
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          FIREBASE_PROJECT: portfolio
