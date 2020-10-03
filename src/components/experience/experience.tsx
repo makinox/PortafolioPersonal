@@ -300,6 +300,20 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img16: file(relativePath: { eq: "experience/experience-img16.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      img16Big: file(relativePath: { eq: "experience/experience-img16.png" }) {
+        childImageSharp {
+          fixed(width: 400, height: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -432,6 +446,16 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       app: 'https://memory.jesusbossa.dev/',
       imgName: 'img15',
       imgAlt: 'Juego de memoria por Jesus bossa',
+      techList: ['Vanilla'],
+    },
+    {
+      subtitle: 'Snake Game',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/Snake-game/',
+      repo: 'https://github.com/makinox/Snake-game',
+      app: 'https://snake.jesusbossa.dev/',
+      imgName: 'img16',
+      imgAlt: 'Juego de la culebrita por Jesus bossa',
       techList: ['Vanilla'],
     },
     {
