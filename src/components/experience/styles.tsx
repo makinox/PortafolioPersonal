@@ -15,7 +15,6 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5% 0 2% 0;
 `;
 
 export const Card = styled.div`
