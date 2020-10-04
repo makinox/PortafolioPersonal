@@ -1,7 +1,7 @@
 import React from 'react';
 import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Anchor, Button, Card, Subtitle, Title, CardBackground, CardContainer, Overlay, Slide, SlideTrack, Slider } from './styles';
+import { Anchor, Button, Title, Slide, SlideTrack, Slider, SlideImage, SlideMiddle } from './styles';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -101,17 +101,22 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       <div>
         <Title>{getMessage(lang, 'edu.title')}</Title>
       </div>
-      {/* <Card>
-        <CardBackground>
-          <CardContainer>
+
+      <article>
+        <Slider>
+          <SlideTrack>
             {Object.keys(data).map((el: any, index: number) => (
-              <img key={index} src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+              <Slide key={index}>
+                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+              </Slide>
             ))}
-          </CardContainer>
-        </CardBackground>
-        <Overlay>
-          <div>
-            <Subtitle>{getMessage(lang, 'edu.sub')}</Subtitle>
+            {Object.keys(data).map((el: any, index: number) => (
+              <Slide key={index}>
+                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+              </Slide>
+            ))}
+          </SlideTrack>
+          <SlideMiddle>
             <Button>
               <Anchor
                 href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing"
@@ -121,98 +126,18 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
                 {getMessage(lang, 'edu.button')}
               </Anchor>
             </Button>
-          </div>
-        </Overlay>
-      </Card> */}
-      <article>
-        <Slider>
-          <SlideTrack>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </Slide>
-          </SlideTrack>
+          </SlideMiddle>
           <SlideTrack reverse>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </Slide>
-            <Slide>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </Slide>
+            {Object.keys(data).map((el: any, index: number) => (
+              <Slide key={index}>
+                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+              </Slide>
+            ))}
+            {Object.keys(data).map((el: any, index: number) => (
+              <Slide key={index}>
+                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
+              </Slide>
+            ))}
           </SlideTrack>
         </Slider>
       </article>

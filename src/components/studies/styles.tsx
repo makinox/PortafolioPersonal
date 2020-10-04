@@ -10,11 +10,11 @@ const whiteGradient = css`
 
 const scrollAnimation = keyframes`
   0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(calc(-503px * 7))}
 `;
 
 const scrollAnimationReverse = keyframes`
-	0% { transform: translateX(calc(-250px * 7))}
+	0% { transform: translateX(calc(-503px * 7))}
   100% { transform: translateX(0); }
 `;
 
@@ -99,8 +99,8 @@ export const Slider = styled.div`
   &::after {
     position: absolute;
     ${whiteGradient};
-    height: 100px;
-    width: 200px;
+    height: 450px;
+    width: 150px;
     content: '';
     z-index: 2;
   }
@@ -123,14 +123,33 @@ export const SlideTrack = styled.div<ItemProps>`
   ${(props) =>
     props.reverse
       ? css`
-          animation: ${scrollAnimationReverse} 10s linear infinite;
+          animation: ${scrollAnimationReverse} 12s linear infinite;
         `
       : css`
-          animation: ${scrollAnimation} 10s linear infinite;
+          animation: ${scrollAnimation} 12s linear infinite;
         `}
+  &:hover {
+    animation-play-state: paused;
+  }
 `;
 
 export const Slide = styled.div`
-  height: 120px;
+  height: 190px;
   width: 250px;
+`;
+
+export const SlideImage = styled.img`
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 10px 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const SlideMiddle = styled.div`
+  margin: 30px 0;
 `;

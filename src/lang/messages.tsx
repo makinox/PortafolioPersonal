@@ -24,7 +24,7 @@ const message = {
 
     'edu.title': 'What I have learned so far',
     'edu.sub': 'You can find all the supports here',
-    'edu.button': 'Certificates',
+    'edu.button': 'See Certificates',
 
     'contact.title': 'Contact',
     'contact.sub': "Let's talk",
@@ -54,7 +54,7 @@ const message = {
 
     'edu.title': 'Que sé hasta ahora',
     'edu.sub': 'Puedes encontrar todos los soportes aquí',
-    'edu.button': 'Certificados',
+    'edu.button': 'Ver Certificados',
 
     'contact.title': 'Contacto',
     'contact.sub': 'Háblemos',
