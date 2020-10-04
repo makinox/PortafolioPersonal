@@ -1,7 +1,7 @@
 import React from 'react';
 import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Anchor, Button, Card, Subtitle, Title, CardBackground, CardContainer, Overlay } from './styles';
+import { Anchor, Button, Card, Subtitle, Title, CardBackground, CardContainer, Overlay, Slide, SlideTrack, Slider } from './styles';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -101,7 +101,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       <div>
         <Title>{getMessage(lang, 'edu.title')}</Title>
       </div>
-      <Card>
+      {/* <Card>
         <CardBackground>
           <CardContainer>
             {Object.keys(data).map((el: any, index: number) => (
@@ -123,7 +123,99 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
             </Button>
           </div>
         </Overlay>
-      </Card>
+      </Card> */}
+      <article>
+        <Slider>
+          <SlideTrack>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+            </Slide>
+          </SlideTrack>
+          <SlideTrack reverse>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </Slide>
+            <Slide>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+            </Slide>
+          </SlideTrack>
+        </Slider>
+      </article>
     </section>
   );
 };

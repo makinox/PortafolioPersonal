@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+interface ItemProps {
+  readonly reverse?: boolean;
+}
+
+const whiteGradient = css`
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+`;
+
+const scrollAnimation = keyframes`
+  0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+`;
+
+const scrollAnimationReverse = keyframes`
+	0% { transform: translateX(calc(-250px * 7))}
+  100% { transform: translateX(0); }
+`;
 
 export const Card = styled.div`
   position: relative;
@@ -69,4 +87,50 @@ export const Subtitle = styled.h4`
   padding: 10px;
   text-align: center;
   text-shadow: 2px 2px #000000;
+`;
+
+export const Slider = styled.div`
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    ${whiteGradient};
+    height: 100px;
+    width: 200px;
+    content: '';
+    z-index: 2;
+  }
+
+  &::after {
+    transform: rotateZ(180deg);
+    right: 0;
+    top: 0;
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+`;
+
+export const SlideTrack = styled.div<ItemProps>`
+  display: flex;
+  width: calc(250px * 14);
+  ${(props) =>
+    props.reverse
+      ? css`
+          animation: ${scrollAnimationReverse} 10s linear infinite;
+        `
+      : css`
+          animation: ${scrollAnimation} 10s linear infinite;
+        `}
+`;
+
+export const Slide = styled.div`
+  height: 120px;
+  width: 250px;
 `;
