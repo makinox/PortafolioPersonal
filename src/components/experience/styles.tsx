@@ -8,7 +8,7 @@ interface ItemProps {
 
 export const Title = styled.div`
   text-align: center;
-  padding: 4%;
+  padding: 10px 0 20px 0;
 `;
 
 export const Container = styled.div`
@@ -171,4 +171,33 @@ export const CardInfoFooter = styled.div`
 export const CardInfoFooterLink = styled.a`
   color: #022ed8;
   text-decoration: none;
+`;
+
+export const FilterContainer = styled.div`
+  justify-content: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const Anchor = styled.a`
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  border: 1px #022ed8 solid;
+  background-color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  color: #022ed8;
+
+  &:hover,
+  &.active {
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: #170aff;
+    color: #fff;
+  }
 `;

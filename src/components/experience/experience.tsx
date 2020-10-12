@@ -1,28 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { getMessage } from '../../lang/messages';
-import { AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineInfoCircle } from 'react-icons/ai';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidContainer } from '../';
 import {
-  Title,
-  Container,
-  Subtitle,
   Card,
   Image,
+  Title,
+  Anchor,
+  Subtitle,
   CardBody,
+  CardInfo,
+  Container,
   Description,
   CardWrapper,
-  MoreButton,
-  MoreContainer,
-  CardInfoButton,
-  CardInfoContainer,
   CardInfoShow,
-  CardInfoFooter,
-  CardInfo,
   CardInfoList,
-  CardInfoFooterLink,
-  CardInfoListItem,
   CardInfoSpan,
+  MoreContainer,
+  CardInfoFooter,
+  CardInfoButton,
+  FilterContainer,
+  CardInfoListItem,
+  CardInfoContainer,
+  CardInfoFooterLink,
 } from './styles';
 
 const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) => {
@@ -327,6 +328,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img1',
       imgAlt: 'Regypos creado por Jesus bossa',
       techList: ['React', 'Bootstrap', 'PWA'],
+      status: 'Old',
     },
     {
       subtitle: 'Inventario',
@@ -337,6 +339,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img2',
       imgAlt: 'Inventario creado por Jesus bossa',
       techList: ['React', 'Redux', 'Bootstrap', 'PWA'],
+      status: 'Old',
     },
     {
       subtitle: 'Utopia',
@@ -347,6 +350,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img3',
       imgAlt: 'Aplicacion de utopia creada por Jesus bossa',
       techList: ['VanillaJS', 'PWA'],
+      status: 'Old',
     },
     {
       subtitle: 'MovieApp',
@@ -357,6 +361,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img5',
       imgAlt: 'Aplicacion para ver trailers de peliculas por Jesus bossa',
       techList: ['React-native', 'Redux'],
+      status: 'Old',
     },
     {
       subtitle: 'Trips',
@@ -367,6 +372,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img6',
       imgAlt: 'Aplicacion de viajes por Jesus bossa',
       techList: ['Flutter', 'BLoC'],
+      status: 'Old',
     },
     {
       subtitle: 'Priorize',
@@ -377,6 +383,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img4',
       imgAlt: 'Aplicacion para tareas basicas por Jesus bossa',
       techList: ['ReactJS', 'PWA'],
+      status: 'Web',
     },
     {
       subtitle: 'Factiffy',
@@ -387,6 +394,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img8',
       imgAlt: 'Aplicacion de red social por Jesus bossa',
       techList: ['Ionic', 'Cordova', 'Angular'],
+      status: 'Native',
     },
     {
       subtitle: 'Darys',
@@ -397,6 +405,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img7',
       imgAlt: 'Aplicacion de diario y notas por Jesus bossa',
       techList: ['Ionic', 'Capacitor', 'Angular'],
+      status: 'Native',
     },
     {
       subtitle: 'Financial',
@@ -407,6 +416,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img9',
       imgAlt: 'Aplicacion de finanzas por Jesus bossa',
       techList: ['Ios', 'Storyboards', 'Pods'],
+      status: 'Native',
     },
     {
       subtitle: 'Petigram',
@@ -417,6 +427,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img10',
       imgAlt: 'Aplicacion de mascotas por Jesus bossa',
       techList: ['React', 'Hooks', 'GraphQl'],
+      status: 'Web',
     },
     {
       subtitle: 'Cereno',
@@ -427,6 +438,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img11',
       imgAlt: 'Aplicacion de restaurantes por Jesus bossa',
       techList: ['React', 'Gatsby', 'GraphQl'],
+      status: 'Web',
     },
     {
       subtitle: 'Moose',
@@ -437,6 +449,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img13',
       imgAlt: 'Museo interactivo por Jesus bossa',
       techList: ['React-Native', 'Gatsby', 'GraphQl'],
+      status: 'Native',
     },
     {
       subtitle: 'Memory Game',
@@ -447,6 +460,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img15',
       imgAlt: 'Juego de memoria por Jesus bossa',
       techList: ['Vanilla'],
+      status: 'Game',
     },
     {
       subtitle: 'Snake Game',
@@ -457,6 +471,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img16',
       imgAlt: 'Juego de la culebrita por Jesus bossa',
       techList: ['Vanilla'],
+      status: 'Game',
     },
     {
       subtitle: 'Preview',
@@ -467,6 +482,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img14',
       imgAlt: 'App de videos por Jesus bossa',
       techList: ['Angular', 'Custom', 'PWA'],
+      status: 'Web',
     },
     {
       subtitle: 'Blog',
@@ -477,10 +493,14 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img12',
       imgAlt: 'Blog por Jesus bossa',
       techList: ['React', 'Gatsby', 'GraphQl'],
+      status: 'Web',
     },
   ];
+  const [limit, useLimit] = useState('New');
 
-  const [limit, useLimit] = useState(10);
+  function HandleLimit(index: string = 'New') {
+    useLimit(index);
+  }
 
   proyects.reverse();
 
@@ -490,18 +510,55 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
         <Title>
           <h2>{getMessage(lang, 'exp.title')}</h2>
         </Title>
+        <FilterContainer>
+          <Anchor onClick={() => HandleLimit('New')} className={limit === 'New' ? 'active' : ''}>
+            New
+          </Anchor>
+          <Anchor onClick={() => HandleLimit('Web')} className={limit === 'Web' ? 'active' : ''}>
+            Web apps
+          </Anchor>
+          <Anchor onClick={() => HandleLimit('Native')} className={limit === 'Native' ? 'active' : ''}>
+            Native apps
+          </Anchor>
+          <Anchor onClick={() => HandleLimit('Game')} className={limit === 'Game' ? 'active' : ''}>
+            Games
+          </Anchor>
+          <Anchor onClick={() => HandleLimit('All')} className={limit === 'Old' ? 'active' : ''}>
+            All
+          </Anchor>
+        </FilterContainer>
         <Container>
           {proyects.map((el, index) => {
-            if (index > limit) {
-              return;
+            switch (limit) {
+              case 'New':
+                if (el.status !== 'Old') {
+                  return <CardComponent data={data} el={el} lang={lang} key={index} />;
+                }
+                break;
+              case 'Web':
+                if (el.status === 'Web') {
+                  return <CardComponent data={data} el={el} lang={lang} key={index} />;
+                }
+                break;
+              case 'Native':
+                if (el.status === 'Native') {
+                  return <CardComponent data={data} el={el} lang={lang} key={index} />;
+                }
+                break;
+              case 'Game':
+                if (el.status === 'Game') {
+                  return <CardComponent data={data} el={el} lang={lang} key={index} />;
+                }
+                break;
+              case 'All':
+                return <CardComponent data={data} el={el} lang={lang} key={index} />;
             }
-            return <CardComponent data={data} el={el} lang={lang} key={index} />;
           })}
         </Container>
         <MoreContainer>
-          <MoreButton onClick={() => (limit === 10 ? useLimit(15) : useLimit(10))}>
+          {/* <MoreButton onClick={() => (limit === 10 ? useLimit(15) : useLimit(10))}>
             {limit === 10 ? <AiOutlinePlusCircle /> : <AiOutlineMinusCircle />}
-          </MoreButton>
+          </MoreButton> */}
         </MoreContainer>
       </section>
     </FluidContainer>
