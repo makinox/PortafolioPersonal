@@ -5,11 +5,11 @@ import { graphql } from 'gatsby';
 const IndexPage = ({ data }: { data: any }) => {
   const [lang, useLang] = useState<'en' | 'es'>('en');
   const getLang = (e: any) => useLang(e.target.value);
-  console.log(data.placeholderImage.publicURL);
+  // console.log(data.placeholderImage.publicURL);
 
   return (
     <>
-      <SEO title="Jesús Bossa" image={data.placeholderImage.publicURL} pathname=" " />
+      <SEO title="Jesús David Bossa" image={data.placeholderImage.publicURL} pathname=" " />
       <Top>
         <Navbar lang={lang} change={getLang} />
         <Hero lang={lang} />

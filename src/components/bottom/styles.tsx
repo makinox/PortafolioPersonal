@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 interface SectionProps {
-  readonly backUrl: string;
+  readonly backUrl?: string;
 }
 
 export const Section = styled.section<SectionProps>`
   /* background-color: #666666; */
-  background-image: url(${(p: any) => (p.backUrl ? p.backUrl : '../../images/background/img1.jpg')});
+  background-image: url(${(p: any) => (p.backUrl ? p.backUrl : '')});
   background-repeat: no-repeat;
   background-position-x: 370%;
   background-position-y: 20%;

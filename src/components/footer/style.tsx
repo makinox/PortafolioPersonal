@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  padding: 10px;
+  padding: 2px 20px;
   background: rgba(0, 0, 0, 0.7);
 `;
 

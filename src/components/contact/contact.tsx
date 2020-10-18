@@ -7,9 +7,9 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
   return (
     <section id="contact">
       {/* {console.log(data)} */}
-      <Banner>
+      {/* <Banner>
         <BannerTitle>{getMessage(lang, 'contact.title')}</BannerTitle>
-      </Banner>
+      </Banner> */}
       <Container>
         <Item>
           <Subtitle>{getMessage(lang, 'contact.sub')}</Subtitle>

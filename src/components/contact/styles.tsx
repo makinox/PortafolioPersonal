@@ -21,7 +21,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
   justify-content: center;
-  padding: 200px 0px;
+  padding: 100px 0px;
   /* box-shadow: inset 0 0 200px 0 rgba(0, 0, 0, 0.6); */
 `;
 

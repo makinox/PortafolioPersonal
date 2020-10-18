@@ -32,6 +32,10 @@ export const Anchor = styled.a`
   }
 `;
 
+export const SectDiv = styled.div`
+  padding: 10px 0;
+`;
+
 export const Image = styled.img`
   width: 35px;
 `;
