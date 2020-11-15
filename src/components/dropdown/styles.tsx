@@ -10,7 +10,11 @@ export const DropdownHiden = styled.div`
   right: 1%;
 `;
 
-export const DropdownContainer = styled.div``;
+export const DropdownContainer = styled.div`
+  &:hover > ${DropdownHiden} {
+    display: flex !important;
+  }
+`;
 
 export const DropdownItem = styled.span`
   color: rgba(0, 0, 0, 0.7);
@@ -19,14 +23,6 @@ export const DropdownItem = styled.span`
 
   &:hover {
     color: rgb(0, 0, 0);
-  }
-
-  &:hover > ${DropdownHiden} {
-    display: flex !important;
-  }
-
-  &:hover ${DropdownHiden} {
-    display: flex !important;
   }
 `;
 
