@@ -1,4 +1,4 @@
-const message = {
+const message: object | any = {
   en: {
     'nav.about': 'About',
     'nav.exp': 'Experience',
@@ -61,6 +61,6 @@ const message = {
   },
 };
 
-export function getMessage<L extends keyof typeof message, K extends keyof typeof message.en>(lang: L, key: K) {
+export function getMessage(lang: string, key: string) {
   return message[lang][key];
 }
