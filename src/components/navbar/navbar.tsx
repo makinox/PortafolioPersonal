@@ -1,6 +1,6 @@
 import React from 'react';
 import { getMessage } from '../../lang/messages';
-import { FluidContainer } from '../';
+import { Dropdown, FluidContainer } from '../';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Nav, LogoDiv, Anchor, Image, Select, Header, SectDiv } from './styles';
 
@@ -34,14 +34,15 @@ export default ({ lang, change }: { lang: 'en' | 'es'; change: any }) => {
           <SectDiv>
             <Anchor href="#contact">{getMessage(lang, 'nav.contact')}</Anchor>
           </SectDiv>
-          <div>
-            <Select onChange={change} name="lang" aria-label="lang-changer">
+          <Dropdown change={change} lang={lang} />
+          {/* <div>
+            <Select name="lang" aria-label="lang-changer">
               <option value="en" defaultValue="true">
                 EN
               </option>
               <option value="es">ES</option>
             </Select>
-          </div>
+          </div> */}
         </Nav>
       </FluidContainer>
     </Header>

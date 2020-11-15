@@ -1,5 +1,6 @@
 export { default as FluidContainer } from './fluidContainer/fluidContainer';
 export { default as Experience } from './experience/experience';
+export { default as Dropdown } from './dropdown/dropdown';
 export { default as Studies } from './studies/studies';
 export { default as Contact } from './contact/contact';
 export { default as Navbar } from './navbar/navbar';

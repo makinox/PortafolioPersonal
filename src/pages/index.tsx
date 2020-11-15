@@ -3,8 +3,8 @@ import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top, Bo
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }: { data: any }) => {
-  const [lang, useLang] = useState<'en' | 'es'>('en');
-  const getLang = (e: any) => useLang(e.target.value);
+  const [lang, useLang] = useState<string | any>('en');
+  const getLang = (e: string) => useLang(e);
   // console.log(data.placeholderImage.publicURL);
 
   return (
