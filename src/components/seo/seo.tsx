@@ -35,7 +35,7 @@ const SEO = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : '';
   const pathImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
 
   return (
