@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import { IndexContainer } from '../containers';
+import { IndexContainer } from '../../containers';
 
 export default IndexContainer;
 
