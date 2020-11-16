@@ -14,7 +14,7 @@ const IndexPage = ({ data }: { data: any }) => {
 
   return (
     <>
-      <SEO title="Jesús David Bossa" image={data.placeholderImage.publicURL} description={getMessage(lang, 'about.p1')} pathname=" " />
+      <SEO title="Jesús David Bossa" lang={lang} image={data.placeholderImage.publicURL} description={getMessage(lang, 'about.p1')} pathname=" " />
       <Top>
         <Navbar lang={lang} change={HandleLang} />
         <Hero lang={lang} />
