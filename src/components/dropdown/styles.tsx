@@ -16,6 +16,11 @@ export const DropdownContainer = styled.div`
   }
 `;
 
+export const DropdownIcon = styled.img`
+  width: 28px;
+  height: 28px;
+`;
+
 export const DropdownItem = styled.span`
   color: rgba(0, 0, 0, 0.7);
   display: inline-block;
