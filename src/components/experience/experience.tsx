@@ -315,6 +315,20 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img17: file(relativePath: { eq: "experience/experience-img17.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      img17Big: file(relativePath: { eq: "experience/experience-img17.png" }) {
+        childImageSharp {
+          fixed(width: 400, height: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -427,6 +441,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img10',
       imgAlt: 'Aplicacion de mascotas por Jesus bossa',
       techList: ['React', 'Hooks', 'GraphQl'],
+      status: 'Web',
+    },
+    {
+      subtitle: 'Vtask',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/vtask',
+      repo: 'https://github.com/makinox/vtask',
+      app: 'https://vtask.jesusbossa.dev/',
+      imgName: 'img17',
+      imgAlt: 'Aplicacion de tareas por Jesus bossa',
+      techList: ['Vue'],
       status: 'Web',
     },
     {
