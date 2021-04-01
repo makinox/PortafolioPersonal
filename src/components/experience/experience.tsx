@@ -329,6 +329,34 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
           }
         }
       }
+      img18: file(relativePath: { eq: "experience/experience-img18.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      img18Big: file(relativePath: { eq: "experience/experience-img18.png" }) {
+        childImageSharp {
+          fixed(width: 400, height: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      img19: file(relativePath: { eq: "experience/experience-img19.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      img19Big: file(relativePath: { eq: "experience/experience-img19.png" }) {
+        childImageSharp {
+          fixed(width: 400, height: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -455,6 +483,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       status: 'Web',
     },
     {
+      subtitle: 'Thumb',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/Thumb',
+      repo: 'https://github.com/makinox/Thumb',
+      app: 'https://thumb.jesusbossa.dev/',
+      imgName: 'img18',
+      imgAlt: 'Aplicacion de votos por Jesus bossa',
+      techList: ['React'],
+      status: 'Web',
+    },
+    {
       subtitle: 'Cereno',
       description: 'exp.sub1',
       ref: 'https://github.com/makinox/Cereno',
@@ -463,6 +502,17 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
       imgName: 'img11',
       imgAlt: 'Aplicacion de restaurantes por Jesus bossa',
       techList: ['React', 'Gatsby', 'GraphQl'],
+      status: 'Web',
+    },
+    {
+      subtitle: 'Best pizza',
+      description: 'exp.sub1',
+      ref: 'https://github.com/makinox/Best-pizza',
+      repo: 'https://github.com/makinox/Best-pizza',
+      app: 'https://bpizza.jesusbossa.dev',
+      imgName: 'img19',
+      imgAlt: 'Aplicacion de pizza por Jesus bossa',
+      techList: ['React'],
       status: 'Web',
     },
     {
