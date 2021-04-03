@@ -5,7 +5,6 @@ interface SectionProps {
 }
 
 export const Section = styled.section<SectionProps>`
-  /* background-color: #666666; */
   background-image: url(${(p: any) => (p.backUrl ? p.backUrl : '')});
   background-repeat: no-repeat;
   background-position-x: 370%;

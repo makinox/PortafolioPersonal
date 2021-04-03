@@ -72,12 +72,12 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
 
           <CardInfoFooter>
             {el.app && (
-              <CardInfoFooterLink target="_blank" href={el.app}>
+              <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.app}>
                 {getMessage(lang, 'exp.sub4')}
               </CardInfoFooterLink>
             )}
             {el.repo && (
-              <CardInfoFooterLink target="_blank" href={el.repo}>
+              <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.repo}>
                 {getMessage(lang, 'exp.sub5')}
               </CardInfoFooterLink>
             )}

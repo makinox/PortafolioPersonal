@@ -17,7 +17,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Card = styled.div`
+export const Card = styled.article`
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   transition: all 0.3s;
@@ -29,9 +29,15 @@ export const Card = styled.div`
   &:hover {
     box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3);
   }
+
+  & > div:first-of-type {
+    text-align: center;
+  }
 `;
 
-export const Subtitle = styled.h4`
+export const Subtitle = styled.span`
+  font-size: 19px;
+  font-weight: bold;
   padding: 20px 0px 0px 0px;
   text-align: center;
   margin: 0;
