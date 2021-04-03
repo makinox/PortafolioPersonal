@@ -25,13 +25,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Running install process
-        run: yarn install
+        run: npm install
 
       - name: Running building
-        run: yarn build
+        run: npm run build
 
       - name: Running tests
-        run: yarn cy-test
+        run: npm run cy-test
 
       - name: Deploy to Firebase ${{ secrets.PROJECTNAME }}
         uses: w9jds/firebase-action@master
