@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { getMessage } from '../../lang/messages';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Anchor, Button, Title, Slide, SlideTrack, Slider, SlideImage, SlideMiddle } from './styles';
+import { Anchor, BadgeContainer, Button, SlideImage, Title } from './styles';
+import { useObserver } from '../../hooks/useObserver';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
   const data = useStaticQuery(graphql`
@@ -96,51 +97,44 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
     }
   `);
 
+  const [badges, useBadges] = useState(() => Object.values(data).slice(0, 4));
+
+  const [containerRef, isVisible] = useObserver({});
+
+  useEffect(() => {
+    let badgeInterval: ReturnType<typeof setTimeout>;
+    // console.log(isVisible);
+    if (isVisible) {
+      badgeInterval = setInterval(
+        () =>
+          useBadges(
+            Object.values(data)
+              .sort(() => 0.5 - Math.random())
+              .slice(0, 4)
+          ),
+        1500
+      );
+    }
+    return () => clearInterval(badgeInterval);
+  }, [isVisible]);
+
   return (
     <section id="studies">
       <div>
         <Title>{getMessage(lang, 'edu.title')}</Title>
       </div>
 
-      <article>
-        <Slider>
-          <SlideTrack>
-            {Object.keys(data).map((el: any, index: number) => (
-              <Slide key={index}>
-                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-              </Slide>
-            ))}
-            {Object.keys(data).map((el: any, index: number) => (
-              <Slide key={index}>
-                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-              </Slide>
-            ))}
-          </SlideTrack>
-          <SlideMiddle>
-            <Button>
-              <Anchor
-                href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {getMessage(lang, 'edu.button')}
-              </Anchor>
-            </Button>
-          </SlideMiddle>
-          <SlideTrack reverse>
-            {Object.keys(data).map((el: any, index: number) => (
-              <Slide key={index}>
-                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-              </Slide>
-            ))}
-            {Object.keys(data).map((el: any, index: number) => (
-              <Slide key={index}>
-                <SlideImage src={data[el].publicURL} alt="Logo de tecnologia dominada por jesús bossa" />
-              </Slide>
-            ))}
-          </SlideTrack>
-        </Slider>
-      </article>
+      <BadgeContainer ref={containerRef as React.MutableRefObject<any>}>
+        {badges.map((el: any, key) => (
+          <SlideImage key={key} src={el.publicURL} />
+        ))}
+      </BadgeContainer>
+
+      <Button>
+        <Anchor href="https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing" target="_blank" rel="noopener noreferrer">
+          {getMessage(lang, 'edu.button')}
+        </Anchor>
+      </Button>
     </section>
   );
 };

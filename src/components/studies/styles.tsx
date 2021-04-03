@@ -150,6 +150,12 @@ export const SlideImage = styled.img`
   }
 `;
 
+export const BadgeContainer = styled.div`
+  justify-content: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  display: flex;
+`;
 export const SlideMiddle = styled.div`
   margin: 30px 0;
 `;

@@ -21,14 +21,14 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
   justify-content: center;
-  padding: 100px 0px;
+  padding: 40px 0px;
   /* box-shadow: inset 0 0 200px 0 rgba(0, 0, 0, 0.6); */
 `;
 
 export const Item = styled.div`
   justify-content: center;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 `;
 
 export const Anchor = styled.a`
