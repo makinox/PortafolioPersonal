@@ -11,6 +11,8 @@ export const DropdownHiden = styled.div`
 `;
 
 export const DropdownContainer = styled.div`
+  position: relative;
+
   &:hover > ${DropdownHiden} {
     display: flex !important;
   }

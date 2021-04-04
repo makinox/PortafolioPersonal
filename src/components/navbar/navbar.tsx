@@ -35,14 +35,6 @@ export default ({ lang, change }: { lang: 'en' | 'es'; change: any }) => {
             <Anchor href="#contact">{getMessage(lang, 'nav.contact')}</Anchor>
           </SectDiv>
           <Dropdown change={change} lang={lang} />
-          {/* <div>
-            <Select name="lang" aria-label="lang-changer">
-              <option value="en" defaultValue="true">
-                EN
-              </option>
-              <option value="es">ES</option>
-            </Select>
-          </div> */}
         </Nav>
       </FluidContainer>
     </Header>
