@@ -28,6 +28,8 @@ const message: object | any = {
 
     'contact.title': 'Contact',
     'contact.sub': "Let's talk",
+
+    'gallery.title': 'Offtopic, I also do NFTs with the photographs I take',
   },
   es: {
     'nav.about': 'Acerca',
@@ -58,6 +60,8 @@ const message: object | any = {
 
     'contact.title': 'Contacto',
     'contact.sub': 'Háblemos',
+
+    'gallery.title': 'Offtopic, también hago NFTs con las fotografías que tomo',
   },
 };
 

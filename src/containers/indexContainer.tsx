@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { navigate } from 'gatsby';
 import { getMessage } from '../lang/messages';
-import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top, Bottom } from '../components/';
+import { SEO, Navbar, Hero, About, Experience, Studies, Contact, Footer, Top, Bottom, Gallery } from '../components/';
 
 const IndexPage = ({ data }: { data: any }) => {
   const url = typeof window !== 'undefined' ? window.location.pathname : '';
@@ -22,6 +22,7 @@ const IndexPage = ({ data }: { data: any }) => {
       </Top>
       <Experience lang={lang} />
       <Studies lang={lang} />
+      <Gallery lang={lang} />
       <Bottom>
         <Contact lang={lang} />
         <Footer />

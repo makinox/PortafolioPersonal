@@ -1,6 +1,6 @@
 import React from 'react';
 import { getMessage } from '../../lang/messages';
-import { Banner, Anchor, Container, Item, Subtitle, Button, ContactMedia } from './styles';
+import { Anchor, Container, Item, Subtitle, Button, ContactMedia } from './styles';
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default ({ lang }: { lang: 'en' | 'es' }) => {
