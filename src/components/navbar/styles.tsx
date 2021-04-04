@@ -38,6 +38,7 @@ export const SectDiv = styled.div`
 
 export const Image = styled.img`
   width: 35px;
+  height: 35px;
 `;
 
 export const Select = styled.select`
