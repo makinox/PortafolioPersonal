@@ -14,7 +14,7 @@ export const BannerTitle = styled.h2`
 export const Subtitle = styled.h3`
   padding: 20px 0;
   color: #000;
-  font-size: 25px;
+  font-size: 24px;
 `;
 
 export const Container = styled.div`
@@ -40,7 +40,7 @@ export const Anchor = styled.a`
   background-color: #022ed8;
   border-radius: 20px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
-  font-size: 20px;
+  font-size: 15px;
 
   &:hover {
     background-color: #170aff;

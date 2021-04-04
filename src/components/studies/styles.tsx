@@ -40,6 +40,7 @@ export const CardContainer = styled.div`
 export const Anchor = styled.a`
   display: inline-block;
   text-decoration: none;
+  font-size: 15px;
   color: white;
   border: 1px #022ed8 solid;
   padding: 10px 45px;

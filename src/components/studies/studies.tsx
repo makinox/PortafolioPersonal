@@ -126,7 +126,7 @@ export default ({ lang }: { lang: 'en' | 'es' }) => {
 
       <BadgeContainer ref={containerRef as React.MutableRefObject<any>}>
         {badges.map((el: any, key) => (
-          <SlideImage key={key} src={el.publicURL} />
+          <SlideImage key={key} src={el.publicURL} alt="Tecnologia dominada por Jesus Bossa" />
         ))}
       </BadgeContainer>
 
