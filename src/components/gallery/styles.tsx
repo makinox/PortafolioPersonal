@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const GallerySubtitle = styled.div`
-  margin-top: 40px;
+  margin-top: 100px;
 
   & h3 {
     text-align: center;
