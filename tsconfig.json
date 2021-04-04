@@ -9,8 +9,16 @@
 
     "jsx": "react",
     "types": ["cypress"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["content-visibility", "contain-intrinsic-size"]
+        }
+      }
+    ]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts","src/**/*"]
 
 }

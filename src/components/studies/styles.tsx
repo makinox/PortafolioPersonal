@@ -160,3 +160,8 @@ export const BadgeContainer = styled.div`
 export const SlideMiddle = styled.div`
   margin: 30px 0;
 `;
+
+export const Container = styled.div`
+  content-visibility: auto;
+  contain-intrinsic-size: 0 300px;
+`;

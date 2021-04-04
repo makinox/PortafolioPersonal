@@ -10,4 +10,7 @@ export const Section = styled.section<SectionProps>`
   background-position-x: 370%;
   background-position-y: 20%;
   background-size: 85%;
+
+  content-visibility: auto;
+  contain-intrinsic-size: 0 460px;
 `;

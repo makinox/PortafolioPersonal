@@ -26,6 +26,9 @@ export const Card = styled.article`
   display: block;
   margin: 20px;
 
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1300px;
+
   &:hover {
     box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3);
   }

@@ -5,6 +5,8 @@ export const Container = styled.div`
   grid-template-columns: minmax(auto, 900px);
   justify-content: center;
   padding: 20px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 348px;
 `;
 
 export const Item = styled.div`
