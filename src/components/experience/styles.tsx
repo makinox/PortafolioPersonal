@@ -125,7 +125,7 @@ export const CardInfoContainer = styled.div<ItemProps>`
 `;
 
 export const CardInfoButton = styled.div`
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   cursor: pointer;
   color: #022ed8;

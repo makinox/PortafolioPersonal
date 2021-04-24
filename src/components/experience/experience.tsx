@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { getMessage } from '../../lang/messages';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FluidContainer } from '../';
 import {
@@ -14,35 +13,15 @@ import {
   Container,
   Description,
   CardWrapper,
-  CardInfoShow,
-  CardInfoList,
-  CardInfoSpan,
   MoreContainer,
-  CardInfoFooter,
   CardInfoButton,
   FilterContainer,
-  CardInfoListItem,
-  CardInfoContainer,
   CardInfoFooterLink,
 } from './styles';
 
 const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) => {
-  const element = useRef(null);
-  const [view, useView] = useState(false);
-
-  useEffect(() => {
-    checkViewPort();
-  }, []);
-
-  function checkViewPort() {
-    const bounding = element.current.getBoundingClientRect();
-    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-    const isOffViewport = bounding.right + 200 > windowWidth;
-    useView(isOffViewport);
-  }
-
   return (
-    <Card ref={element}>
+    <Card>
       <div>
         <Subtitle>{el.subtitle}</Subtitle>
         <Description>{getMessage(lang, 'exp.sub1')}</Description>
@@ -56,33 +35,17 @@ const CardComponent = ({ el, lang, data }: { el: any; lang: any; data: any }) =>
       </CardBody>
       <CardInfo>
         <CardInfoButton>
-          <AiOutlineInfoCircle />
-          <CardInfoSpan>{getMessage(lang, 'exp.sub3')}</CardInfoSpan>
+          {el.app && (
+            <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.app}>
+              {getMessage(lang, 'exp.sub4')}
+            </CardInfoFooterLink>
+          )}
+          {el.repo && (
+            <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.repo}>
+              {getMessage(lang, 'exp.sub5')}
+            </CardInfoFooterLink>
+          )}
         </CardInfoButton>
-        {/* {console.log(view)} */}
-        <CardInfoContainer ref={element} view={view}>
-          <CardInfoShow>
-            <Image fixed={data[`${el.imgName}Big`].childImageSharp.fixed} alt={el.imgAlt} />
-            <CardInfoList>
-              {el.techList.map((te: any, idx: any) => (
-                <CardInfoListItem key={idx}>{te}</CardInfoListItem>
-              ))}
-            </CardInfoList>
-          </CardInfoShow>
-
-          <CardInfoFooter>
-            {el.app && (
-              <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.app}>
-                {getMessage(lang, 'exp.sub4')}
-              </CardInfoFooterLink>
-            )}
-            {el.repo && (
-              <CardInfoFooterLink target="_blank" rel="noopener noreferrer" href={el.repo}>
-                {getMessage(lang, 'exp.sub5')}
-              </CardInfoFooterLink>
-            )}
-          </CardInfoFooter>
-        </CardInfoContainer>
       </CardInfo>
     </Card>
   );

@@ -19,8 +19,8 @@ const message: object | any = {
     'exp.sub1': 'Project in production',
     'exp.sub2': 'Personal project',
     'exp.sub3': 'More info',
-    'exp.sub4': 'App access',
-    'exp.sub5': 'Repo access',
+    'exp.sub4': 'App',
+    'exp.sub5': 'Repo',
 
     'edu.title': 'What I have learned so far',
     'edu.sub': 'You can find all the supports here',
