@@ -1,66 +1,33 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "portfolio",
+  "version": "1.0.0",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Jesus Bossa <x@jesusbossa.dev>",
-  "dependencies": {
-    "gatsby": "^3.2.1",
-    "gatsby-image": "^3.2.0",
-    "gatsby-plugin-manifest": "^3.2.0",
-    "gatsby-plugin-react-helmet": "^4.2.0",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-robots-txt": "^1.5.5",
-    "gatsby-plugin-sharp": "^3.2.0",
-    "gatsby-plugin-sitemap": "^3.2.0",
-    "gatsby-plugin-styled-components": "^4.2.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-filesystem": "^3.2.0",
-    "gatsby-transformer-sharp": "^3.2.0",
-    "imagemin-pngquant": "^9.0.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0",
-    "styled-components": "^5.2.3"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-helmet": "^6.1.0",
-    "@types/styled-components": "^5.1.9",
-    "babel-preset-gatsby": "^1.2.0",
-    "cypress": "^6.8.0",
-    "identity-obj-proxy": "^3.0.0",
-    "prettier": "2.2.1",
-    "react-test-renderer": "^17.0.2",
-    "serve": "^11.3.2",
-    "start-server-and-test": "^1.12.1",
-    "typescript": "^4.2.3"
-  },
+  "description": "Jesús David Bossa | Portfolio",
+  "author": "Jesús David Bossa",
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "deploy": "npm run build && firebase deploy",
-    "clean": "gatsby clean",
-    "serve": "serve public --single -p 8000 ",
-    "test": "start-server-and-test start http://localhost:8000 cy-open",
-    "cy-test": "start-server-and-test serve http://localhost:8000 cy-run",
-    "cy-run": "cypress run",
-    "cy-open": "cypress open"
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "^3.4.0",
+    "gatsby-plugin-image": "^1.4.0",
+    "gatsby-plugin-manifest": "^3.4.0",
+    "gatsby-plugin-react-helmet": "^4.4.0",
+    "gatsby-plugin-sharp": "^3.4.0",
+    "gatsby-plugin-sitemap": "^4.0.0",
+    "gatsby-plugin-styled-components": "^4.4.0",
+    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-transformer-sharp": "^3.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.3"
   }
 }

@@ -34,6 +34,7 @@ jobs:
         run: npm run cy-test
 
       - name: Deploy to Firebase ${{ secrets.PROJECTNAME }}
+        if: contains(github.ref, 'master')
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting

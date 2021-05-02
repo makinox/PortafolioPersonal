@@ -1,12 +1,11 @@
-import { graphql } from 'gatsby';
-import { IndexContainer } from '../containers';
+import React from 'react';
 
-export default IndexContainer;
+function IndexPage() {
+  return (
+    <main>
+      <h1>Home Page</h1>
+    </main>
+  );
+}
 
-export const query = graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "preview.png" }) {
-      publicURL
-    }
-  }
-`;
+export default IndexPage;
