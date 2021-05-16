@@ -4217,12 +4217,6 @@ var plugins = [{
     "pure": false
   }
 }, {
-  name: 'gatsby-plugin-image',
-  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
-  options: {
-    "plugins": []
-  }
-}, {
   name: 'gatsby-plugin-react-helmet',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
   options: {
@@ -4238,6 +4232,12 @@ var plugins = [{
     "entryLimit": 45000,
     "query": "{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }",
     "excludes": []
+  }
+}, {
+  name: 'gatsby-plugin-image',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
+  options: {
+    "plugins": []
   }
 }, {
   name: 'gatsby-plugin-google-fonts',
