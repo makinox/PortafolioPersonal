@@ -7,7 +7,10 @@ function IndexPage() {
     <>
       <NavBar />
       <main>
-        <h1>Home Page</h1>
+        <article>
+          <h1 className="headline2">Jesús David Bossa</h1>
+          <h2 className="headline3">Software architect</h2>
+        </article>
         <Button use="contained" message="Say hi" onClick={() => alert('hi')} />
       </main>
     </>
