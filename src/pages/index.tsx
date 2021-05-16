@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavBar } from '../components';
-import { Button } from '@makinox/makinox-ui';
-import { Description, Hero } from '../containers';
+import { Description, Hero, Projects } from '../containers';
 
 function IndexPage() {
   return (
@@ -10,6 +9,7 @@ function IndexPage() {
       <main>
         <Hero />
         <Description />
+        <Projects />
       </main>
     </>
   );
