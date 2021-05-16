@@ -15,14 +15,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        fileName: `./src/types/gatsby-graphql.ts`,
-        documentPaths: ['./node_modules/gatsby-*/**/*.js'],
-      },
-    },
-
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Roboto\:300,400,500`, `Open Sans\:300,400,500`],

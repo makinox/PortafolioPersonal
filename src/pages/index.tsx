@@ -1,12 +1,10 @@
-import { graphql } from 'gatsby';
 import React from 'react';
 import { NavBar } from '../components';
 import { Description, Hero, Projects } from '../containers';
 
-function IndexPage({ data }) {
+function IndexPage() {
   return (
     <>
-      {console.log({ data })}
       <NavBar />
       <main>
         <Hero />
@@ -16,15 +14,5 @@ function IndexPage({ data }) {
     </>
   );
 }
-
-export const query = graphql`
-  query HomePageQuery {
-    site {
-      siteMetadata {
-        description
-      }
-    }
-  }
-`;
 
 export default IndexPage;
