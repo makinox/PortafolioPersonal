@@ -265,7 +265,7 @@ function Projects() {
       <ProjectSection className="flex flex-wrap justify-center">
         {ProjectInfo.reverse().map((el, index) => {
           const image = getImage(imageList[el.imgName]);
-          const CardButtons: any = [];
+          const CardButtons: [JSX.Element?, JSX.Element?] | any = [];
           if (el.repo) {
             CardButtons.push(
               <Button onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`} use="text" message="repo" />
