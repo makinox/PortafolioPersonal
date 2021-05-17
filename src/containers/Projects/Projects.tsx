@@ -1,9 +1,16 @@
-import { Button, Card } from '@makinox/makinox-ui';
+import { Button } from '@makinox/makinox-ui';
 import React, { useState } from 'react';
-import { ProjectFilter } from './Projects.styles';
+import { ProjectCard, ProjectFilter } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const ProjectList = ['New', 'Web apps', 'Native apps', 'Games', 'All'];
+const ProjectList = [
+  { text: 'New', filter: 'New' },
+  { text: 'Web apps', filter: 'Web' },
+  { text: 'Native apps', filter: 'Native' },
+  { text: 'Games', filter: 'Game' },
+  { text: 'All', filter: 'All' },
+];
 const ProjectInfo = [
   {
     subtitle: 'Regypos',
@@ -12,6 +19,7 @@ const ProjectInfo = [
     repo: '',
     app: 'https://www.regypos.com',
     imgName: 'img1',
+    imgSrc: '../../images/projects/projects-img1.jpg',
     imgAlt: 'Regypos creado por Jesus bossa',
     techList: ['React', 'Bootstrap', 'PWA'],
     status: 'Old',
@@ -23,6 +31,7 @@ const ProjectInfo = [
     repo: '',
     app: 'https://inventory.regypos.com',
     imgName: 'img2',
+    imgSrc: '../../images/projects/projects-img2.jpg',
     imgAlt: 'Inventario creado por Jesus bossa',
     techList: ['React', 'Redux', 'Bootstrap', 'PWA'],
     status: 'Old',
@@ -34,6 +43,7 @@ const ProjectInfo = [
     repo: '',
     app: 'https://utopia1.herokuapp.com',
     imgName: 'img3',
+    imgSrc: '../../images/projects/projects-img3.jpg',
     imgAlt: 'Aplicacion de utopia creada por Jesus bossa',
     techList: ['VanillaJS', 'PWA'],
     status: 'Old',
@@ -45,6 +55,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/moviePlayer',
     app: 'https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40makinox/movieplayer-7392818119eeadcbdd885a0622b7063e-signed.apk',
     imgName: 'img5',
+    imgSrc: '../../images/projects/projects-img5.jpg',
     imgAlt: 'Aplicacion para ver trailers de peliculas por Jesus bossa',
     techList: ['React-native', 'Redux'],
     status: 'Old',
@@ -56,6 +67,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/flutter-trips',
     app: 'https://drive.google.com/open?id=16xQ6AhcL--BtdMiLrOAjFTo5G4kvPevU',
     imgName: 'img6',
+    imgSrc: '../../images/projects/projects-img6.jpg',
     imgAlt: 'Aplicacion de viajes por Jesus bossa',
     techList: ['Flutter', 'BLoC'],
     status: 'Old',
@@ -67,6 +79,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/priorize',
     app: 'https://priorize.jesusbossa.dev/',
     imgName: 'img4',
+    imgSrc: '../../images/projects/projects-img4.jpg',
     imgAlt: 'Aplicacion para tareas basicas por Jesus bossa',
     techList: ['ReactJS', 'PWA'],
     status: 'Web',
@@ -78,6 +91,7 @@ const ProjectInfo = [
     repo: '',
     app: 'https://play.google.com/store/apps/details?id=com.jesusbossa.factiffy',
     imgName: 'img8',
+    imgSrc: '../../images/projects/projects-img8.jpg',
     imgAlt: 'Aplicacion de red social por Jesus bossa',
     techList: ['Ionic', 'Cordova', 'Angular'],
     status: 'Native',
@@ -89,6 +103,7 @@ const ProjectInfo = [
     repo: '',
     app: 'https://play.google.com/store/apps/details?id=com.darys.jesusbossa',
     imgName: 'img7',
+    imgSrc: '../../images/projects/projects-img7.jpg',
     imgAlt: 'Aplicacion de diario y notas por Jesus bossa',
     techList: ['Ionic', 'Capacitor', 'Angular'],
     status: 'Native',
@@ -100,6 +115,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/financial',
     app: '',
     imgName: 'img9',
+    imgSrc: '../../images/projects/projects-img9.jpg',
     imgAlt: 'Aplicacion de finanzas por Jesus bossa',
     techList: ['Ios', 'Storyboards', 'Pods'],
     status: 'Native',
@@ -111,6 +127,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/petigram',
     app: 'https://petgram-front-makinox.makinoxx.now.sh/',
     imgName: 'img10',
+    imgSrc: '../../images/projects/projects-img10.jpg',
     imgAlt: 'Aplicacion de mascotas por Jesus bossa',
     techList: ['React', 'Hooks', 'GraphQl'],
     status: 'Web',
@@ -122,6 +139,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/vtask',
     app: 'https://vtask.jesusbossa.dev/',
     imgName: 'img17',
+    imgSrc: '../../images/projects/projects-img17.jpg',
     imgAlt: 'Aplicacion de tareas por Jesus bossa',
     techList: ['Vue'],
     status: 'Web',
@@ -133,6 +151,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Thumb',
     app: 'https://thumb.jesusbossa.dev/',
     imgName: 'img18',
+    imgSrc: '../../images/projects/projects-img18.jpg',
     imgAlt: 'Aplicacion de votos por Jesus bossa',
     techList: ['React'],
     status: 'Web',
@@ -144,6 +163,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Cereno',
     app: 'https://cereno.jesusbossa.dev/',
     imgName: 'img11',
+    imgSrc: '../../images/projects/projects-img11.jpg',
     imgAlt: 'Aplicacion de restaurantes por Jesus bossa',
     techList: ['React', 'Gatsby', 'GraphQl'],
     status: 'Web',
@@ -155,6 +175,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Best-pizza',
     app: 'https://bpizza.jesusbossa.dev',
     imgName: 'img19',
+    imgSrc: '../../images/projects/projects-img19.jpg',
     imgAlt: 'Aplicacion de pizza por Jesus bossa',
     techList: ['React'],
     status: 'Web',
@@ -166,6 +187,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Moose',
     app: 'https://play.google.com/store/apps/details?id=moose.jesusbossa.dev',
     imgName: 'img13',
+    imgSrc: '../../images/projects/projects-img13.jpg',
     imgAlt: 'Museo interactivo por Jesus bossa',
     techList: ['React-Native', 'Gatsby', 'GraphQl'],
     status: 'Native',
@@ -177,6 +199,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Memory-game',
     app: 'https://memory.jesusbossa.dev/',
     imgName: 'img15',
+    imgSrc: '../../images/projects/projects-img15.jpg',
     imgAlt: 'Juego de memoria por Jesus bossa',
     techList: ['Vanilla'],
     status: 'Game',
@@ -188,6 +211,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/Snake-game',
     app: 'https://snake.jesusbossa.dev/',
     imgName: 'img16',
+    imgSrc: '../../images/projects/projects-img16.jpg',
     imgAlt: 'Juego de la culebrita por Jesus bossa',
     techList: ['Vanilla'],
     status: 'Game',
@@ -199,6 +223,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/shVideo',
     app: 'https://preview.jesusbossa.dev/',
     imgName: 'img14',
+    imgSrc: '../../images/projects/projects-img14.jpg',
     imgAlt: 'App de videos por Jesus bossa',
     techList: ['Angular', 'Custom', 'PWA'],
     status: 'Web',
@@ -210,6 +235,7 @@ const ProjectInfo = [
     repo: 'https://github.com/makinox/blog',
     app: 'https://voib.jesusbossa.dev/',
     imgName: 'img12',
+    imgSrc: '../../images/projects/projects-img12.jpg',
     imgAlt: 'Blog por Jesus bossa',
     techList: ['React', 'Gatsby', 'GraphQl'],
     status: 'Web',
@@ -220,7 +246,7 @@ function Projects() {
   const [filter, useFilter] = useState(ProjectList[0]);
   const imageList = useProjectQuery();
 
-  function HandleProjectFilter(element: string) {
+  function HandleProjectFilter(element) {
     useFilter(element);
   }
 
@@ -232,45 +258,75 @@ function Projects() {
           <Button
             key={`${element}-${idx}`}
             onClick={() => HandleProjectFilter(element)}
-            message={element}
+            message={element.text}
             use={element === filter ? 'contained' : 'outlined'}
           />
         ))}
       </ProjectFilter>
-      <section>
-        {ProjectInfo.map((el, index) => {
-          switch (filter) {
+      <section className="flex flex-wrap justify-center">
+        {ProjectInfo.reverse().map((el, index) => {
+          switch (filter.filter) {
             case 'New':
               if (el.status !== 'Old') {
+                const image = getImage(imageList[el.imgName]);
                 return (
-                  <Card use="outlined" title={el.subtitle} key={`${el.subtitle}-${index}`} media={imageList[el.imgName].childImageSharp.fixed.src} />
+                  <ProjectCard
+                    use="outlined"
+                    title={el.subtitle}
+                    key={`${el.subtitle}-${index}`}
+                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                  />
                 );
               }
               break;
             case 'Web':
               if (el.status === 'Web') {
+                const image = getImage(imageList[el.imgName]);
                 return (
-                  <Card use="outlined" title={el.subtitle} key={`${el.subtitle}-${index}`} media={imageList[el.imgName].childImageSharp.fixed.src} />
+                  <ProjectCard
+                    use="outlined"
+                    title={el.subtitle}
+                    key={`${el.subtitle}-${index}`}
+                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                  />
                 );
               }
               break;
             case 'Native':
               if (el.status === 'Native') {
+                const image = getImage(imageList[el.imgName]);
                 return (
-                  <Card use="outlined" title={el.subtitle} key={`${el.subtitle}-${index}`} media={imageList[el.imgName].childImageSharp.fixed.src} />
+                  <ProjectCard
+                    use="outlined"
+                    title={el.subtitle}
+                    key={`${el.subtitle}-${index}`}
+                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                  />
                 );
               }
               break;
             case 'Game':
               if (el.status === 'Game') {
+                const image = getImage(imageList[el.imgName]);
                 return (
-                  <Card use="outlined" title={el.subtitle} key={`${el.subtitle}-${index}`} media={imageList[el.imgName].childImageSharp.fixed.src} />
+                  <ProjectCard
+                    use="outlined"
+                    title={el.subtitle}
+                    key={`${el.subtitle}-${index}`}
+                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                  />
                 );
               }
               break;
             case 'All':
+              const image = getImage(imageList[el.imgName]);
               return (
-                <Card use="outlined" title={el.subtitle} key={`${el.subtitle}-${index}`} media={imageList[el.imgName].childImageSharp.fixed.src} />
+                <ProjectCard
+                  use="outlined"
+                  title={el.subtitle}
+                  key={`${el.subtitle}-${index}`}
+                  customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                />
               );
           }
         })}
