@@ -23,3 +23,11 @@ export const ProjectCard = styled(Card)`
     border-top-right-radius: inherit;
   }
 `;
+
+export const ProjectSection = styled.section`
+  margin: 10px 0;
+
+  & > article {
+    margin: 8px;
+  }
+`;

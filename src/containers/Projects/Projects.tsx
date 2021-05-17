@@ -1,6 +1,6 @@
-import { Button } from '@makinox/makinox-ui';
+import { Button, FluidContainer } from '@makinox/makinox-ui';
 import React, { useState } from 'react';
-import { ProjectCard, ProjectFilter } from './Projects.styles';
+import { ProjectCard, ProjectFilter, ProjectSection } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -251,9 +251,8 @@ function Projects() {
   }
 
   return (
-    <>
+    <FluidContainer>
       <ProjectFilter className="flex justify-center">
-        {console.log({ imageList, ProjectInfo })}
         {ProjectList.map((element, idx) => (
           <Button
             key={`${element}-${idx}`}
@@ -263,75 +262,85 @@ function Projects() {
           />
         ))}
       </ProjectFilter>
-      <section className="flex flex-wrap justify-center">
+      <ProjectSection className="flex flex-wrap justify-center">
         {ProjectInfo.reverse().map((el, index) => {
+          const image = getImage(imageList[el.imgName]);
+          const CardButtons: any = [];
+          if (el.repo) {
+            CardButtons.push(
+              <Button onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`} use="text" message="repo" />
+            );
+          }
+          if (el.app) {
+            CardButtons.push(<Button onClick={() => window.open(el.app, '_blank')} key={`button app ${el.description}`} use="text" message="app" />);
+          }
           switch (filter.filter) {
             case 'New':
               if (el.status !== 'Old') {
-                const image = getImage(imageList[el.imgName]);
                 return (
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                    buttons={CardButtons}
                   />
                 );
               }
               break;
             case 'Web':
               if (el.status === 'Web') {
-                const image = getImage(imageList[el.imgName]);
                 return (
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                    buttons={CardButtons}
                   />
                 );
               }
               break;
             case 'Native':
               if (el.status === 'Native') {
-                const image = getImage(imageList[el.imgName]);
                 return (
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                    buttons={CardButtons}
                   />
                 );
               }
               break;
             case 'Game':
               if (el.status === 'Game') {
-                const image = getImage(imageList[el.imgName]);
                 return (
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                    buttons={CardButtons}
                   />
                 );
               }
               break;
             case 'All':
-              const image = getImage(imageList[el.imgName]);
               return (
                 <ProjectCard
                   use="outlined"
                   title={el.subtitle}
                   key={`${el.subtitle}-${index}`}
                   customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
+                  buttons={CardButtons}
                 />
               );
           }
         })}
-      </section>
-    </>
+      </ProjectSection>
+    </FluidContainer>
   );
 }
 
