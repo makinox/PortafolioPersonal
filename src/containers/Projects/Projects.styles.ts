@@ -1,5 +1,6 @@
 import { Card } from '@makinox/makinox-ui';
 import styled from 'styled-components';
+import { FadeIn } from '../../animations';
 
 export const ProjectFilter = styled.section`
   & > button {
@@ -29,5 +30,6 @@ export const ProjectSection = styled.section`
 
   & > article {
     margin: 8px;
+    ${FadeIn({ time: '1s' })}
   }
 `;

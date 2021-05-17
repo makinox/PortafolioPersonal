@@ -98,7 +98,7 @@ export const useProjectQuery = () => {
               height: 200
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
-              transformOptions: { fit: COVER, cropFocus: NORTH }
+              transformOptions: { fit: COVER, cropFocus: ENTROPY }
             )
           }
         }
