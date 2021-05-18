@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavBar } from '../components';
-import { Description, Hero, Projects } from '../containers';
+import { Description, Hero, Projects, Studies } from '../containers';
 
 function IndexPage() {
   return (
@@ -10,6 +10,7 @@ function IndexPage() {
         <Hero />
         <Description />
         <Projects />
+        <Studies />
       </main>
     </>
   );
