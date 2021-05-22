@@ -1,7 +1,14 @@
 import React from 'react';
-import { Bar } from './Navbar.styles';
+import { useNavbarQuery } from './Navbar.graph';
+import { Bar, BarLogo } from './Navbar.styles';
 
-const LeftChild = <span>Porfolio</span>;
+const LeftChild = ({ LogoSource }) => (
+  <div className="flex items-center">
+    <BarLogo src={LogoSource} alt="Portafolio logo" />
+    <span>Porfolio</span>
+  </div>
+);
+
 const CenterChild = (
   <>
     <span>About</span>
@@ -18,7 +25,9 @@ const RightChild = (
 );
 
 function NavBar() {
-  return <Bar leftChild={LeftChild} centerChild={CenterChild} rightChild={RightChild} />;
+  const { logo } = useNavbarQuery();
+
+  return <Bar leftChild={<LeftChild LogoSource={logo.publicURL} />} centerChild={CenterChild} rightChild={RightChild} />;
 }
 
 export default NavBar;

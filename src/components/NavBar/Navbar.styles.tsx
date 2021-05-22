@@ -9,3 +9,9 @@ export const Bar = styled(TopBar)`
     }
   }
 `;
+
+export const BarLogo = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+`;
