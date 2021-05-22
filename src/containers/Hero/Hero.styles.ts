@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const TitleArticle = styled.article`
-  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 144px;
 `;
