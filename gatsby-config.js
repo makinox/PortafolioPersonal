@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Portfolio`,
-    description: `Jesús David Bossa | Portfolio`,
+    title: `Jesús David Bossa | Portfolio`,
+    description: `Portfolio of Jesús Bossa`,
     author: `Jesús David Bossa`,
     siteUrl: 'https://jesusbossa.dev/',
     keywords: ['Portafolio', 'Portfolio', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: 'src/images/logo.svg',
       },
     },
     {

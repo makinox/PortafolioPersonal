@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavBar } from '../components';
+import { NavBar, Seo } from '../components';
 import { Description, Footer, Hero, Projects, Studies } from '../containers';
 
 function IndexPage() {
   return (
     <>
+      <Seo />
       <NavBar />
       <main>
         <Hero />
