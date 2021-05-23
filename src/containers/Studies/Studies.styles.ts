@@ -15,7 +15,7 @@ export const StudiesImage = styled.img`
 `;
 
 export const StudiesContainer = styled.div`
-  margin: 48px 0;
+  margin: 76px 0;
   min-height: 170px;
 
   @media (max-width: 765px) {
