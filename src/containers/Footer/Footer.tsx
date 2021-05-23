@@ -6,7 +6,7 @@ import React from 'react';
 function Footer() {
   return (
     <>
-      <FluidContainer className="flex flex-col items-center ">
+      <FluidContainer className="flex flex-col items-center" id="contact">
         <h3 className="headline4 text-center">A couple of things I've done</h3>
         <FooterContactContainer>
           <Button use="contained" message="x@jesusbossa.dev" onClick={() => window.open('mailto:x@jesusbossa.dev')} />

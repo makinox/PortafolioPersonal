@@ -3,7 +3,9 @@ import { TopBar } from '@makinox/makinox-ui';
 
 export const Bar = styled(TopBar)`
   & > div > div:nth-child(2) {
-    span {
+    a {
+      color: #000;
+      text-decoration: none;
       margin: 0 10px;
       cursor: pointer;
     }

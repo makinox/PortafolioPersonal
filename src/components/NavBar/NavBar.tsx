@@ -5,16 +5,16 @@ import { Bar, BarLogo } from './Navbar.styles';
 const LeftChild = ({ LogoSource }) => (
   <div className="flex items-center">
     <BarLogo src={LogoSource} alt="Portafolio logo" />
-    <span>Porfolio</span>
+    <span>Portfolio</span>
   </div>
 );
 
 const CenterChild = (
   <>
-    <span>About</span>
-    <span>Experience</span>
-    <span>Education</span>
-    <span>Contact</span>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#studies">Education</a>
+    <a href="#contact">Contact</a>
   </>
 );
 const RightChild = (

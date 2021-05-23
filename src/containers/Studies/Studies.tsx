@@ -25,7 +25,7 @@ function Studies() {
   }, [isVisible]);
 
   return (
-    <FluidContainer>
+    <FluidContainer id="studies">
       <h3 className="headline4 text-center">What I have learned so far</h3>
 
       <StudiesContainer className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>

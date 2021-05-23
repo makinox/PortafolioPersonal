@@ -232,7 +232,7 @@ function Projects() {
   }
 
   return (
-    <FluidContainer>
+    <FluidContainer id="projects">
       <h3 className="headline4 text-center">A couple of things I've done</h3>
       <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (

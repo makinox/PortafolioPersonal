@@ -10,7 +10,7 @@ function Description() {
         maxWidth="600px"
         children={
           <>
-            <div className="card-header">
+            <div className="card-header" id="about">
               <h6 className="headline6">A little bit about me ...</h6>
             </div>
             <div className="card-body">
