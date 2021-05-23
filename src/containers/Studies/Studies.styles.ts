@@ -13,3 +13,24 @@ export const StudiesImage = styled.img`
     transform: scale(1.1);
   }
 `;
+
+export const StudiesContainer = styled.div`
+  margin: 48px 0;
+  min-height: 170px;
+
+  @media (max-width: 765px) {
+    & > img:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (max-width: 496px) {
+    min-height: 340px;
+  }
+
+  @media (max-width: 336px) {
+    & > img:nth-child(3) {
+      display: none;
+    }
+  }
+`;

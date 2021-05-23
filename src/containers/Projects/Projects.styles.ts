@@ -33,7 +33,8 @@ export const ProjectCard = styled(Card)`
 `;
 
 export const ProjectSection = styled.section`
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 48px;
 
   & > article {
     margin: 8px;

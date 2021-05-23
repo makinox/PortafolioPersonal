@@ -2,7 +2,7 @@ import { useObserver } from '../../hooks/useObserver';
 import { FluidContainer } from '@makinox/makinox-ui';
 import React, { useEffect, useState } from 'react';
 import { useStudiesQuery } from './Studies.graph';
-import { StudiesImage } from './Studies.styles';
+import { StudiesContainer, StudiesImage } from './Studies.styles';
 
 function Studies() {
   const studiesBadges = useStudiesQuery();
@@ -26,13 +26,13 @@ function Studies() {
 
   return (
     <FluidContainer>
-      <h3 className="headline4">What I have learned so far</h3>
+      <h3 className="headline4 text-center">What I have learned so far</h3>
 
-      <div className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>
+      <StudiesContainer className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>
         {badges.map((el: any, idx) => {
           return <StudiesImage key={idx} src={el.publicURL} alt="Tecnologia" />;
         })}
-      </div>
+      </StudiesContainer>
     </FluidContainer>
   );
 }
