@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { FadeIn } from '../../animations';
 
 export const ProjectFilter = styled.section`
+  margin: 48px 0;
+
   & > button {
     margin-right: 10px;
   }
@@ -20,8 +22,13 @@ export const ProjectCard = styled(Card)`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  & > div.card-customMedia div {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
 `;
 
