@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { FadeIn } from '../../animations';
 
 export const ProjectFilter = styled.section`
-  margin: 48px 0;
+  margin: 40px 0;
 
   & > button {
     margin-right: 10px;
+    margin-top: 8px;
   }
 
   & > button:last-of-type {

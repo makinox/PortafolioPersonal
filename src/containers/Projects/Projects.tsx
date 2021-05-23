@@ -234,7 +234,7 @@ function Projects() {
   return (
     <FluidContainer>
       <h3 className="headline4 text-center">A couple of things I've done</h3>
-      <ProjectFilter className="flex justify-center">
+      <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (
           <Button
             key={`${element}-${idx}`}
