@@ -2174,10 +2174,10 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@makinox/makinox-ui@^1.3.9":
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.3.9.tgz#72cbb899fe03846c292c42bf3fa8dd1dfbbbdb67"
-  integrity sha512-XzFnzX/K+GPSX46eTlNuWvyKvhf6j25oWX8y9SAPKD56VeGZmXZXRXyPFXzOpgKM6k6ORdTPIVP8bXZbScclAQ==
+"@makinox/makinox-ui@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.4.0.tgz#e57f36dffe9e592a9a027bdfd0575765aaf3e517"
+  integrity sha512-f0EqDAGUtkz0PfR4kS9/wFmnyPOM0dNXvRcJ5MlALjPMdfwuFt1osHIOMt2CV3DpYPaJzCzqGzm8AWMPSHDDmQ==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"

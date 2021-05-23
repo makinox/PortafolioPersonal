@@ -17,3 +17,13 @@ export const BarLogo = styled.img`
   height: 30px;
   margin-right: 10px;
 `;
+
+export const DropdownItem = styled.span`
+  min-width: 100px;
+  cursor: pointer;
+  padding: 5px;
+
+  &:hover {
+    background-color: rgba(var(--light-primary), 0.08);
+  }
+`;
