@@ -263,9 +263,10 @@ function Projects() {
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
+                    buttons={CardButtons}
+                    text={el.techList.join(' - ')}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                    buttons={CardButtons}
                   />
                 );
               }
@@ -276,9 +277,10 @@ function Projects() {
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
+                    buttons={CardButtons}
+                    text={el.techList.join(' - ')}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                    buttons={CardButtons}
                   />
                 );
               }
@@ -289,9 +291,10 @@ function Projects() {
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
+                    buttons={CardButtons}
+                    text={el.techList.join(' - ')}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} objectPosition="top" />}
-                    buttons={CardButtons}
                   />
                 );
               }
@@ -302,9 +305,10 @@ function Projects() {
                   <ProjectCard
                     use="outlined"
                     title={el.subtitle}
+                    buttons={CardButtons}
+                    text={el.techList.join(' - ')}
                     key={`${el.subtitle}-${index}`}
                     customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                    buttons={CardButtons}
                   />
                 );
               }
@@ -314,9 +318,10 @@ function Projects() {
                 <ProjectCard
                   use="outlined"
                   title={el.subtitle}
+                  buttons={CardButtons}
+                  text={el.techList.join(' - ')}
                   key={`${el.subtitle}-${index}`}
                   customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                  buttons={CardButtons}
                 />
               );
           }
