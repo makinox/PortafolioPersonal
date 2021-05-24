@@ -1,14 +1,14 @@
 import { Description, Footer, Hero, Projects, Studies } from '../containers';
 import { NavBar, Seo } from '../components';
-import i18n from '../lang/messages/en';
+import messages from '../lang/messages/en';
 import React from 'react';
 
 function IndexPage(props) {
   return (
     <>
-      {console.log({ props, i18n })}
+      {console.log({ props, messages })}
       <Seo lang={props.pageContext.langKey} />
-      <NavBar />
+      <NavBar messages={messages} />
       <main>
         <Hero />
         <Description />

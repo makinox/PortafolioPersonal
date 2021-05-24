@@ -1,4 +1,5 @@
 export default {
+  'nav.title': 'Portafolio',
   'nav.about': 'Acerca',
   'nav.exp': 'Experiencia',
   'nav.edu': 'Educación',

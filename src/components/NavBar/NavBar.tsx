@@ -1,23 +1,25 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import { useNavbarQuery } from './Navbar.graph';
 import { Dropdown } from '@makinox/makinox-ui';
 import { Bar, BarLogo, DropdownItem } from './Navbar.styles';
 
-const LeftChild = ({ LogoSource }) => (
+const LeftChild = ({ LogoSource, title }) => (
   <div className="flex items-center">
     <BarLogo src={LogoSource} alt="Portafolio logo" />
-    <span>Portfolio</span>
+    <span>{title}</span>
   </div>
 );
 
-const CenterChild = (
+const CenterChild = ({ messages }) => (
   <>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#studies">Education</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">{messages['nav.about']}</a>
+    <a href="#projects">{messages['nav.exp']}</a>
+    <a href="#studies">{messages['nav.edu']}</a>
+    <a href="#contact">{messages['nav.contact']}</a>
   </>
 );
+
 const RightChild = (
   <Dropdown
     Item={
@@ -28,7 +30,7 @@ const RightChild = (
       />
     }
     HiddenItems={[
-      <DropdownItem className="flex items-center">
+      <DropdownItem className="flex items-center" onClick={() => navigate('/es')}>
         <BarLogo
           src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
           alt="Español"
@@ -36,7 +38,7 @@ const RightChild = (
         />
         <span>English [en]</span>
       </DropdownItem>,
-      <DropdownItem className="flex items-center">
+      <DropdownItem className="flex items-center" onClick={() => navigate('/')}>
         <BarLogo
           src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
           alt="English"
@@ -48,10 +50,16 @@ const RightChild = (
   />
 );
 
-function NavBar() {
+function NavBar({ messages }) {
   const { logo } = useNavbarQuery();
 
-  return <Bar leftChild={<LeftChild LogoSource={logo.publicURL} />} centerChild={CenterChild} rightChild={RightChild} />;
+  return (
+    <Bar
+      leftChild={<LeftChild title={messages['nav.title']} LogoSource={logo.publicURL} />}
+      centerChild={<CenterChild messages={messages} />}
+      rightChild={RightChild}
+    />
+  );
 }
 
 export default NavBar;
