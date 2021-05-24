@@ -223,7 +223,7 @@ const ProjectInfo = [
   },
 ];
 
-function Projects() {
+function Projects({ messages }) {
   const [filter, useFilter] = useState(ProjectList[0]);
   const imageList = useProjectQuery();
 
@@ -233,7 +233,7 @@ function Projects() {
 
   return (
     <FluidContainer id="projects">
-      <h3 className="headline4 text-center">A couple of things I've done</h3>
+      <h3 className="headline4 text-center">{messages['exp.title']}</h3>
       <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (
           <Button

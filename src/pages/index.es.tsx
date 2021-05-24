@@ -10,8 +10,8 @@ function IndexPage(props) {
       <NavBar messages={messages} lang={props.pageContext.langKey} />
       <main>
         <Hero messages={messages} />
-        <Description />
-        <Projects />
+        <Description messages={messages} />
+        <Projects messages={messages} />
         <Studies />
         <Footer />
       </main>
