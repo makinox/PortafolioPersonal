@@ -27,7 +27,24 @@ const RightChild = (
         loading="lazy"
       />
     }
-    HiddenItems={[<DropdownItem>English [en]</DropdownItem>, <DropdownItem>Spanish [es]</DropdownItem>]}
+    HiddenItems={[
+      <DropdownItem className="flex items-center">
+        <BarLogo
+          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
+          alt="Español"
+          loading="lazy"
+        />
+        <span>English [en]</span>
+      </DropdownItem>,
+      <DropdownItem className="flex items-center">
+        <BarLogo
+          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
+          alt="English"
+          loading="lazy"
+        />
+        <span>Spanish [es]</span>
+      </DropdownItem>,
+    ]}
   />
 );
 

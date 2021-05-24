@@ -15,7 +15,8 @@ export const StudiesImage = styled.img`
 `;
 
 export const StudiesContainer = styled.div`
-  margin: 76px 0;
+  margin-top: 76px;
+  margin-bottom: 36px;
   min-height: 170px;
 
   @media (max-width: 765px) {
@@ -33,4 +34,8 @@ export const StudiesContainer = styled.div`
       display: none;
     }
   }
+`;
+
+export const CertCointainer = styled.div`
+  margin: 56px 0;
 `;

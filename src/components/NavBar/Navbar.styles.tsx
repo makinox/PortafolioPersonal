@@ -19,7 +19,7 @@ export const BarLogo = styled.img`
 `;
 
 export const DropdownItem = styled.span`
-  min-width: 100px;
+  min-width: 150px;
   cursor: pointer;
   padding: 5px;
 

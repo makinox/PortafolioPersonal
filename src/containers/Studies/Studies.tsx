@@ -1,8 +1,8 @@
 import { useObserver } from '../../hooks/useObserver';
-import { FluidContainer } from '@makinox/makinox-ui';
+import { Button, FluidContainer } from '@makinox/makinox-ui';
 import React, { useEffect, useState } from 'react';
 import { useStudiesQuery } from './Studies.graph';
-import { StudiesContainer, StudiesImage } from './Studies.styles';
+import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles';
 
 function Studies() {
   const studiesBadges = useStudiesQuery();
@@ -33,6 +33,14 @@ function Studies() {
           return <StudiesImage key={idx} src={el.publicURL} alt="Tecnologia" />;
         })}
       </StudiesContainer>
+
+      <CertCointainer className="flex justify-center">
+        <Button
+          use="contained"
+          message="See certificates"
+          onClick={() => window.open('https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing', '_blank')}
+        />
+      </CertCointainer>
     </FluidContainer>
   );
 }
