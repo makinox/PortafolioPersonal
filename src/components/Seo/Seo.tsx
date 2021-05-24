@@ -1,10 +1,8 @@
 import React from 'react';
-import { useLocation } from '@reach/router';
 import { Helmet } from 'react-helmet';
 import { useSeoQuery } from './Seo.graph';
 
 function SEO({ title, description, lang }: { title?: string; description?: string; lang?: string }) {
-  const { href } = useLocation();
   const { site } = useSeoQuery();
 
   const seo = {
@@ -17,7 +15,6 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
 
   return (
     <Helmet title={seo.title} titleTemplate={seo.title} htmlAttributes={{ lang: seo.lang }}>
-      {console.log({ href })}
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}

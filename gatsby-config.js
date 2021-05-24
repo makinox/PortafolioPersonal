@@ -1,3 +1,5 @@
+const languages = require('./src/lang/languajes.ts');
+
 module.exports = {
   siteMetadata: {
     title: `Jesús David Bossa | Portfolio`,
@@ -6,6 +8,7 @@ module.exports = {
     siteUrl: 'https://jesusbossa.dev/',
     keywords: ['Portafolio', 'Portfolio', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
     image: '/preview.png',
+    languages,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -14,6 +17,15 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: true,
+        prefixDefault: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
