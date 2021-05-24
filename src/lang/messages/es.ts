@@ -5,7 +5,7 @@ export default {
   'nav.edu': 'Educación',
   'nav.contact': 'Contactame',
 
-  'hero.sub': 'Ingeniero de software',
+  'hero.sub': 'Arquitecto de software',
 
   'about.title': 'Un poco sobre mi ...',
   'about.p1': 'Soy un chico de Colombia que le gusta mucho programar, normalmente curioso por todo aquello fantástico que ofrece la tecnología.',

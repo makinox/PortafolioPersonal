@@ -6,11 +6,10 @@ import React from 'react';
 function IndexPage(props) {
   return (
     <>
-      {console.log({ props, messages })}
       <Seo lang={props.pageContext.langKey} />
-      <NavBar messages={messages} />
+      <NavBar messages={messages} lang={props.pageContext.langKey} />
       <main>
-        <Hero />
+        <Hero messages={messages} />
         <Description />
         <Projects />
         <Studies />

@@ -5,7 +5,7 @@ export default {
   'nav.edu': 'Education',
   'nav.contact': 'Contact',
 
-  'hero.sub': 'Software engineer',
+  'hero.sub': 'Software architect',
 
   'about.title': 'A little bit about me ...',
   'about.p1': 'I am a guy from Colombia who likes programming very much, usually curious about all that fantastic technology offers.',
