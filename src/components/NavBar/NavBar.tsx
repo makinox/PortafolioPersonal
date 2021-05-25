@@ -14,7 +14,6 @@ const CenterChild = ({ messages }) => (
   <>
     <a href="#about">{messages['nav.about']}</a>
     <a href="#projects">{messages['nav.exp']}</a>
-    <a href="#studies">{messages['nav.edu']}</a>
     <a href="#contact">{messages['nav.contact']}</a>
   </>
 );
@@ -67,7 +66,6 @@ const RightChild = ({ lang }) => (
 
 function NavBar({ messages, lang }) {
   const { logo } = useNavbarQuery();
-  console.log({ lang });
   return (
     <Bar
       leftChild={<LeftChild title={messages['nav.title']} LogoSource={logo.publicURL} />}

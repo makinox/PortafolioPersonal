@@ -1,7 +1,7 @@
 export default {
   'nav.title': 'Portafolio',
   'nav.about': 'Acerca',
-  'nav.exp': 'Experiencia',
+  'nav.exp': 'Proyectos',
   'nav.edu': 'Educación',
   'nav.contact': 'Contactame',
 
