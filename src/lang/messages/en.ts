@@ -21,6 +21,11 @@ export default {
   'exp.sub3': 'More info',
   'exp.sub4': 'App',
   'exp.sub5': 'Repo',
+  'exp.filter1': 'New',
+  'exp.filter2': 'WEB APPS',
+  'exp.filter3': 'NATIVE APPS',
+  'exp.filter4': 'GAMES',
+  'exp.filter5': 'ALL',
 
   'edu.title': 'What I have learned so far',
   'edu.sub': 'You can find all the supports here',

@@ -4,13 +4,6 @@ import { ProjectCard, ProjectFilter, ProjectSection } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const ProjectList = [
-  { text: 'New', filter: 'New' },
-  { text: 'Web apps', filter: 'Web' },
-  { text: 'Native apps', filter: 'Native' },
-  { text: 'Games', filter: 'Game' },
-  { text: 'All', filter: 'All' },
-];
 const ProjectInfo = [
   {
     subtitle: 'Regypos',
@@ -221,9 +214,17 @@ const ProjectInfo = [
     techList: ['React', 'Gatsby', 'GraphQl'],
     status: 'Web',
   },
-];
+].reverse();
 
 function Projects({ messages }) {
+  const ProjectList = [
+    { text: messages['exp.filter1'], filter: 'New' },
+    { text: messages['exp.filter2'], filter: 'Web' },
+    { text: messages['exp.filter3'], filter: 'Native' },
+    { text: messages['exp.filter4'], filter: 'Game' },
+    { text: messages['exp.filter5'], filter: 'All' },
+  ];
+
   const [filter, useFilter] = useState(ProjectList[0]);
   const imageList = useProjectQuery();
 
@@ -240,12 +241,12 @@ function Projects({ messages }) {
             key={`${element}-${idx}`}
             onClick={() => HandleProjectFilter(element)}
             message={element.text}
-            use={element === filter ? 'contained' : 'outlined'}
+            use={element.filter === filter.filter ? 'contained' : 'outlined'}
           />
         ))}
       </ProjectFilter>
       <ProjectSection className="flex flex-wrap justify-center">
-        {ProjectInfo.reverse().map((el, index) => {
+        {ProjectInfo.map((el, index) => {
           const image = getImage(imageList[el.imgName]);
           const CardButtons: [JSX.Element?, JSX.Element?] | any = [];
           if (el.repo) {

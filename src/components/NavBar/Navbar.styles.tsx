@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TopBar } from '@makinox/makinox-ui';
+import { Dropdown, TopBar } from '@makinox/makinox-ui';
 
 export const Bar = styled(TopBar)`
   & > div > div:nth-child(2) {
@@ -25,5 +25,11 @@ export const DropdownItem = styled.span`
 
   &:hover {
     background-color: rgba(var(--light-primary), 0.08);
+  }
+`;
+
+export const BarDropdown = styled(Dropdown)`
+  & > div {
+    right: 2%;
   }
 `;

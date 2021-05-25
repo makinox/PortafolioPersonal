@@ -1,8 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import { useNavbarQuery } from './Navbar.graph';
-import { Dropdown } from '@makinox/makinox-ui';
-import { Bar, BarLogo, DropdownItem } from './Navbar.styles';
+import { Bar, BarLogo, DropdownItem, BarDropdown } from './Navbar.styles';
 
 const LeftChild = ({ LogoSource, title }) => (
   <div className="flex items-center">
@@ -21,7 +20,7 @@ const CenterChild = ({ messages }) => (
 );
 
 const RightChild = ({ lang }) => (
-  <Dropdown
+  <BarDropdown
     Item={
       lang === 'en' ? (
         <div className="flex items-center">
