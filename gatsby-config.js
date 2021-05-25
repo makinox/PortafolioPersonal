@@ -27,13 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Roboto\:300,400`, `Open Sans\:300,400`],
-        display: 'swap',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/logo.svg',

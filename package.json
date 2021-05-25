@@ -24,7 +24,6 @@
     "@makinox/makinox-ui": "^1.4.0",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^1.4.0",
     "gatsby-plugin-manifest": "^3.4.0",
