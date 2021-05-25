@@ -11,8 +11,14 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "gserve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "npm run build && firebase deploy",
+    "serve": "serve public --single -p 8000 ",
+    "test": "start-server-and-test start http://localhost:8000 cy-open",
+    "cy-test": "start-server-and-test serve http://localhost:8000 cy-run",
+    "cy-run": "cypress run",
+    "cy-open": "cypress open"
   },
   "dependencies": {
     "@makinox/makinox-ui": "^1.4.0",
@@ -36,6 +42,9 @@
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",
     "@types/styled-components": "^5.1.9",
-    "react-icons": "^4.2.0"
+    "cypress": "^7.4.0",
+    "react-icons": "^4.2.0",
+    "serve": "^11.3.2",
+    "start-server-and-test": "^1.12.3"
   }
 }
