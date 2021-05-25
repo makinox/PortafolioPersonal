@@ -1,4 +1,4 @@
-import { Card } from '@makinox/makinox-ui';
+import { Card, FluidContainer } from '@makinox/makinox-ui';
 import styled from 'styled-components';
 import { FadeIn } from '../../animations';
 
@@ -41,4 +41,9 @@ export const ProjectSection = styled.section`
     margin: 8px;
     ${FadeIn({ time: '1s' })}
   }
+`;
+
+export const ProjectContainer = styled(FluidContainer)`
+  content-visibility: auto;
+  contain-intrinsic-size: 0 2732px;
 `;

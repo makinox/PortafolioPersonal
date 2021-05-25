@@ -1,10 +1,9 @@
-import { DescriptionCard } from './Description.styles';
-import { FluidContainer } from '@makinox/makinox-ui';
+import { DescriptionCard, DescriptionContainer } from './Description.styles';
 import React from 'react';
 
 function Description({ messages }) {
   return (
-    <FluidContainer className="flex justify-center">
+    <DescriptionContainer className="flex justify-center">
       <DescriptionCard
         use="elevated"
         maxWidth="600px"
@@ -22,7 +21,7 @@ function Description({ messages }) {
           </>
         }
       />
-    </FluidContainer>
+    </DescriptionContainer>
   );
 }
 

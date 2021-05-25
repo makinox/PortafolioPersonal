@@ -1,6 +1,6 @@
-import { Button, FluidContainer } from '@makinox/makinox-ui';
+import { Button } from '@makinox/makinox-ui';
 import React, { useState } from 'react';
-import { ProjectCard, ProjectFilter, ProjectSection } from './Projects.styles';
+import { ProjectCard, ProjectContainer, ProjectFilter, ProjectSection } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -233,7 +233,7 @@ function Projects({ messages }) {
   }
 
   return (
-    <FluidContainer id="projects">
+    <ProjectContainer id="projects">
       <h3 className="headline4 text-center">{messages['exp.title']}</h3>
       <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (
@@ -328,7 +328,7 @@ function Projects({ messages }) {
           }
         })}
       </ProjectSection>
-    </FluidContainer>
+    </ProjectContainer>
   );
 }
 
