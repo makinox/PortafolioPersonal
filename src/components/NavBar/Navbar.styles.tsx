@@ -17,7 +17,7 @@ export const Bar = styled(TopBar)`
   }
 
   @media (max-width: 495px) {
-    & > div > div:nth-child(1) img {
+    & > div > div:nth-child(1) {
       display: none;
     }
   }
