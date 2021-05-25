@@ -1,54 +1,51 @@
+const languages = require('./src/lang/languajes.ts');
+
 module.exports = {
   siteMetadata: {
-    title: `Portfolio`,
-    description: `Jesús David Bossa | Portfolio`,
+    title: `Jesús David Bossa | Portfolio`,
+    description: `Portfolio of Jesús Bossa`,
     author: `Jesús David Bossa`,
     siteUrl: 'https://jesusbossa.dev/',
     keywords: ['Portafolio', 'Portfolio', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
     image: '/preview.png',
+    languages,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-i18n',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Jesús David Bossa Portfolio`,
-        short_name: `Portfolio`,
-        start_url: `/`,
-        background_color: `#67E2F7`,
-        theme_color: `#67E2F7`,
-        display: `minimal-ui`,
-        icon: `src/images/logo.svg`,
-        cache_busting_mode: 'none',
+        langKeyForNull: 'any',
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: true,
+        prefixDefault: false,
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        host: 'https://jesusbossa.dev',
-        sitemap: 'https://jesusbossa.dev/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        fonts: [`Roboto\:300,400,500`, `Open Sans\:300,400,500`],
+        display: 'swap',
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        google: {
-          families: ['Open Sans', `Roboto`],
-        },
+        icon: 'src/images/logo.svg',
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
   ],
 };

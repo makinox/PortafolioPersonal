@@ -1,6 +1,6 @@
 import { Description, Footer, Hero, Projects, Studies } from '../containers';
 import { NavBar, Seo } from '../components';
-import messages from '../lang/messages/en';
+import messages from '../lang/messages/es';
 import React from 'react';
 
 function IndexPage(props) {

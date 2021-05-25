@@ -25,15 +25,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Running install process
-        run: npm install
+        run: yarn install
 
       - name: Running building
-        run: npm run build
+        run: yarn build
 
       - name: Running tests
-        run: npm run cy-test
+        run: yarn cy-test
 
       - name: Deploy to Firebase ${{ secrets.PROJECTNAME }}
+        if: contains(github.ref, 'master')
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
