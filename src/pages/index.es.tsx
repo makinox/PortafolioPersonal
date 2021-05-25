@@ -12,8 +12,8 @@ function IndexPage(props) {
         <Hero messages={messages} />
         <Description messages={messages} />
         <Projects messages={messages} />
-        <Studies />
-        <Footer />
+        <Studies messages={messages} />
+        <Footer messages={messages} />
       </main>
     </>
   );

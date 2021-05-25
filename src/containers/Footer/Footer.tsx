@@ -3,11 +3,11 @@ import { FooterContactContainer, FooterContainer, FooterSocialContainer } from '
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import React from 'react';
 
-function Footer() {
+function Footer({ messages }) {
   return (
     <>
       <FluidContainer className="flex flex-col items-center" id="contact">
-        <h3 className="headline4 text-center">A couple of things I've done</h3>
+        <h3 className="headline4 text-center">{messages['contact.sub']}</h3>
         <FooterContactContainer>
           <Button use="contained" message="x@jesusbossa.dev" onClick={() => window.open('mailto:x@jesusbossa.dev')} />
         </FooterContactContainer>
