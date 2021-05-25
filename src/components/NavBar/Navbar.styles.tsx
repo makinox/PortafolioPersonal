@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Dropdown, TopBar } from '@makinox/makinox-ui';
 
 export const Bar = styled(TopBar)`
-  overflow-x: auto;
-
   & > div > div:nth-child(2) a {
     color: #000;
     text-decoration: none;
