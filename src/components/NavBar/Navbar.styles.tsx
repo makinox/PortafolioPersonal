@@ -41,7 +41,7 @@ export const BarLogo = styled.img`
 export const DropdownItem = styled.span`
   min-width: 150px;
   cursor: pointer;
-  padding: 5px;
+  padding: 2px 5px;
 
   &:hover {
     background-color: rgba(var(--light-primary), 0.08);
@@ -51,5 +51,10 @@ export const DropdownItem = styled.span`
 export const BarDropdown = styled(Dropdown)`
   & > div {
     right: 2%;
+    top: 1%;
+  }
+
+  & > div:hover {
+    display: flex !important;
   }
 `;
