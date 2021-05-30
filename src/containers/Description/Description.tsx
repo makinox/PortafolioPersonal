@@ -1,12 +1,13 @@
 import { DescriptionCard, DescriptionContainer } from './Description.styles';
 import React from 'react';
 
-function Description({ messages }) {
+function Description({ messages, isDark }) {
   return (
     <DescriptionContainer className="flex justify-center">
       <DescriptionCard
         use="elevated"
         maxWidth="600px"
+        isDark={isDark}
         children={
           <>
             <div className="card-header" id="about">

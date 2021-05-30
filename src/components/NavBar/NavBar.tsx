@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { navigate } from 'gatsby';
 import { useNavbarQuery } from './Navbar.graph';
 import { Bar, BarLogo, DropdownItem, BarDropdown } from './Navbar.styles';
+import { AppContext } from '../../context/context';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const LeftChild = ({ LogoSource, title }) => (
   <div className="flex items-center">
@@ -18,59 +20,69 @@ const CenterChild = ({ messages }) => (
   </>
 );
 
-const RightChild = ({ lang }) => (
-  <BarDropdown
-    Item={
-      lang === 'en' ? (
-        <div className="flex items-center">
+const RightChild = ({ lang, isDark, HandleIsDark }) => (
+  <div className="flex items-center">
+    {isDark ? (
+      <FaMoon style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
+    ) : (
+      <FaSun style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
+    )}
+    <BarDropdown
+      isDark={isDark}
+      Item={
+        lang === 'en' ? (
+          <div className="flex items-center">
+            <BarLogo
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
+              alt="English"
+              loading="lazy"
+            />
+
+            <span>English</span>
+          </div>
+        ) : (
+          <div className="flex items-center">
+            <BarLogo
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
+              alt="Español"
+              loading="lazy"
+            />
+            <span>Español</span>
+          </div>
+        )
+      }
+      HiddenItems={[
+        <DropdownItem key="English" className="flex items-center" onClick={() => navigate('/')}>
           <BarLogo
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
             alt="English"
             loading="lazy"
           />
-
-          <span>English</span>
-        </div>
-      ) : (
-        <div className="flex items-center">
+          <span>English [en]</span>
+        </DropdownItem>,
+        <DropdownItem key="Español" className="flex items-center" onClick={() => navigate('/es')}>
           <BarLogo
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
             alt="Español"
             loading="lazy"
           />
-          <span>Español</span>
-        </div>
-      )
-    }
-    HiddenItems={[
-      <DropdownItem key="English" className="flex items-center" onClick={() => navigate('/')}>
-        <BarLogo
-          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
-          alt="English"
-          loading="lazy"
-        />
-        <span>English [en]</span>
-      </DropdownItem>,
-      <DropdownItem key="Español" className="flex items-center" onClick={() => navigate('/es')}>
-        <BarLogo
-          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
-          alt="Español"
-          loading="lazy"
-        />
 
-        <span>Spanish [es]</span>
-      </DropdownItem>,
-    ]}
-  />
+          <span>Spanish [es]</span>
+        </DropdownItem>,
+      ]}
+    />
+  </div>
 );
 
-function NavBar({ messages, lang }) {
+function NavBar({ messages, lang, isDark }) {
   const { logo } = useNavbarQuery();
+  const { HandleIsDark } = useContext(AppContext);
   return (
     <Bar
+      isDark={isDark}
       leftChild={<LeftChild title={messages['nav.title']} LogoSource={logo.publicURL} />}
       centerChild={<CenterChild messages={messages} />}
-      rightChild={<RightChild lang={lang} />}
+      rightChild={<RightChild lang={lang} HandleIsDark={HandleIsDark} isDark={isDark} />}
     />
   );
 }

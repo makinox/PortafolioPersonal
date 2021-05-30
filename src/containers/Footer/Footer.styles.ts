@@ -12,9 +12,22 @@ export const FooterSocialContainer = styled.div`
   }
 `;
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer<{ isDark?: boolean }>`
   box-shadow: 3px 3px 10px 3px rgb(0 0 0 / 3%);
-  background-color: #fff;
   margin-top: 48px;
   padding: 25px;
+
+  ${(props) => {
+    if (props.theme?.isDark || props.isDark) {
+      return `
+        background-color: rgb(var(--dark-background));
+        color: rgb(var(--dark-onBackground));
+      `;
+    } else {
+      return `
+        background-color: rgb(var(--light-background));
+        color: rgb(var(--light-onBackground));
+      `;
+    }
+  }}
 `;

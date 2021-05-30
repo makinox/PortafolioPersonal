@@ -216,7 +216,7 @@ const ProjectInfo = [
   },
 ].reverse();
 
-function Projects({ messages }) {
+function Projects({ messages, isDark }) {
   const ProjectList = [
     { text: messages['exp.filter1'], filter: 'New' },
     { text: messages['exp.filter2'], filter: 'Web' },
@@ -238,9 +238,10 @@ function Projects({ messages }) {
       <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (
           <Button
+            isDark={isDark}
             key={`${element}-${idx}`}
-            onClick={() => HandleProjectFilter(element)}
             message={element.text}
+            onClick={() => HandleProjectFilter(element)}
             use={element.filter === filter.filter ? 'contained' : 'outlined'}
           />
         ))}
@@ -251,11 +252,19 @@ function Projects({ messages }) {
           const CardButtons: [JSX.Element?, JSX.Element?] | any = [];
           if (el.repo) {
             CardButtons.push(
-              <Button onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`} use="text" message="repo" />
+              <Button
+                isDark={isDark}
+                onClick={() => window.open(el.repo, '_blank')}
+                key={`button repo ${el.description}`}
+                use="text"
+                message="repo"
+              />
             );
           }
           if (el.app) {
-            CardButtons.push(<Button onClick={() => window.open(el.app, '_blank')} key={`button app ${el.description}`} use="text" message="app" />);
+            CardButtons.push(
+              <Button isDark={isDark} onClick={() => window.open(el.app, '_blank')} key={`button app ${el.description}`} use="text" message="app" />
+            );
           }
           switch (filter.filter) {
             case 'New':
@@ -263,6 +272,7 @@ function Projects({ messages }) {
                 return (
                   <ProjectCard
                     use="outlined"
+                    isDark={isDark}
                     title={el.subtitle}
                     buttons={CardButtons}
                     text={el.techList.join(' - ')}
@@ -277,6 +287,7 @@ function Projects({ messages }) {
                 return (
                   <ProjectCard
                     use="outlined"
+                    isDark={isDark}
                     title={el.subtitle}
                     buttons={CardButtons}
                     text={el.techList.join(' - ')}
@@ -291,6 +302,7 @@ function Projects({ messages }) {
                 return (
                   <ProjectCard
                     use="outlined"
+                    isDark={isDark}
                     title={el.subtitle}
                     buttons={CardButtons}
                     text={el.techList.join(' - ')}
@@ -305,6 +317,7 @@ function Projects({ messages }) {
                 return (
                   <ProjectCard
                     use="outlined"
+                    isDark={isDark}
                     title={el.subtitle}
                     buttons={CardButtons}
                     text={el.techList.join(' - ')}
@@ -318,6 +331,7 @@ function Projects({ messages }) {
               return (
                 <ProjectCard
                   use="outlined"
+                  isDark={isDark}
                   title={el.subtitle}
                   buttons={CardButtons}
                   text={el.techList.join(' - ')}

@@ -3,10 +3,21 @@ import { Dropdown, TopBar } from '@makinox/makinox-ui';
 
 export const Bar = styled(TopBar)`
   & > div > div:nth-child(2) a {
-    color: #000;
     text-decoration: none;
     margin: 0 10px;
     cursor: pointer;
+
+    ${(props) => {
+      if (props.theme?.isDark || props.isDark) {
+        return `
+        color: rgb(var(--dark-onBackground)) !important;
+      `;
+      } else {
+        return `
+        color: rgb(var(--light-onBackground)) !important;
+      `;
+      }
+    }}
   }
 
   @media (max-width: 435px) {
@@ -49,6 +60,8 @@ export const DropdownItem = styled.span`
 `;
 
 export const BarDropdown = styled(Dropdown)`
+  margin-left: 5px;
+
   & > div {
     right: 2%;
     top: 1%;

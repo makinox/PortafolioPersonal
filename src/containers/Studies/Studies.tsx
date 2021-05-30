@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useStudiesQuery } from './Studies.graph';
 import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles';
 
-function Studies({ messages }) {
+function Studies({ messages, isDark }) {
   const studiesBadges = useStudiesQuery();
   const [badges, useBadges] = useState(() => Object.values(studiesBadges).slice(0, 4));
   const [containerRef, isVisible] = useObserver({});
@@ -37,6 +37,7 @@ function Studies({ messages }) {
       <CertCointainer className="flex justify-center">
         <Button
           use="contained"
+          isDark={isDark}
           message={messages['edu.button']}
           onClick={() => window.open('https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing', '_blank')}
         />
