@@ -26,6 +26,7 @@ export default {
   'exp.filter3': 'NATIVE APPS',
   'exp.filter4': 'Juegos',
   'exp.filter5': 'Todo',
+  'exp.filter6': 'Librería',
 
   'edu.title': 'Que sé hasta ahora',
   'edu.sub': 'Puedes encontrar todos los soportes aquí',

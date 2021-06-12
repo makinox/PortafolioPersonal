@@ -214,6 +214,17 @@ const ProjectInfo = [
     techList: ['React', 'Gatsby', 'GraphQl'],
     status: 'Web',
   },
+  {
+    subtitle: 'Makinox-ui',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/makinox-ui',
+    repo: 'https://github.com/makinox/makinox-ui',
+    app: 'https://makinox-ui.jesusbossa.dev',
+    imgName: 'img20',
+    imgAlt: 'Makinox-ui library por Jesus bossa',
+    techList: ['React', 'Gatsby', 'GraphQl'],
+    status: 'Library',
+  },
 ].reverse();
 
 function Projects({ messages, isDark }) {
@@ -222,6 +233,7 @@ function Projects({ messages, isDark }) {
     { text: messages['exp.filter2'], filter: 'Web' },
     { text: messages['exp.filter3'], filter: 'Native' },
     { text: messages['exp.filter4'], filter: 'Game' },
+    { text: messages['exp.filter6'], filter: 'Library' },
     { text: messages['exp.filter5'], filter: 'All' },
   ];
 
@@ -299,6 +311,21 @@ function Projects({ messages, isDark }) {
               break;
             case 'Native':
               if (el.status === 'Native') {
+                return (
+                  <ProjectCard
+                    use="outlined"
+                    isDark={isDark}
+                    title={el.subtitle}
+                    buttons={CardButtons}
+                    text={el.techList.join(' - ')}
+                    key={`${el.subtitle}-${index}`}
+                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} objectPosition="top" />}
+                  />
+                );
+              }
+              break;
+            case 'Library':
+              if (el.status === 'Library') {
                 return (
                   <ProjectCard
                     use="outlined"
