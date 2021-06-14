@@ -18,6 +18,14 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://jesusbossa.dev',
+        sitemap: 'https://jesusbossa.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-i18n',
       options: {
         langKeyForNull: 'any',
