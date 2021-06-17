@@ -27,7 +27,9 @@ export const ProjectCard = styled(Card)`
     border-top-right-radius: 4px;
   }
 
-  & > div.card-customMedia div {
+  & > div.card-customMedia div,
+  & > div.card-customMedia div img,
+  & > div.card-customMedia div picture {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
