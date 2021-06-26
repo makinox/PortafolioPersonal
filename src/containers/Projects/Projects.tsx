@@ -225,6 +225,17 @@ const ProjectInfo = [
     techList: ['React', 'Gatsby', 'GraphQl'],
     status: 'Library',
   },
+  {
+    subtitle: 'Makinox-image-creator',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/makinox-image-creator',
+    repo: 'https://github.com/makinox/makinox-image-creator',
+    app: 'https://www.npmjs.com/package/@makinox/image-creator',
+    imgName: 'img21',
+    imgAlt: 'Makinox-image-creator library por Jesus bossa',
+    techList: ['Typescript'],
+    status: 'Library',
+  },
 ].reverse();
 
 function Projects({ messages, isDark }) {
