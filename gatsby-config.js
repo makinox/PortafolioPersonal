@@ -3,7 +3,7 @@ const languages = require('./src/lang/languajes.ts');
 module.exports = {
   siteMetadata: {
     title: `Jesús David Bossa | Portfolio`,
-    description: `Portfolio of Jesús Bossa`,
+    description: `Portfolio of Jesús David Bossa`,
     author: `Jesús David Bossa`,
     siteUrl: 'https://jesusbossa.dev/',
     keywords: ['Portafolio', 'Portfolio', 'Tech', 'Jesus bossa', 'Jesus david bossa'],

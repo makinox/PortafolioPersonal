@@ -6,8 +6,8 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
   const { site } = useSeoQuery();
 
   const seo = {
-    title: title || site.siteMetadata.title,
-    description: description || site.siteMetadata.description,
+    title: title || lang === 'es' ? 'Jesús David Bossa | Portafolio' : site.siteMetadata.title,
+    description: description || lang === 'es' ? 'Portafolio de Jesús David Bossa' : site.siteMetadata.description,
     image: site.siteMetadata.image,
     url: site.siteMetadata.siteUrl,
     lang: lang || 'en',

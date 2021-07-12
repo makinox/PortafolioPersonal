@@ -20,6 +20,16 @@ export const Bar = styled(TopBar)`
     }}
   }
 
+  & > div > div:nth-child(3) img {
+    margin-top: 3px;
+  }
+
+  @media (max-width: 370px) {
+    & > div > div:nth-child(3) > div > div span span.bar-lang-span {
+      display: none;
+    }
+  }
+
   @media (max-width: 435px) {
     & > div > div:nth-child(2) a {
       font-size: 15px;

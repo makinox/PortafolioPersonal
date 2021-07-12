@@ -38,7 +38,7 @@ const RightChild = ({ lang, isDark, HandleIsDark }) => (
               loading="lazy"
             />
 
-            <span>English</span>
+            <span className="bar-lang-span">English</span>
           </div>
         ) : (
           <div className="flex items-center">
@@ -47,7 +47,7 @@ const RightChild = ({ lang, isDark, HandleIsDark }) => (
               alt="Español"
               loading="lazy"
             />
-            <span>Español</span>
+            <span className="bar-lang-span">Español</span>
           </div>
         )
       }
