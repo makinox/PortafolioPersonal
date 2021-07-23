@@ -6,7 +6,7 @@ export const AppContext = createContext({
 });
 
 export const AppProvider = ({ children }: { children: any }) => {
-  const [isDark, setIsDark] = useState<boolean>(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const [isDark, setIsDark] = useState<boolean>(false);
 
   function HandleIsDark(): void {
     setIsDark((prev) => {
@@ -27,6 +27,10 @@ export const AppProvider = ({ children }: { children: any }) => {
   }
 
   useEffect(CheckStorageState, []);
+
+  useEffect(() => {
+    setIsDark(Boolean(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
+  }, []);
 
   return (
     <AppContext.Provider
