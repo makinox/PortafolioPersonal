@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import { useNavbarQuery } from './Navbar.graph';
 import { Bar, BarLogo, DropdownItem, BarDropdown } from './Navbar.styles';
 import { AppContext } from '../../context/context';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { CgDarkMode } from 'react-icons/cg';
 
 const LeftChild = ({ LogoSource, title }) => (
   <div className="flex items-center">
@@ -22,11 +22,8 @@ const CenterChild = ({ messages }) => (
 
 const RightChild = ({ lang, isDark, HandleIsDark }) => (
   <div className="flex items-center">
-    {isDark ? (
-      <FaMoon style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
-    ) : (
-      <FaSun style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
-    )}
+    <CgDarkMode style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
+
     <BarDropdown
       isDark={isDark}
       Item={

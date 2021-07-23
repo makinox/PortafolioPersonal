@@ -6,7 +6,7 @@ export const AppContext = createContext({
 });
 
 export const AppProvider = ({ children }: { children: any }) => {
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState<boolean>(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   function HandleIsDark(): void {
     setIsDark((prev) => {
