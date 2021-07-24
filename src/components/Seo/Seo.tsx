@@ -28,8 +28,21 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
       {seo.image && <meta name="twitter:image" content={seo.image} />}
 
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
-      <link as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+      <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <noscript>{`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" />`}</noscript>
+      <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <noscript>{`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" />`}</noscript>
     </Helmet>
   );
 }
