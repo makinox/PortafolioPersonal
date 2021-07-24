@@ -9,24 +9,8 @@ export const AppProvider = ({ children }: { children: any }) => {
   const [isDark, setIsDark] = useState<boolean>(false);
 
   function HandleIsDark(): void {
-    setIsDark((prev) => {
-      localStorage.setItem('isDark', JSON.stringify(!prev));
-      return !prev;
-    });
+    setIsDark((prev) => !prev);
   }
-
-  function CheckStorageState(): void {
-    try {
-      const darkResult = localStorage.getItem('isDark');
-      if (darkResult !== null) {
-        setIsDark(JSON.parse(darkResult));
-      }
-    } catch (error) {
-      return console.error({ error: true, message: error });
-    }
-  }
-
-  useEffect(CheckStorageState, []);
 
   useEffect(() => {
     setIsDark(Boolean(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
