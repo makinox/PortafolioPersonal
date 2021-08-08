@@ -113,7 +113,7 @@ const ProjectInfo = [
     imgName: 'img10',
     imgAlt: 'Aplicacion de mascotas por Jesus bossa',
     techList: ['React', 'Hooks', 'GraphQl'],
-    status: 'Web',
+    status: 'Old',
   },
   {
     subtitle: 'Vtask',
