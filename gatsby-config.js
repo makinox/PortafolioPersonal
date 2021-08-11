@@ -18,6 +18,15 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-QD795TJBJF'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://jesusbossa.dev',
