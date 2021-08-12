@@ -18,7 +18,6 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
 
   return (
     <Helmet title={seo.title} titleTemplate={seo.title} htmlAttributes={{ lang: seo.lang }}>
-      {console.log({ preview })}
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
