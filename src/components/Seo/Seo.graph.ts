@@ -15,8 +15,8 @@ export const useSeoQuery = () => {
         preview: file(relativePath: { eq: "preview.png" }) {
           childImageSharp {
             gatsbyImageData(
-              width: 330
-              height: 200
+              width: 1200
+              height: 630
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
               transformOptions: { fit: COVER, cropFocus: NORTH }
