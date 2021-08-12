@@ -12,7 +12,7 @@ export const useSeoQuery = () => {
             keywords
           }
         }
-        preview: file(relativePath: { eq: "projects/projects-img1.jpg" }) {
+        preview: file(relativePath: { eq: "preview.png" }) {
           childImageSharp {
             gatsbyImageData(
               width: 330
