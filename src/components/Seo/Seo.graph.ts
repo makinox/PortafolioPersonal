@@ -12,6 +12,17 @@ export const useSeoQuery = () => {
             keywords
           }
         }
+        preview: file(relativePath: { eq: "projects/projects-img1.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 330
+              height: 200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              transformOptions: { fit: COVER, cropFocus: NORTH }
+            )
+          }
+        }
       }
     `
   );

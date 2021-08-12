@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useSeoQuery } from './Seo.graph';
 
 function SEO({ title, description, lang }: { title?: string; description?: string; lang?: string }) {
-  const { site } = useSeoQuery();
+  const { site, preview } = useSeoQuery();
 
   const seo = {
     title: title || lang === 'es' ? 'Jesús David Bossa | Portafolio' : site.siteMetadata.title,
@@ -11,13 +11,14 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
       description || lang === 'es'
         ? 'Portafolio de Jesús David Bossa. Aqui comparto mi experiencia dando a conocer mis proyectos y como es mi forma de trabajo'
         : site.siteMetadata.description,
-    image: `https://jesusbossa.dev${site.siteMetadata.image}`,
+    image: `https://jesusbossa.dev${preview.childImageSharp.gatsbyImageData.images.fallback.src}`,
     url: site.siteMetadata.siteUrl,
     lang: lang || 'en',
   };
 
   return (
     <Helmet title={seo.title} titleTemplate={seo.title} htmlAttributes={{ lang: seo.lang }}>
+      {console.log({ preview })}
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
