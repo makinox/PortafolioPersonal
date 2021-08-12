@@ -8,7 +8,7 @@ function SEO({ title, description, lang }: { title?: string; description?: strin
   const seo = {
     title: title || lang === 'es' ? 'Jesús David Bossa | Portafolio' : site.siteMetadata.title,
     description: description || lang === 'es' ? 'Portafolio de Jesús David Bossa' : site.siteMetadata.description,
-    image: site.siteMetadata.image,
+    image: `https://jesusbossa.dev${site.siteMetadata.image}`,
     url: site.siteMetadata.siteUrl,
     lang: lang || 'en',
   };
