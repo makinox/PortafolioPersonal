@@ -6,6 +6,9 @@ export const useNavbarQuery = () => {
         logo: file(relativePath: { eq: "logo.svg" }) {
           publicURL
         }
+        logo2: file(relativePath: { eq: "logo2.svg" }) {
+          publicURL
+        }
       }
     `
   );

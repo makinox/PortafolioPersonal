@@ -46,7 +46,29 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/logo.svg',
+        icon: 'src/images/icon.svg',
+        lang: `en`,
+        name: `Jesús David Bossa | Portfolio`,
+        short_name: `Jesús Bossa | Portfolio`,
+        description: `Portfolio of Jesús David Bossa. Here I share my experience by publicizing my projects and my way of work`,
+        start_url: `/`,
+        display: `standalone`,
+        localize: [
+          {
+            lang: `en`,
+            name: `Jesús David Bossa | Portfolio`,
+            short_name: `Jesús Bossa | Portfolio`,
+            description: `Portfolio of Jesús David Bossa. Here I share my experience by publicizing my projects and my way of work`,
+            start_url: `/`,
+          },
+          {
+            lang: `es`,
+            name: `Jesús David Bossa | Portafolio`,
+            short_name: `Jesús Bossa | Portafolio`,
+            description: `Portafolio de Jesús David Bossa. Aqui comparto mi experiencia dando a conocer mis proyectos y como es mi forma de trabajo`,
+            start_url: `/es`,
+          },
+        ],
       },
     },
     {
