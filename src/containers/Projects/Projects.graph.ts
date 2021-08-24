@@ -234,6 +234,17 @@ export const useProjectQuery = () => {
             )
           }
         }
+        img22: file(relativePath: { eq: "projects/projects-img22.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 330
+              height: 200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              transformOptions: { fit: COVER, cropFocus: NORTH }
+            )
+          }
+        }
       }
     `
   );
