@@ -4,9 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { useStudiesQuery } from './Studies.graph';
 import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles';
 
+type studyBadge = { publicURL: string };
+
 function Studies({ messages, isDark }) {
   const studiesBadges = useStudiesQuery();
-  const [badges, useBadges] = useState(() => Object.values(studiesBadges).slice(0, 4));
+  const badgeValues: studyBadge[] = Object.values(studiesBadges);
+  const [badges, useBadges] = useState<studyBadge[]>(() => badgeValues.slice(0, 4));
   const [preloaded, setPreloaded] = useState(false);
   const [containerRef, isVisible] = useObserver({});
 
@@ -14,7 +17,6 @@ function Studies({ messages, isDark }) {
     let badgeInterval: ReturnType<typeof setTimeout>;
     if (isVisible) {
       if (!preloaded) {
-        const badgeValues: { publicURL: string }[] = Object.values(studiesBadges);
         badgeValues.map((el, idx) => {
           const preload = new Image();
           preload.src = el.publicURL;
@@ -25,11 +27,7 @@ function Studies({ messages, isDark }) {
       }
       badgeInterval = setInterval(() => {
         useBadges([]);
-        useBadges(
-          Object.values(studiesBadges)
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 4)
-        );
+        useBadges(badgeValues.sort(() => 0.5 - Math.random()).slice(0, 4));
       }, 2500);
     }
     return () => clearInterval(badgeInterval);
@@ -40,7 +38,7 @@ function Studies({ messages, isDark }) {
       <h3 className="headline4 text-center">{messages['edu.title']}</h3>
 
       <StudiesContainer className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>
-        {badges.map((el: any, idx) => {
+        {badges.map((el, idx) => {
           return <StudiesImage key={idx} src={el.publicURL} alt="Tecnologia" />;
         })}
       </StudiesContainer>
