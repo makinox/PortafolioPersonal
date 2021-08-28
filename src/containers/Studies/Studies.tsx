@@ -7,11 +7,22 @@ import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles
 function Studies({ messages, isDark }) {
   const studiesBadges = useStudiesQuery();
   const [badges, useBadges] = useState(() => Object.values(studiesBadges).slice(0, 4));
+  const [preloaded, setPreloaded] = useState(false);
   const [containerRef, isVisible] = useObserver({});
 
   useEffect(() => {
     let badgeInterval: ReturnType<typeof setTimeout>;
     if (isVisible) {
+      if (!preloaded) {
+        const badgeValues: { publicURL: string }[] = Object.values(studiesBadges);
+        badgeValues.map((el, idx) => {
+          const preload = new Image();
+          preload.src = el.publicURL;
+          if (idx + 1 === badgeValues.length) {
+            setPreloaded(true);
+          }
+        });
+      }
       badgeInterval = setInterval(() => {
         useBadges([]);
         useBadges(
