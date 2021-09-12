@@ -1,15 +1,15 @@
-import { useObserver } from '../../hooks/useObserver';
-import { Button, FluidContainer } from '@makinox/makinox-ui';
 import React, { useEffect, useState } from 'react';
-import { useStudiesQuery } from './Studies.graph';
+import { Button, FluidContainer } from '@makinox/makinox-ui';
+
 import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles';
+import { useObserver } from '../../hooks/useObserver';
+import { useStudiesQuery } from './Studies.graph';
+import { translations } from '../../types';
 
-type studyBadge = { publicURL: string };
-
-function Studies({ messages, isDark }) {
+function Studies({ messages, isDark }: { messages: translations; isDark: boolean }) {
   const studiesBadges = useStudiesQuery();
-  const badgeValues: studyBadge[] = Object.values(studiesBadges);
-  const [badges, useBadges] = useState<studyBadge[]>(() => badgeValues.slice(0, 4));
+  const badgeValues = Object.values(studiesBadges);
+  const [badges, useBadges] = useState(() => badgeValues.slice(0, 4));
   const [preloaded, setPreloaded] = useState(false);
   const [containerRef, isVisible] = useObserver({});
 

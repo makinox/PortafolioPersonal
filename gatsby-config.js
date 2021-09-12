@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-graphql-codegen',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',

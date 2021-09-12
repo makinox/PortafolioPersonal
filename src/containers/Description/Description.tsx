@@ -1,7 +1,8 @@
-import { DescriptionCard, DescriptionContainer } from './Description.styles';
 import React from 'react';
+import { translations } from '../../types';
+import { DescriptionCard, DescriptionContainer } from './Description.styles';
 
-function Description({ messages, isDark }) {
+function Description({ messages, isDark }: { messages: translations; isDark: boolean }) {
   return (
     <DescriptionContainer className="flex justify-center">
       <DescriptionCard

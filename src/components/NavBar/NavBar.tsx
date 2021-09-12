@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
+import { CgDarkMode } from 'react-icons/cg';
 import { navigate } from 'gatsby';
-import { useNavbarQuery } from './Navbar.graph';
+
 import { Bar, BarLogo, DropdownItem, BarDropdown } from './Navbar.styles';
 import { AppContext } from '../../context/context';
-import { CgDarkMode } from 'react-icons/cg';
+import { useNavbarQuery } from './Navbar.graph';
+import { translations } from '../../types';
 
-const LeftChild = ({ LogoSource, title }) => (
+const LeftChild = ({ LogoSource, title }: { LogoSource: string; title: string }) => (
   <div className="flex items-center">
     <BarLogo src={LogoSource} alt="Portafolio logo" />
     <span>{title}</span>
   </div>
 );
 
-const CenterChild = ({ messages }) => (
+const CenterChild = ({ messages }: { messages: translations }) => (
   <>
     <a href="#about">{messages['nav.about']}</a>
     <a href="#projects">{messages['nav.exp']}</a>
@@ -20,7 +22,7 @@ const CenterChild = ({ messages }) => (
   </>
 );
 
-const RightChild = ({ lang, isDark, HandleIsDark }) => {
+const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction; lang: 'es' | 'en'; isDark: boolean }) => {
   const englishElement = (
     <>
       <BarLogo
@@ -74,7 +76,7 @@ const RightChild = ({ lang, isDark, HandleIsDark }) => {
   );
 };
 
-function NavBar({ messages, lang, isDark }) {
+function NavBar({ messages, lang, isDark }: { messages: translations; lang: 'es' | 'en'; isDark: boolean }) {
   const { logo, logo2 } = useNavbarQuery();
   const { HandleIsDark } = useContext(AppContext);
   return (

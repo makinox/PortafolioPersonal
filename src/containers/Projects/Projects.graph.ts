@@ -1,6 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { ProjectImagesQuery } from '../../../graphql-types';
+
 export const useProjectQuery = () => {
-  const data = useStaticQuery(
+  const data: ProjectImagesQuery = useStaticQuery(
     graphql`
       query ProjectImages {
         img1: file(relativePath: { eq: "projects/projects-img1.jpg" }) {

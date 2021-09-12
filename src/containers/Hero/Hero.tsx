@@ -1,7 +1,9 @@
-import { HeroContainer, TitleArticle } from './Hero.styles';
 import React from 'react';
 
-function Hero({ messages }) {
+import { HeroContainer, TitleArticle } from './Hero.styles';
+import { translations } from '../../types';
+
+function Hero({ messages }: { messages: translations }) {
   return (
     <HeroContainer className="flex justify-center">
       <TitleArticle className="text-center">

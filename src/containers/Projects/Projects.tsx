@@ -1,13 +1,15 @@
-import { Button } from '@makinox/makinox-ui';
 import React, { useState } from 'react';
+import { Button } from '@makinox/makinox-ui';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
 import { ProjectCard, ProjectContainer, ProjectFilter, ProjectSection } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { translations } from '../../types';
 import projects from './Projects.mock';
 
 const ProjectInfo = projects.reverse();
 
-function Projects({ messages, isDark }) {
+function Projects({ messages, isDark }: { messages: translations; isDark: boolean }) {
   const ProjectList = [
     { text: messages['exp.filter1'], filter: 'New' },
     { text: messages['exp.filter2'], filter: 'Web' },

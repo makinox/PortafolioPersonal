@@ -1,8 +1,10 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { StudiesQuery } from '../../../graphql-types';
+
 export const useStudiesQuery = () => {
-  const data = useStaticQuery(
+  const data: StudiesQuery = useStaticQuery(
     graphql`
-      query {
+      query Studies {
         img1: file(relativePath: { eq: "studies/Img1.svg" }) {
           publicURL
         }

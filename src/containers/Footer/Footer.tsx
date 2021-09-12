@@ -1,9 +1,11 @@
-import { Button, Float, FluidContainer } from '@makinox/makinox-ui';
-import { FooterContactContainer, FooterContainer, FooterSocialContainer } from './Footer.styles';
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import React from 'react';
+import { Button, Float, FluidContainer } from '@makinox/makinox-ui';
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
-function Footer({ messages, isDark }) {
+import { FooterContactContainer, FooterContainer, FooterSocialContainer } from './Footer.styles';
+import { translations } from '../../types';
+
+function Footer({ messages, isDark }: { messages: translations; isDark: boolean }) {
   return (
     <>
       <FluidContainer className="flex flex-col items-center" id="contact">
