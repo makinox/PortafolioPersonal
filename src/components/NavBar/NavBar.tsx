@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CgDarkMode } from 'react-icons/cg';
 import { navigate } from 'gatsby';
 
-import { DropdownContainer, DropdownHiden, DropdownItem, TopBar, FluidContainer } from '@makinox/makinox-ui';
+import { DropdownContainer, DropdownHiden, TopBar, FluidContainer } from '@makinox/makinox-ui';
 import { Bar, BarLogo, DropdownItemHidden, BarDropdown } from './Navbar.styles';
 import { AppContext } from '../../context/context';
 import { useNavbarQuery } from './Navbar.graph';
@@ -51,11 +51,7 @@ const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction
       <CgDarkMode style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
 
       <BarDropdown className={DropdownContainer({ isDark })}>
-        {lang === 'en' ? (
-          <div className={`flex items-center ${DropdownItem()}`}>{englishElement}</div>
-        ) : (
-          <div className={`flex items-center ${DropdownItem()}`}>{spanishElement}</div>
-        )}
+        {lang === 'en' ? <div className={`flex items-center `}>{englishElement}</div> : <div className={`flex items-center `}>{spanishElement}</div>}
         <div className={DropdownHiden({ isDark })}>
           {lang === 'en'
             ? [

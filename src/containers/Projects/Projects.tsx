@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ButtonOutline, ButtonText } from '@makinox/makinox-ui';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { ButtonContained, ButtonOutline, ButtonText, Card, FluidContainer } from '@makinox/makinox-ui';
 
 import { ProjectCard, ProjectContainer, ProjectFilter, ProjectSection } from './Projects.styles';
 import { useProjectQuery } from './Projects.graph';
@@ -26,25 +26,45 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
     useFilter(element);
   }
 
+  const FilteredCard = ({ el, image, CardButtons }) => (
+    <ProjectCard className={Card({ isDark, type: 'outlined' })}>
+      <div className="card-media">
+        <GatsbyImage image={image} alt={el.imgAlt} />
+      </div>
+      <div className="card-header">
+        <h6 className="headline6">{el.subtitle}</h6>
+      </div>
+      <div className="card-body">
+        <p className="body2">{el.techList.join(' - ')}</p>
+      </div>
+      <div className="card-bottom">{CardButtons.map((mapedButton) => mapedButton)}</div>
+    </ProjectCard>
+  );
+
   return (
-    <ProjectContainer id="projects">
+    <ProjectContainer className={FluidContainer()} id="projects">
       <h3 className="headline4 text-center">{messages['exp.title']}</h3>
       <ProjectFilter className="flex justify-center flex-wrap">
-        {ProjectList.map((element, idx) => (
-          <button
-            className={ButtonOutline({ isDark })}
-            key={`${element}-${idx}`}
-            onClick={() => HandleProjectFilter(element)}
-            // use={element.filter === filter.filter ? 'contained' : 'outlined'}
-          >
-            {element.text}
-          </button>
-        ))}
+        {ProjectList.map((element, idx) => {
+          if (element.filter === filter.filter) {
+            return (
+              <button className={ButtonContained({ isDark })} key={`${element}-${idx}`} onClick={() => HandleProjectFilter(element)}>
+                {element.text}
+              </button>
+            );
+          }
+
+          return (
+            <button className={ButtonOutline({ isDark })} key={`${element}-${idx}`} onClick={() => HandleProjectFilter(element)}>
+              {element.text}
+            </button>
+          );
+        })}
       </ProjectFilter>
       <ProjectSection className="flex flex-wrap justify-center">
         {ProjectInfo.map((el, index) => {
           const image = getImage(imageList[el.imgName]);
-          const CardButtons: [JSX.Element?, JSX.Element?] | any = [];
+          const CardButtons = [];
           if (el.repo) {
             CardButtons.push(
               <button className={ButtonText({ isDark })} onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`}>
@@ -62,91 +82,31 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
           switch (filter.filter) {
             case 'New':
               if (el.status !== 'Old') {
-                return (
-                  <ProjectCard
-                    use="outlined"
-                    isDark={isDark}
-                    title={el.subtitle}
-                    buttons={CardButtons}
-                    text={el.techList.join(' - ')}
-                    key={`${el.subtitle}-${index}`}
-                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                  />
-                );
+                return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
               }
               break;
             case 'Web':
               if (el.status === 'Web') {
-                return (
-                  <ProjectCard
-                    use="outlined"
-                    isDark={isDark}
-                    title={el.subtitle}
-                    buttons={CardButtons}
-                    text={el.techList.join(' - ')}
-                    key={`${el.subtitle}-${index}`}
-                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                  />
-                );
+                return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
               }
               break;
             case 'Native':
               if (el.status === 'Native') {
-                return (
-                  <ProjectCard
-                    use="outlined"
-                    isDark={isDark}
-                    title={el.subtitle}
-                    buttons={CardButtons}
-                    text={el.techList.join(' - ')}
-                    key={`${el.subtitle}-${index}`}
-                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} objectPosition="top" />}
-                  />
-                );
+                return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
               }
               break;
             case 'Library':
               if (el.status === 'Library') {
-                return (
-                  <ProjectCard
-                    use="outlined"
-                    isDark={isDark}
-                    title={el.subtitle}
-                    buttons={CardButtons}
-                    text={el.techList.join(' - ')}
-                    key={`${el.subtitle}-${index}`}
-                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} objectPosition="top" />}
-                  />
-                );
+                return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
               }
               break;
             case 'Game':
               if (el.status === 'Game') {
-                return (
-                  <ProjectCard
-                    use="outlined"
-                    isDark={isDark}
-                    title={el.subtitle}
-                    buttons={CardButtons}
-                    text={el.techList.join(' - ')}
-                    key={`${el.subtitle}-${index}`}
-                    customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                  />
-                );
+                return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
               }
               break;
             case 'All':
-              return (
-                <ProjectCard
-                  use="outlined"
-                  isDark={isDark}
-                  title={el.subtitle}
-                  buttons={CardButtons}
-                  text={el.techList.join(' - ')}
-                  key={`${el.subtitle}-${index}`}
-                  customMedia={<GatsbyImage image={image} alt={el.imgAlt} />}
-                />
-              );
+              return <FilteredCard el={el} image={image} CardButtons={CardButtons} key={`${el.subtitle}-${index}`} />;
           }
         })}
       </ProjectSection>

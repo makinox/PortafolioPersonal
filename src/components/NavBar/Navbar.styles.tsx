@@ -71,12 +71,12 @@ export const DropdownItemHidden = styled.span`
 export const BarDropdown = styled.div`
   margin-left: 5px;
 
-  & > div {
+  & > div:last-of-type {
     right: 2%;
     top: 1%;
   }
 
-  & > div:hover {
+  & > div:last-of-type:hover {
     display: flex !important;
   }
 `;

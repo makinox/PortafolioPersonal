@@ -45,7 +45,7 @@ function Studies({ messages, isDark }: { messages: translations; isDark: boolean
 
       <CertCointainer className="flex justify-center">
         <button
-          className={ButtonContained()}
+          className={ButtonContained({ isDark })}
           onClick={() => window.open('https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing', '_blank')}
         >
           {messages['edu.button']}
