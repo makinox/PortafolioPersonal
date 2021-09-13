@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@makinox/makinox-ui';
+import { ButtonOutline, ButtonText } from '@makinox/makinox-ui';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { ProjectCard, ProjectContainer, ProjectFilter, ProjectSection } from './Projects.styles';
@@ -31,13 +31,14 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
       <h3 className="headline4 text-center">{messages['exp.title']}</h3>
       <ProjectFilter className="flex justify-center flex-wrap">
         {ProjectList.map((element, idx) => (
-          <Button
-            isDark={isDark}
+          <button
+            className={ButtonOutline({ isDark })}
             key={`${element}-${idx}`}
-            message={element.text}
             onClick={() => HandleProjectFilter(element)}
-            use={element.filter === filter.filter ? 'contained' : 'outlined'}
-          />
+            // use={element.filter === filter.filter ? 'contained' : 'outlined'}
+          >
+            {element.text}
+          </button>
         ))}
       </ProjectFilter>
       <ProjectSection className="flex flex-wrap justify-center">
@@ -46,18 +47,16 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
           const CardButtons: [JSX.Element?, JSX.Element?] | any = [];
           if (el.repo) {
             CardButtons.push(
-              <Button
-                isDark={isDark}
-                onClick={() => window.open(el.repo, '_blank')}
-                key={`button repo ${el.description}`}
-                use="text"
-                message="repo"
-              />
+              <button className={ButtonText({ isDark })} onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`}>
+                repo
+              </button>
             );
           }
           if (el.app) {
             CardButtons.push(
-              <Button isDark={isDark} onClick={() => window.open(el.app, '_blank')} key={`button app ${el.description}`} use="text" message="app" />
+              <button className={ButtonText({ isDark })} onClick={() => window.open(el.app, '_blank')} key={`button app ${el.description}`}>
+                app
+              </button>
             );
           }
           switch (filter.filter) {

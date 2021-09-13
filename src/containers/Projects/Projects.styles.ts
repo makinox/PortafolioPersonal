@@ -1,4 +1,4 @@
-import { Card, FluidContainer } from '@makinox/makinox-ui';
+// import { Card, FluidContainer } from '@makinox/makinox-ui';
 import styled from 'styled-components';
 import { FadeIn } from '../../animations';
 
@@ -15,7 +15,8 @@ export const ProjectFilter = styled.section`
   }
 `;
 
-export const ProjectCard = styled(Card)`
+// export const ProjectCard = styled(Card)`
+export const ProjectCard = styled.article`
   & > div.card-customMedia {
     padding: initial;
     position: relative;
@@ -45,7 +46,8 @@ export const ProjectSection = styled.section`
   }
 `;
 
-export const ProjectContainer = styled(FluidContainer)`
+// export const ProjectContainer = styled(FluidContainer)`
+export const ProjectContainer = styled.section`
   content-visibility: auto;
   contain-intrinsic-size: 0 2732px;
 `;

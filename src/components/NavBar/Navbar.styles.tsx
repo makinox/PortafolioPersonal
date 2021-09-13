@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { Dropdown, TopBar } from '@makinox/makinox-ui';
 
-export const Bar = styled(TopBar)`
-  & > div > div:nth-child(2) a {
+export const Bar = styled.nav<{ isDark: boolean }>`
+  & > section > div:nth-child(2) a {
     text-decoration: none;
     margin: 0 10px;
     cursor: pointer;
@@ -20,34 +19,34 @@ export const Bar = styled(TopBar)`
     }}
   }
 
-  & > div > div:nth-child(3) img {
+  & > section > div:nth-child(3) img {
     margin-top: 3px;
   }
 
   @media (max-width: 370px) {
-    & > div > div:nth-child(3) > div > div span span.bar-lang-span {
+    & > section > div:nth-child(3) > div > div span span.bar-lang-span {
       display: none;
     }
   }
 
   @media (max-width: 435px) {
-    & > div > div:nth-child(2) a {
+    & > section > div:nth-child(2) a {
       font-size: 15px;
       margin: 0 3px !important;
     }
   }
 
   @media (max-width: 495px) {
-    & > div > div:nth-child(1) {
+    & > section > div:nth-child(1) {
       display: none;
     }
   }
 
   @media (max-width: 765px) {
-    & > div > div:nth-child(1) span {
+    & > section > div:nth-child(1) span {
       display: none;
     }
-    & > div > div:nth-child(3) > div > span div span {
+    & > section > div:nth-child(3) > div > span div span {
       display: none;
     }
   }
@@ -59,7 +58,7 @@ export const BarLogo = styled.img`
   margin-right: 10px;
 `;
 
-export const DropdownItem = styled.span`
+export const DropdownItemHidden = styled.span`
   min-width: 150px;
   cursor: pointer;
   padding: 2px 5px;
@@ -69,7 +68,7 @@ export const DropdownItem = styled.span`
   }
 `;
 
-export const BarDropdown = styled(Dropdown)`
+export const BarDropdown = styled.div`
   margin-left: 5px;
 
   & > div {

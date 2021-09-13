@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import { CgDarkMode } from 'react-icons/cg';
 import { navigate } from 'gatsby';
 
-import { Bar, BarLogo, DropdownItem, BarDropdown } from './Navbar.styles';
+import { DropdownContainer, DropdownHiden, DropdownItem, TopBar, FluidContainer } from '@makinox/makinox-ui';
+import { Bar, BarLogo, DropdownItemHidden, BarDropdown } from './Navbar.styles';
 import { AppContext } from '../../context/context';
 import { useNavbarQuery } from './Navbar.graph';
 import { translations } from '../../types';
@@ -15,11 +16,11 @@ const LeftChild = ({ LogoSource, title }: { LogoSource: string; title: string })
 );
 
 const CenterChild = ({ messages }: { messages: translations }) => (
-  <>
+  <div>
     <a href="#about">{messages['nav.about']}</a>
     <a href="#projects">{messages['nav.exp']}</a>
     <a href="#contact">{messages['nav.contact']}</a>
-  </>
+  </div>
 );
 
 const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction; lang: 'es' | 'en'; isDark: boolean }) => {
@@ -49,29 +50,32 @@ const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction
     <div className="flex items-center">
       <CgDarkMode style={{ cursor: 'pointer' }} onClick={HandleIsDark} size={25} />
 
-      <BarDropdown
-        isDark={isDark}
-        Item={lang === 'en' ? <div className="flex items-center">{englishElement}</div> : <div className="flex items-center">{spanishElement}</div>}
-        HiddenItems={
-          lang === 'en'
+      <BarDropdown className={DropdownContainer({ isDark })}>
+        {lang === 'en' ? (
+          <div className={`flex items-center ${DropdownItem()}`}>{englishElement}</div>
+        ) : (
+          <div className={`flex items-center ${DropdownItem()}`}>{spanishElement}</div>
+        )}
+        <div className={DropdownHiden({ isDark })}>
+          {lang === 'en'
             ? [
-                <DropdownItem key="Español" className="flex items-center" onClick={() => navigate('/es')}>
+                <DropdownItemHidden key="Español" className="flex items-center" onClick={() => navigate('/es')}>
                   {spanishElement}
-                </DropdownItem>,
-                <DropdownItem key="English" className="flex items-center" onClick={() => navigate('/')}>
+                </DropdownItemHidden>,
+                <DropdownItemHidden key="English" className="flex items-center" onClick={() => navigate('/')}>
                   {englishElement}
-                </DropdownItem>,
+                </DropdownItemHidden>,
               ]
             : [
-                <DropdownItem key="English" className="flex items-center" onClick={() => navigate('/')}>
+                <DropdownItemHidden key="English" className="flex items-center" onClick={() => navigate('/')}>
                   {englishElement}
-                </DropdownItem>,
-                <DropdownItem key="Español" className="flex items-center" onClick={() => navigate('/es')}>
+                </DropdownItemHidden>,
+                <DropdownItemHidden key="Español" className="flex items-center" onClick={() => navigate('/es')}>
                   {spanishElement}
-                </DropdownItem>,
-              ]
-        }
-      />
+                </DropdownItemHidden>,
+              ]}
+        </div>
+      </BarDropdown>
     </div>
   );
 };
@@ -80,12 +84,13 @@ function NavBar({ messages, lang, isDark }: { messages: translations; lang: 'es'
   const { logo, logo2 } = useNavbarQuery();
   const { HandleIsDark } = useContext(AppContext);
   return (
-    <Bar
-      isDark={isDark}
-      leftChild={<LeftChild title={messages['nav.title']} LogoSource={isDark ? logo2.publicURL : logo.publicURL} />}
-      centerChild={<CenterChild messages={messages} />}
-      rightChild={<RightChild lang={lang} HandleIsDark={HandleIsDark} isDark={isDark} />}
-    />
+    <Bar isDark={isDark} className={TopBar({ isDark })}>
+      <section className={`flex justify-between items-center ${FluidContainer()}`}>
+        <LeftChild title={messages['nav.title']} LogoSource={isDark ? logo2.publicURL : logo.publicURL} />
+        <CenterChild messages={messages} />
+        <RightChild lang={lang} HandleIsDark={HandleIsDark} isDark={isDark} />
+      </section>
+    </Bar>
   );
 }
 

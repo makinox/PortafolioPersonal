@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, FluidContainer } from '@makinox/makinox-ui';
+import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
 
 import { CertCointainer, StudiesContainer, StudiesImage } from './Studies.styles';
 import { useObserver } from '../../hooks/useObserver';
@@ -34,7 +34,7 @@ function Studies({ messages, isDark }: { messages: translations; isDark: boolean
   }, [isVisible]);
 
   return (
-    <FluidContainer id="studies">
+    <section id="studies" className={FluidContainer()}>
       <h3 className="headline4 text-center">{messages['edu.title']}</h3>
 
       <StudiesContainer className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>
@@ -44,14 +44,14 @@ function Studies({ messages, isDark }: { messages: translations; isDark: boolean
       </StudiesContainer>
 
       <CertCointainer className="flex justify-center">
-        <Button
-          use="contained"
-          isDark={isDark}
-          message={messages['edu.button']}
+        <button
+          className={ButtonContained()}
           onClick={() => window.open('https://drive.google.com/drive/folders/0B1M5FQ2FYAeQVFhzMGptMFRNMFE?usp=sharing', '_blank')}
-        />
+        >
+          {messages['edu.button']}
+        </button>
       </CertCointainer>
-    </FluidContainer>
+    </section>
   );
 }
 

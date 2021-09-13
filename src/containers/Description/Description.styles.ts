@@ -1,7 +1,8 @@
-import { Card, FluidContainer } from '@makinox/makinox-ui';
+// import { Card, FluidContainer } from '@makinox/makinox-ui';
 import styled from 'styled-components';
 
-export const DescriptionCard = styled(Card)`
+// export const DescriptionCard = styled(Card)`
+export const DescriptionCard = styled.article`
   margin-bottom: 80px;
 
   & .body2 {
@@ -9,7 +10,8 @@ export const DescriptionCard = styled(Card)`
   }
 `;
 
-export const DescriptionContainer = styled(FluidContainer)`
+// export const DescriptionContainer = styled(FluidContainer)`
+export const DescriptionContainer = styled.section`
   content-visibility: auto;
   contain-intrinsic-size: 0 294px;
 `;
