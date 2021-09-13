@@ -7,6 +7,7 @@ import { Bar, BarLogo, DropdownItemHidden, BarDropdown } from './Navbar.styles';
 import { AppContext } from '../../context/context';
 import { useNavbarQuery } from './Navbar.graph';
 import { translations } from '../../types';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const LeftChild = ({ LogoSource, title }: { LogoSource: string; title: string }) => (
   <div className="flex items-center">
@@ -26,10 +27,13 @@ const CenterChild = ({ messages }: { messages: translations }) => (
 const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction; lang: 'es' | 'en'; isDark: boolean }) => {
   const englishElement = (
     <>
-      <BarLogo
+      <StaticImage
+        style={{ marginRight: '10px' }}
         src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/flag-united-states_1f1fa-1f1f8.png"
         alt="English"
         loading="lazy"
+        width={30}
+        height={30}
       />
 
       <span className="bar-lang-span">English</span>
@@ -37,10 +41,13 @@ const RightChild = ({ lang, isDark, HandleIsDark }: { HandleIsDark: VoidFunction
   );
   const spanishElement = (
     <>
-      <BarLogo
+      <StaticImage
+        style={{ marginRight: '10px' }}
         src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/271/flag-colombia_1f1e8-1f1f4.png"
         alt="Español"
         loading="lazy"
+        width={30}
+        height={30}
       />
       <span className="bar-lang-span">Español</span>
     </>

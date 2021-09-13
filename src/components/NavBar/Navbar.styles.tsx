@@ -19,8 +19,8 @@ export const Bar = styled.nav<{ isDark: boolean }>`
     }}
   }
 
-  & > section > div:nth-child(3) img {
-    margin-top: 3px;
+  & > section > div:nth-child(3) > div > div > div:first-of-type {
+    margin-right: 4px;
   }
 
   @media (max-width: 370px) {
@@ -62,6 +62,10 @@ export const DropdownItemHidden = styled.span`
   min-width: 150px;
   cursor: pointer;
   padding: 2px 5px;
+
+  & > div:first-of-type {
+    margin-right: 4px;
+  }
 
   &:hover {
     background-color: rgba(var(--light-primary), 0.08);
