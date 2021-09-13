@@ -1,4 +1,3 @@
-// import { FluidContainer } from '@makinox/makinox-ui';
 import styled from 'styled-components';
 
 export const TitleArticle = styled.article`
@@ -11,7 +10,6 @@ export const TitleArticle = styled.article`
   }
 `;
 
-// export const HeroContainer = styled(FluidContainer)`
 export const HeroContainer = styled.section`
   content-visibility: auto;
   contain-intrinsic-size: 0 540px;
