@@ -21,7 +21,7 @@
     "cy-open": "cypress open"
   },
   "dependencies": {
-    "@makinox/makinox-ui": "^1.5.0",
+    "@makinox/makinox-ui": "1.5.1",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
     "gatsby-plugin-google-gtag": "^3.11.0",
