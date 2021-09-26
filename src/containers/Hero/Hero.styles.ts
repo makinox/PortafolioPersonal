@@ -11,6 +11,15 @@ export const TitleArticle = styled.article`
 `;
 
 export const HeroContainer = styled.section`
+  position: relative;
   content-visibility: auto;
   contain-intrinsic-size: 0 540px;
+`;
+
+export const HeroBackground = styled.div`
+  position: absolute;
+  background-color: rgba(0, 255, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 `;
