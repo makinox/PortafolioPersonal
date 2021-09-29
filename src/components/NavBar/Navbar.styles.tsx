@@ -78,6 +78,7 @@ export const BarDropdown = styled.div`
   & > div:last-of-type {
     right: 2%;
     top: 1%;
+    z-index: 2;
   }
 
   & > div:last-of-type:hover {

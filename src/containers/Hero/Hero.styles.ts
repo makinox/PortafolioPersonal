@@ -11,6 +11,7 @@ export const TitleArticle = styled.article`
 `;
 
 export const HeroContainer = styled.section`
+  position: relative;
   content-visibility: auto;
   contain-intrinsic-size: 0 540px;
 `;
