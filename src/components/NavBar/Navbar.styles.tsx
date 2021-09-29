@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const Bar = styled.nav<{ isDark: boolean }>`
-  position: absolute;
+  position: absolute !important;
   z-index: 2;
   width: 100%;
 
   ${(props) => {
     if (props.isDark) {
-      return 'background-color: rgba(var(--dark-onPrimary), .7);';
+      return 'background-color: rgba(var(--dark-onPrimary), .7) !important;';
     } else {
-      return 'background-color: rgba(var(--light-background), .7);';
+      return 'background-color: rgba(var(--light-background), .7) !important;';
     }
   }}
 

@@ -1,5 +1,4 @@
 import React, { useContext, useRef } from 'react';
-import { FluidContainer } from '@makinox/makinox-ui';
 
 import { HeroContainer, TitleArticle } from './Hero.styles';
 import { AppContext } from '../../context/context';
