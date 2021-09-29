@@ -8,7 +8,9 @@ export const DescriptionCard = styled.article`
   }
 `;
 
-export const DescriptionContainer = styled.section`
-  content-visibility: auto;
+export const DescriptionContainer = styled.div`
+  box-shadow: rgb(0 0 0 / 8%) -3px -6px 10px -3px;
   contain-intrinsic-size: 0 294px;
+  content-visibility: auto;
+  padding-top: 60px;
 `;

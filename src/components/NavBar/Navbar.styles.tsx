@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 
 export const Bar = styled.nav<{ isDark: boolean }>`
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+
+  ${(props) => {
+    if (props.isDark) {
+      return 'background-color: rgba(var(--dark-onPrimary), .7);';
+    } else {
+      return 'background-color: rgba(var(--light-background), .7);';
+    }
+  }}
+
   & > section > div:nth-child(2) a {
     text-decoration: none;
     margin: 0 10px;
@@ -9,7 +21,7 @@ export const Bar = styled.nav<{ isDark: boolean }>`
     ${(props) => {
       if (props.theme?.isDark || props.isDark) {
         return `
-        color: rgb(var(--dark-onBackground)) !important;
+        color: rgba(var(--dark-onBackground)) !important;
       `;
       } else {
         return `

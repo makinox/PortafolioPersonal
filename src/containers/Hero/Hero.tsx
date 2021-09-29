@@ -13,7 +13,6 @@ function Hero({ messages }: { messages: translations }) {
 
   return (
     <HeroContainer ref={heroRef} className={`flex justify-center`}>
-      {console.log({ heroRef })}
       <TitleArticle className={`text-center ${FluidContainer}`}>
         <h1 className="headline1">Jesús David Bossa</h1>
         <h2 className="headline3">{messages['hero.sub']}</h2>

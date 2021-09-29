@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const TitleArticle = styled.article`
-  margin-top: 200px;
-  margin-bottom: 144px;
+  margin-top: 270px;
+  margin-bottom: 220px;
 
   @media (max-width: 472px) {
     margin-top: 72px;

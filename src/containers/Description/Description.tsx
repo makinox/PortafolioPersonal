@@ -6,7 +6,7 @@ import { translations } from '../../types';
 
 function Description({ messages, isDark }: { messages: translations; isDark: boolean }) {
   return (
-    <DescriptionContainer className={`flex justify-center ${FluidContainer}`}>
+    <DescriptionContainer className="flex justify-center">
       <DescriptionCard
         className={Card({
           isDark,
