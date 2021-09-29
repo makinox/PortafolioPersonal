@@ -50,8 +50,8 @@ const Wave = ({ heroRef }: HeroNoiseProps) => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[0.7, 0.3, 1, 1]} />
-      <lightShaderMaterial uColor={'tomato'} ref={ref} uAspect={heroRef.current.offsetWidth / heroRef.current.offsetHeight} />
+      <planeBufferGeometry args={[0.8, 0.3, 1, 1]} />
+      <lightShaderMaterial ref={ref} uAspect={heroRef.current.offsetWidth / heroRef.current.offsetHeight} />
     </mesh>
   );
 };

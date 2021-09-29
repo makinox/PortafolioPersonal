@@ -12,8 +12,8 @@ function Hero({ messages }: { messages: translations }) {
   const heroRef = useRef<HTMLDivElement>();
 
   return (
-    <HeroContainer ref={heroRef} className={`flex justify-center`}>
-      <TitleArticle className={`text-center ${FluidContainer}`}>
+    <HeroContainer ref={heroRef} className="flex justify-center">
+      <TitleArticle className="text-center">
         <h1 className="headline1">Jesús David Bossa</h1>
         <h2 className="headline3">{messages['hero.sub']}</h2>
       </TitleArticle>
