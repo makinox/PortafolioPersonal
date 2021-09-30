@@ -3,8 +3,8 @@ import React, { useContext, useRef } from 'react';
 import { HeroContainer, TitleArticle } from './Hero.styles';
 import { AppContext } from '../../context/context';
 import { translations } from '../../types';
-import HeroLight from './Hero.light';
-import HeroDark from './Hero.dark';
+import HeroLight from './ui/HeroLight';
+import HeroDark from './ui/HeroDark';
 
 function Hero({ messages }: { messages: translations }) {
   const { isDark } = useContext(AppContext);

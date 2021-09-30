@@ -5,9 +5,9 @@ import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import glsl from 'babel-plugin-glsl/macro';
 
-import { HeroNoiseProps } from './Hero.types';
+import { HeroNoiseProps } from '../Hero.types';
 
-const GradientShaderMaterial = shaderMaterial(
+const DarkShaderMaterial = shaderMaterial(
   {
     uTime: 0,
     uColor: new THREE.Color(0.0, 0.0, 0.0),
@@ -42,7 +42,7 @@ const GradientShaderMaterial = shaderMaterial(
   `
 );
 
-extend({ GradientShaderMaterial });
+extend({ DarkShaderMaterial });
 
 const Wave = ({ heroRef }: HeroNoiseProps) => {
   const ref: any = useRef();
@@ -50,9 +50,8 @@ const Wave = ({ heroRef }: HeroNoiseProps) => {
 
   return (
     <mesh>
-      {console.log({ wid: heroRef.current.offsetWidth, hei: heroRef.current.offsetHeight })}
       <planeBufferGeometry args={[0.8, 0.3, 1, 1]} />
-      <gradientShaderMaterial ref={ref} uAspect={heroRef.current.offsetWidth / heroRef.current.offsetHeight} />
+      <darkShaderMaterial ref={ref} uAspect={heroRef.current.offsetWidth / heroRef.current.offsetHeight} />
     </mesh>
   );
 };

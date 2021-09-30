@@ -5,7 +5,7 @@ import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import glsl from 'babel-plugin-glsl/macro';
 
-import { HeroNoiseProps } from './Hero.types';
+import { HeroNoiseProps } from '../Hero.types';
 
 const LightShaderMaterial = shaderMaterial(
   {
