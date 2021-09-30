@@ -10,7 +10,7 @@ export default {
   'about.title': 'A little bit about me ...',
   'about.p1': 'I am a guy from Colombia who likes programming very much, usually curious about all that fantastic technology offers.',
   'about.p2':
-    'During the last years, I have dedicated myself to developing and innovating in technology projects, contributing to their development and future.',
+    'During the last years i have dedicated myself to developing and innovating in technology projects, contributing to their development and future.',
   'about.p3':
     'I work in frontend, backend and devop. I build and design different types of software turning them into incredible products and services.',
   'about.p4': 'Let me show you.',
