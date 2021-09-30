@@ -9,8 +9,7 @@ export default {
 
   'about.title': 'Un poco sobre mi ...',
   'about.p1': 'Soy un chico de Colombia que le gusta mucho programar, normalmente curioso por todo aquello fantástico que ofrece la tecnología.',
-  'about.p2':
-    'Durante los dos últimos años, me he dedicado a desarrollar e innovar en proyectos de tecnología, contribuyendo a su desarrollo y futuro.',
+  'about.p2': 'Durante los últimos años, me he dedicado a desarrollar e innovar en proyectos de tecnología, contribuyendo a su desarrollo y futuro.',
   'about.p3':
     'Trabajo en frontend, backend y devop. Construyo y diseño diferentes tipos de software convirtiéndolos en productos y servicios increíbles.',
   'about.p4': 'Déjame mostrarte.',
