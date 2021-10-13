@@ -220,6 +220,17 @@ export default [
     status: 'Library',
   },
   {
+    subtitle: 'Roomes',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/roomes',
+    repo: 'https://github.com/makinox/roomes',
+    app: 'https://roomes.jesusbossa.dev/',
+    imgName: 'img23',
+    imgAlt: 'Roomes por Jesus bossa',
+    techList: ['Svelte', 'Typescript'],
+    status: 'Web',
+  },
+  {
     subtitle: 'Crehana Desktop',
     description: 'exp.sub1',
     ref: 'https://www.crehana.com/apps',
