@@ -253,6 +253,17 @@ export default [
     status: 'Native',
   },
   {
+    subtitle: 'Invaders Game',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/invaders-game',
+    repo: 'https://github.com/makinox/invaders-game',
+    app: 'https://invaders.jesusbossa.dev/',
+    imgName: 'img25',
+    imgAlt: 'Juego de invasores por Jesus bossa',
+    techList: ['Vanilla', 'Kaboom'],
+    status: 'Game',
+  },
+  {
     subtitle: 'Blog',
     description: 'exp.sub1',
     ref: 'https://github.com/makinox/blog',
