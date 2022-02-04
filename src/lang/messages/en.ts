@@ -7,13 +7,13 @@ export default {
 
   'hero.sub': 'Software architect',
 
-  'about.title': 'A little bit about me ...',
-  'about.p1': 'I am a guy from Colombia who likes programming very much, usually curious about all that fantastic technology offers.',
+  'about.title': 'A little bit about myself...',
+  'about.p1': "I am a guy from Colombia who likes programming very much. As always, I'm really curious about all these technologies offer.",
   'about.p2':
-    'During the last years i have dedicated myself to developing and innovating in technology projects, contributing to their development and future.',
+    'During the last years, I have dedicated to develop and innovate in technology software projects, contributing to their business development and future expansion.',
   'about.p3':
-    'I work in frontend, backend and devop. I build and design different types of software turning them into incredible products and services.',
-  'about.p4': 'Let me show you.',
+    "I've worked in Frontend, Backend and Devops. I've built and design different types of software, turning them into incredible products and services.",
+  'about.p4': "Let's go ahead, and I'll show you.",
 
   'exp.title': "A couple of things I've done",
   'exp.sub1': 'Project in production',
