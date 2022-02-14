@@ -231,6 +231,17 @@ export default [
     status: 'web',
   },
   {
+    subtitle: 'Space-weight',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/space-weight',
+    repo: 'https://github.com/makinox/space-weight',
+    app: 'https://space-weight.jesusbossa.dev/',
+    imgName: 'img26',
+    imgAlt: 'Space-weight por Jesus bossa',
+    techList: ['Next', 'React', 'Typescript'],
+    status: 'Web',
+  },
+  {
     subtitle: 'Roomes',
     description: 'exp.sub1',
     ref: 'https://github.com/makinox/roomes',

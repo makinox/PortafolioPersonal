@@ -280,6 +280,11 @@ export const useProjectQuery = () => {
             )
           }
         }
+        img26: file(relativePath: { eq: "projects/projects-img26.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
+          }
+        }
       }
     `
   );
