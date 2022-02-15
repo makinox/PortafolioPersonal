@@ -11,12 +11,12 @@ const ProjectInfo = projects.reverse();
 
 function Projects({ messages, isDark }: { messages: translations; isDark: boolean }) {
   const ProjectList = [
-    { text: messages['exp.filter1'], filter: 'New' },
-    { text: messages['exp.filter2'], filter: 'Web' },
-    { text: messages['exp.filter3'], filter: 'Native' },
-    { text: messages['exp.filter4'], filter: 'Game' },
-    { text: messages['exp.filter6'], filter: 'Library' },
-    { text: messages['exp.filter5'], filter: 'All' },
+    { text: messages['exp.filter1'], filter: 'New', count: ProjectInfo.filter((prj) => prj.status !== 'Old').length },
+    { text: messages['exp.filter2'], filter: 'Web', count: ProjectInfo.filter((prj) => prj.status === 'Web').length },
+    { text: messages['exp.filter3'], filter: 'Native', count: ProjectInfo.filter((prj) => prj.status === 'Native').length },
+    { text: messages['exp.filter4'], filter: 'Game', count: ProjectInfo.filter((prj) => prj.status === 'Game').length },
+    { text: messages['exp.filter6'], filter: 'Library', count: ProjectInfo.filter((prj) => prj.status === 'Library').length },
+    { text: messages['exp.filter5'], filter: 'All', count: ProjectInfo.length },
   ];
 
   const [filter, useFilter] = useState(ProjectList[0]);
@@ -49,14 +49,14 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
           if (element.filter === filter.filter) {
             return (
               <button className={ButtonContained({ isDark })} key={`${element}-${idx}`} onClick={() => HandleProjectFilter(element)}>
-                {element.text}
+                {element.text} {element.count}
               </button>
             );
           }
 
           return (
             <button className={ButtonOutline({ isDark })} key={`${element}-${idx}`} onClick={() => HandleProjectFilter(element)}>
-              {element.text}
+              {element.text} {element.count}
             </button>
           );
         })}
