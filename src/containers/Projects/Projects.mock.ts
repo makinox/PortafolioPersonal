@@ -231,6 +231,17 @@ export default [
     status: 'web',
   },
   {
+    subtitle: 'Limons',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/nimonx',
+    repo: 'https://github.com/makinox/nimonx',
+    app: 'https://limons.jesusbossa.dev/',
+    imgName: 'img27',
+    imgAlt: 'Limons por Jesus bossa',
+    techList: ['Next', 'React', 'Typescript', '3D'],
+    status: 'Web',
+  },
+  {
     subtitle: 'Space-weight',
     description: 'exp.sub1',
     ref: 'https://github.com/makinox/space-weight',
@@ -238,7 +249,7 @@ export default [
     app: 'https://space-weight.jesusbossa.dev/',
     imgName: 'img26',
     imgAlt: 'Space-weight por Jesus bossa',
-    techList: ['Next', 'React', 'Typescript'],
+    techList: ['Next', 'React', 'Typescript', '3D'],
     status: 'Web',
   },
   {

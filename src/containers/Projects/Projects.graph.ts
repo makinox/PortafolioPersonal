@@ -285,6 +285,11 @@ export const useProjectQuery = () => {
             gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
           }
         }
+        img27: file(relativePath: { eq: "projects/projects-img27.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
+          }
+        }
       }
     `
   );
