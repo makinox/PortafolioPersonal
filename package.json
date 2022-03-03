@@ -37,7 +37,7 @@
     "gatsby-plugin-sitemap": "^5.9.0",
     "gatsby-plugin-styled-components": "^5.9.0",
     "gatsby-source-filesystem": "^4.9.0",
-    "gatsby-transformer-sharp": "^3.4.0",
+    "gatsby-transformer-sharp": "^4.9.0",
     "glsl-hsl2rgb": "^1.1.0",
     "glsl-noise": "^0.0.0",
     "glslify": "^7.1.1",
