@@ -64,7 +64,7 @@ function Projects({ messages, isDark }: { messages: translations; isDark: boolea
       <ProjectSection className="flex flex-wrap justify-center">
         {ProjectInfo.map((el, index) => {
           const image = getImage(imageList[el.imgName]);
-          const CardButtons = [];
+          const CardButtons: Array<JSX.Element> = [];
           if (el.repo) {
             CardButtons.push(
               <button className={ButtonText({ isDark })} onClick={() => window.open(el.repo, '_blank')} key={`button repo ${el.description}`}>
