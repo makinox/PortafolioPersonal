@@ -1,4 +1,4 @@
-import { Description, Footer, Hero, Projects, Studies } from '../containers';
+import { Description, Footer, Hero, Projects, Studies, Work } from '../containers';
 import { AppContext } from '../context/context';
 import { NavBar, Seo } from '../components';
 import messages from '../lang/messages/es';
@@ -15,6 +15,7 @@ function IndexPage(props) {
         <Hero messages={messages} />
         <Description messages={messages} isDark={isDark} />
         <Projects messages={messages} isDark={isDark} />
+        <Work />
         <Studies messages={messages} isDark={isDark} />
         <Footer messages={messages} isDark={isDark} />
       </main>
