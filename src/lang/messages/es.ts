@@ -31,6 +31,19 @@ export default {
   'edu.sub': 'Puedes encontrar todos los soportes aquí',
   'edu.button': 'Ver Certificados',
 
+  'work.title': 'Más de 6 años trabajando con grandes empresas',
+  'work.job1': 'Desarrollador de front-end',
+  'work.job2': 'Desarrollador de full-stack',
+  'work.job3': 'CEO',
+  'work.job4': 'Lider de desarrollo de software',
+  'work.job5': 'Asistente ingeniero de sistemas',
+  'work.date1': 'Actualmente desde marzo 2022',
+  'work.date2': '1 año y 1 mes',
+  'work.date3': '9 meses',
+  'work.date4': '2 años y 6 meses',
+  'work.date5': '4 meses',
+  'work.date6': '6 meses',
+
   'contact.title': 'Contacto',
   'contact.sub': 'Háblemos',
 

@@ -32,6 +32,19 @@ export default {
   'edu.sub': 'You can find all the supports here',
   'edu.button': 'See Certificates',
 
+  'work.title': 'More than 6 years working with large companies',
+  'work.job1': 'Front End Developer',
+  'work.job2': 'Full Stack Developer',
+  'work.job3': 'Acting CEO',
+  'work.job4': 'Software Developer Lead',
+  'work.job5': 'System assistant engineer',
+  'work.date1': 'Currently since March 2022',
+  'work.date2': '1 year and 1 month',
+  'work.date3': '9 months',
+  'work.date4': '2 years and 6 months',
+  'work.date5': '4 months',
+  'work.date6': '6 months',
+
   'contact.title': 'Contact',
   'contact.sub': "Let's talk",
 
