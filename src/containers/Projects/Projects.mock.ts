@@ -209,6 +209,17 @@ export default [
     status: 'Library',
   },
   {
+    subtitle: 'Makinox-utils',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/makinox-utils',
+    repo: 'https://github.com/makinox/makinox-utils',
+    app: 'https://www.npmjs.com/package/@makinox/makinox-utils',
+    imgName: 'img28',
+    imgAlt: 'Makinox-utils libreria por Jesus bossa',
+    techList: ['Typescript'],
+    status: 'Library',
+  },
+  {
     subtitle: 'Makinox-image-creator',
     description: 'exp.sub1',
     ref: 'https://github.com/makinox/makinox-image-creator',
