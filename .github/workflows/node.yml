@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [lts/gallium]
+        node-version: [16.14.2]
         os: [ubuntu-latest]
 
     steps:
