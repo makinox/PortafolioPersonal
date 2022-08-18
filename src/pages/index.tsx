@@ -1,8 +1,10 @@
+import React, { useContext } from 'react';
+
 import { Description, Footer, Hero, Projects, Studies, Work } from '../containers';
+import People from '../containers/People/People';
 import { AppContext } from '../context/context';
 import { NavBar, Seo } from '../components';
 import messages from '../lang/messages/en';
-import React, { useContext } from 'react';
 
 function IndexPage(props) {
   const { isDark } = useContext(AppContext);
@@ -16,6 +18,7 @@ function IndexPage(props) {
         <Description messages={messages} isDark={isDark} />
         <Projects messages={messages} isDark={isDark} />
         <Work messages={messages} isDark={isDark} />
+        <People messages={messages} isDark={isDark} />
         <Studies messages={messages} isDark={isDark} />
         <Footer messages={messages} isDark={isDark} />
       </main>

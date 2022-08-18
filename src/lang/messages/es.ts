@@ -44,6 +44,9 @@ export default {
   'work.date5': '4 meses',
   'work.date6': '6 meses',
 
+  'people.title': 'Que dice la gente de mi',
+  'people.cta': 'Verificar',
+
   'contact.title': 'Contacto',
   'contact.sub': 'Háblemos',
 

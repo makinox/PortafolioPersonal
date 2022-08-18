@@ -45,6 +45,9 @@ export default {
   'work.date5': '4 months',
   'work.date6': '6 months',
 
+  'people.title': 'What people say about me',
+  'people.cta': 'Verify',
+
   'contact.title': 'Contact',
   'contact.sub': "Let's talk",
 
