@@ -19,7 +19,7 @@ function Footer({ messages, isDark }: { messages: translations; isDark: boolean 
           <button className={Float({ isDark })} onClick={() => window.open('https://github.com/makinox', '_blank')}>
             <FaGithubSquare size={30} aria-label="Github" />
           </button>
-          <button className={Float({ isDark })} onClick={() => window.open('https://www.instagram.com/jesus.david7', '_blank')}>
+          <button className={Float({ isDark })} onClick={() => window.open('https://www.instagram.com/makinoxz', '_blank')}>
             <FaInstagramSquare size={30} aria-label="Instagram" />
           </button>
           <button className={Float({ isDark })} onClick={() => window.open('https://www.linkedin.com/in/makinox/', '_blank')}>

@@ -14,7 +14,7 @@ export default {
     'Trabajo en frontend, backend y devops, Construyo y diseño diferentes tipos de software convirtiéndolos en productos y servicios increíbles.',
   'about.p4': 'Déjame mostrarte.',
 
-  'exp.title': 'Un par de cosas que he hecho',
+  'exp.title': 'Un par de cosas en las que he trabajado',
   'exp.sub1': 'Proyecto en producción',
   'exp.sub2': 'Proyecto personal',
   'exp.sub3': 'Mas información',

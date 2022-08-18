@@ -15,7 +15,7 @@ export default {
     "I've worked in Frontend, Backend and Devops. I've built and design different types of software, turning them into incredible products and services.",
   'about.p4': "Let's go ahead, and I'll show you.",
 
-  'exp.title': "A couple of things I've done",
+  'exp.title': "A couple of things I've worked on",
   'exp.sub1': 'Project in production',
   'exp.sub2': 'Personal project',
   'exp.sub3': 'More info',
