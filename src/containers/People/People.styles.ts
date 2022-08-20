@@ -8,7 +8,7 @@ export const PeopleBody = styled.div`
   margin: 20px;
 
   article {
-    margin: 20px;
+    margin: 20px 0;
   }
 
   article img {

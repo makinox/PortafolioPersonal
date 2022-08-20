@@ -14,7 +14,7 @@ export default [
   {
     name: 'Fernando Florez',
     img: 'img3',
-    place: 'Matter Supply Co',
+    place: 'iSofact',
     text: 'It was something exciting to work with Jesus. He was a good lead and he was always willing to help me when I needed. He has a significant experience in Frontend, experience that allowed us to create great products.',
   },
 ];

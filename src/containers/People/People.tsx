@@ -15,11 +15,11 @@ export default function People({ messages, isDark }: { messages: translations; i
       <PeopleHeader className="flex flex-col items-center">
         <h3 className="headline4">{messages['people.title']}</h3>
       </PeopleHeader>
-      <PeopleBody className="flex flex-wrap justify-center">
+      <PeopleBody className="flex flex-col">
         {PeopleData.map((person) => (
           <article
             key={person.name}
-            className={`${Card({ type: 'outlined', css: { minWidth: '380px', height: 'min-content' }, isDark })} text-center`}
+            className={`${Card({ type: 'outlined', css: { width: '100%', maxWidth: 'max-content', height: 'min-content' }, isDark })} text-center`}
           >
             <div className="card-media">
               <GatsbyImage image={getImage(imageList[person.img]) as IGatsbyImageData} alt={person.name} />
