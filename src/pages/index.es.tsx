@@ -18,8 +18,8 @@ function IndexPage(props) {
         <Description messages={messages} isDark={isDark} />
         <Projects messages={messages} isDark={isDark} />
         <Work messages={messages} isDark={isDark} />
-        <People messages={messages} isDark={isDark} />
         <Studies messages={messages} isDark={isDark} />
+        <People messages={messages} isDark={isDark} />
         <Footer messages={messages} isDark={isDark} />
       </main>
     </>
