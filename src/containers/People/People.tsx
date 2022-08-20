@@ -1,11 +1,15 @@
 import React from 'react';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { ButtonText, Card, FluidContainer } from '@makinox/makinox-ui';
 
 import { PeopleBody, PeopleHeader } from './People.styles';
+import { usePeopleQuery } from './People.graph';
 import { translations } from '../../types';
 import PeopleData from './People.mock';
 
 export default function People({ messages, isDark }: { messages: translations; isDark: boolean }) {
+  const imageList = usePeopleQuery();
+
   return (
     <section className={FluidContainer()}>
       <PeopleHeader className="flex flex-col items-center">
@@ -18,7 +22,7 @@ export default function People({ messages, isDark }: { messages: translations; i
             className={`${Card({ type: 'outlined', css: { minWidth: '380px', height: 'min-content' }, isDark })} text-center`}
           >
             <div className="card-media">
-              <img src={person.img} alt={person.name} />
+              <GatsbyImage image={getImage(imageList[person.img]) as IGatsbyImageData} alt={person.name} />
             </div>
             <div className="card-header" id="about">
               <h6 className="headline6">{person.name}</h6>
