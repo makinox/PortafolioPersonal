@@ -15,5 +15,12 @@ export const WorkBody = styled.div`
     height: 40px;
     width: 40px;
     margin-top: 10px;
+    border-radius: 50%;
+  }
+
+  .work-badge {
+    position: absolute;
+    left: 44%;
+    top: 1%;
   }
 `;

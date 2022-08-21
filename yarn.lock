@@ -2313,12 +2313,12 @@
   resolved "https://registry.yarnpkg.com/@lmdb/lmdb-win32-x64/-/lmdb-win32-x64-2.5.2.tgz#28f643fbc0bec30b07fbe95b137879b6b4d1c9c5"
   integrity sha512-zrBczSbXKxEyK2ijtbRdICDygRqWSRPpZMN5dD1T8VMEW5RIhIbwFWw2phDRXuBQdVDpSjalCIUMWMV2h3JaZA==
 
-"@makinox/makinox-ui@1.6.6":
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.6.6.tgz#123350e79b2e6a7c1e491b0d137c6548fe6b0d40"
-  integrity sha512-RXFlZ9ORJ95alMHgXG04rwUEYbNhXhv2lSX1LY9W5EpF20I/BEWChj1p/g9FKQuszjaF+gZ+Bvs82/cGbM6gMw==
+"@makinox/makinox-ui@1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.6.7.tgz#bf9a89895208e67ec73db101f62ae769d6d8a4fb"
+  integrity sha512-8+Amltbl5aTo1mzo/eyF4Wc4YNYtyV+epFxMErlz86EvmjUhJcY4RIOtGiMxODGiTUnT6goN2LL9MRlU8m42QA==
   dependencies:
-    "@stitches/core" "^1.2.7"
+    "@stitches/core" "1.2.8"
 
 "@microsoft/fetch-event-source@2.0.1":
   version "2.0.1"
@@ -2840,7 +2840,7 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@stitches/core@^1.2.7":
+"@stitches/core@1.2.8":
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/@stitches/core/-/core-1.2.8.tgz#dce3b8fdc764fbc6dbea30c83b73bfb52cf96173"
   integrity sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==
