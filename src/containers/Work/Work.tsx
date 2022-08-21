@@ -13,7 +13,7 @@ export default function Work({ messages, isDark }: { messages: translations; isD
   return (
     <section className={FluidContainer()}>
       <WorkHeader className="flex flex-col items-center">
-        <h3 className="headline4">{messages['work.title']}</h3>
+        <h3 className="headline4 text-center">{messages['work.title']}</h3>
       </WorkHeader>
       <WorkBody className="flex flex-wrap justify-center">
         {worksData.map((workDetail) => (

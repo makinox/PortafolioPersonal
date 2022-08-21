@@ -13,7 +13,7 @@ export default function People({ messages, isDark }: { messages: translations; i
   return (
     <section className={FluidContainer()}>
       <PeopleHeader className="flex flex-col items-center">
-        <h3 className="headline4">{messages['people.title']}</h3>
+        <h3 className="headline4 text-center">{messages['people.title']}</h3>
       </PeopleHeader>
       <PeopleBody className="flex flex-col">
         {PeopleData.map((person) => (
