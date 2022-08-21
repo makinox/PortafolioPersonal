@@ -19,7 +19,7 @@ function Studies({ messages, isDark }: { messages: translations; isDark: boolean
       if (!preloaded) {
         badgeValues.map((el, idx) => {
           const preload = new Image();
-          preload.src = el.publicURL;
+          preload.src = el?.publicURL as string;
           if (idx + 1 === badgeValues.length) {
             setPreloaded(true);
           }
@@ -38,8 +38,8 @@ function Studies({ messages, isDark }: { messages: translations; isDark: boolean
       <h3 className="headline4 text-center">{messages['edu.title']}</h3>
 
       <StudiesContainer className="flex justify-center flex-wrap" ref={containerRef as React.MutableRefObject<any>}>
-        {badges.map((el, idx) => {
-          return <StudiesImage key={idx} src={el.publicURL} alt="Tecnologia" />;
+        {badges.map((el) => {
+          return <StudiesImage key={el?.publicURL as string} src={el?.publicURL as string} alt="Tecnologia" />;
         })}
       </StudiesContainer>
 
