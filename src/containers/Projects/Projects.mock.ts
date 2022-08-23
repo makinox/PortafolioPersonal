@@ -275,6 +275,17 @@ export default [
     status: 'Web',
   },
   {
+    subtitle: 'EVA PACS',
+    description: 'exp.sub1',
+    ref: 'https://evacenter.com',
+    repo: '',
+    app: 'https://evacenter.com',
+    imgName: 'img29',
+    imgAlt: 'Eva pacs por el equipo eva y jesus bossa  ',
+    techList: ['Typescript', 'React'],
+    status: 'Native',
+  },
+  {
     subtitle: 'Crehana Desktop',
     description: 'exp.sub1',
     ref: 'https://www.crehana.com/apps',
