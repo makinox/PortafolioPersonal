@@ -231,6 +231,17 @@ export default [
     status: 'Library',
   },
   {
+    subtitle: 'Makinox-g11n',
+    description: 'exp.sub1',
+    ref: 'https://github.com/makinox/makinox-g11n',
+    repo: 'https://github.com/makinox/makinox-g11n',
+    app: '',
+    imgName: 'img30',
+    imgAlt: 'Makinox-g11n libreria por Jesus bossa',
+    techList: ['Typescript', 'React', 'Nx'],
+    status: 'Library',
+  },
+  {
     subtitle: 'D Task',
     description: 'exp.sub1',
     ref: 'https://github.com/makinox/solid-contract',
