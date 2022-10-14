@@ -10,12 +10,24 @@ function Footer({ messages, isDark }: { messages: translations; isDark: boolean 
     <>
       <section className={`flex flex-col items-center ${FluidContainer()}`} id="contact">
         <h3 className="headline4 text-center">{messages['contact.sub']}</h3>
-        <FooterContactContainer>
+        <FooterContactContainer className="flex justify-center flex-wrap">
           <button className={ButtonContained({ isDark })} onClick={() => window.open('mailto:x@jesusbossa.dev')}>
-            x@jesusbossa.dev
+            Email me
+          </button>
+          <button
+            className={ButtonContained({ isDark })}
+            onClick={() => window.open('https://docs.google.com/document/d/1OGHl-zTllmxzfH1SG7ZDS0K1y20iFMxi_KfkyzZfIhI/edit?usp=sharing')}
+          >
+            get my resume
+          </button>
+          <button
+            className={ButtonContained({ isDark })}
+            onClick={() => window.open('https://docs.google.com/document/d/1iNSFmj9ojlC4Jq5I-Lq1IOOmLxclbI6u5cEhmPNMgd4/edit?usp=sharing')}
+          >
+            get my curriculum
           </button>
         </FooterContactContainer>
-        <FooterSocialContainer>
+        <FooterSocialContainer className="flex justify-center flex-wrap">
           <button className={Float({ isDark })} onClick={() => window.open('https://github.com/makinox', '_blank')}>
             <FaGithubSquare size={30} aria-label="Github" />
           </button>

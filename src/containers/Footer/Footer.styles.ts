@@ -2,13 +2,16 @@ import styled from 'styled-components';
 
 export const FooterContactContainer = styled.div`
   margin-top: 76px;
+  & > button {
+    margin: 5px;
+  }
 `;
 
 export const FooterSocialContainer = styled.div`
   margin: 76px 0;
 
   & > button {
-    margin: 0 10px;
+    margin: 5px;
   }
 `;
 
