@@ -5,6 +5,8 @@ export const DescriptionCard = styled.article`
 
   & .body2 {
     margin-bottom: 5px;
+    opacity: 0.7;
+    font-size: 15px;
   }
 `;
 
