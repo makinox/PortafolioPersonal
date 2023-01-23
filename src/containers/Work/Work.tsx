@@ -1,6 +1,6 @@
 import React from 'react';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { Card, FluidContainer, Badge } from '@makinox/makinox-ui';
+import { Card, FluidContainer, Badge, ButtonText } from '@makinox/makinox-ui';
 
 import { WorkBody, WorkHeader } from './Work.styles';
 import { translations } from '../../types';
@@ -28,6 +28,11 @@ export default function Work({ messages, isDark }: { messages: translations; isD
                 <span className="subtitle1">{messages[workDetail.job]}</span>
               </div>
               <div className="card-body">{messages[workDetail.timeCount]}</div>
+              <div className="card-bottom">
+                <button className={ButtonText({ isDark })} onClick={() => window.open(workDetail?.link, '_blank')}>
+                  {messages['work.cta']}
+                </button>
+              </div>
             </article>
           ))
           .reverse()}

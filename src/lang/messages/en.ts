@@ -44,6 +44,7 @@ export default {
   'work.date4': '2 years and 6 months',
   'work.date5': '4 months',
   'work.date6': '6 months',
+  'work.cta': 'Visit',
 
   'people.title': 'What people say about me',
   'people.cta': 'Verify',

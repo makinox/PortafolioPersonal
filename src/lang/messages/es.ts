@@ -43,6 +43,7 @@ export default {
   'work.date4': '2 años y 6 meses',
   'work.date5': '4 meses',
   'work.date6': '6 meses',
+  'work.cta': 'Visitar',
 
   'people.title': 'Que dice la gente de mi',
   'people.cta': 'Verificar',
