@@ -294,7 +294,7 @@ export default [
     imgName: 'img29',
     imgAlt: 'Eva pacs por el equipo eva y jesus bossa  ',
     techList: ['Typescript', 'React'],
-    status: 'Native',
+    status: 'Web',
   },
   {
     subtitle: 'Crehana Desktop',
