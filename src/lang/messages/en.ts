@@ -53,4 +53,8 @@ export default {
   'contact.sub': "Let's talk",
 
   'gallery.title': 'Offtopic, I also do NFTs with the photographs I take',
+
+  'footer.email': 'Email me',
+  'footer.resume': 'Get my resume',
+  'footer.curriculum': 'get my curriculum',
 };

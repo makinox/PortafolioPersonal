@@ -23,4 +23,8 @@ export const WorkBody = styled.div`
     left: 44%;
     top: 1%;
   }
+
+  .card-media {
+    margin-top: 10px;
+  }
 `;

@@ -52,4 +52,8 @@ export default {
   'contact.sub': 'Háblemos',
 
   'gallery.title': 'Offtopic, también hago NFTs con las fotografías que tomo',
+
+  'footer.email': 'Envíame un correo',
+  'footer.resume': 'Obtén mi resume',
+  'footer.curriculum': 'Obtén mi curriculum',
 };

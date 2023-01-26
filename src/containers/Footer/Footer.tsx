@@ -12,19 +12,19 @@ function Footer({ messages, isDark }: { messages: translations; isDark: boolean 
         <h3 className="headline4 text-center">{messages['contact.sub']}</h3>
         <FooterContactContainer className="flex justify-center flex-wrap">
           <button className={ButtonContained({ isDark })} onClick={() => window.open('mailto:x@jesusbossa.dev')}>
-            Email me
+            {messages['footer.email']}
           </button>
           <button
             className={ButtonContained({ isDark })}
             onClick={() => window.open('https://docs.google.com/document/d/1OGHl-zTllmxzfH1SG7ZDS0K1y20iFMxi_KfkyzZfIhI/edit?usp=sharing')}
           >
-            get my resume
+            {messages['footer.resume']}
           </button>
           <button
             className={ButtonContained({ isDark })}
             onClick={() => window.open('https://docs.google.com/document/d/1iNSFmj9ojlC4Jq5I-Lq1IOOmLxclbI6u5cEhmPNMgd4/edit?usp=sharing')}
           >
-            get my curriculum
+            {messages['footer.curriculum']}
           </button>
         </FooterContactContainer>
         <FooterSocialContainer className="flex justify-center flex-wrap">
