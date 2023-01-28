@@ -36,7 +36,7 @@ export const ProjectCard = styled.article`
 
 export const ProjectSection = styled.section`
   margin-top: 10px;
-  margin-bottom: 48px;
+  margin-bottom: 10px;
 
   & > article {
     margin: 8px;

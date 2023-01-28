@@ -32,6 +32,12 @@ export default {
   'edu.sub': 'You can find all the supports here',
   'edu.button': 'See Certificates',
 
+  Master: 'Master',
+  Expert: 'Expert',
+  Proficient: 'Proficient',
+  Beginner: 'Beginner',
+  Interested: 'Interested',
+
   'work.title': 'More than 6 years working with large companies',
   'work.job1': 'Front End Developer',
   'work.job2': 'Full Stack Developer',

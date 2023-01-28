@@ -21,8 +21,8 @@ export default {
   'exp.sub4': 'Aplicación',
   'exp.sub5': 'Repositorio',
   'exp.filter1': 'Nuevo',
-  'exp.filter2': 'WEB APPS',
-  'exp.filter3': 'NATIVE APPS',
+  'exp.filter2': 'APPS Web',
+  'exp.filter3': 'APPS Nativas',
   'exp.filter4': 'Juegos',
   'exp.filter5': 'Todo',
   'exp.filter6': 'Librerías',
@@ -30,6 +30,12 @@ export default {
   'edu.title': 'Que sé hasta ahora',
   'edu.sub': 'Puedes encontrar todos los soportes aquí',
   'edu.button': 'Ver Certificados',
+
+  Master: 'Maestro',
+  Expert: 'Experto',
+  Proficient: 'Capaz',
+  Beginner: 'Principiante',
+  Interested: 'Interesado',
 
   'work.title': 'Más de 6 años trabajando con grandes empresas',
   'work.job1': 'Desarrollador de front-end',
