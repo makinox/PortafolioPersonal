@@ -50,14 +50,14 @@ export default function Skills({ messages, isDark }: { messages: translations; i
         {SkillList.map((element, idx) => {
           if (element.filter === filter.filter) {
             return (
-              <button className={ButtonContained({ isDark, css: { margin: '0  5px' } })} key={`${element}-${idx}`} onClick={() => useFilter(element)}>
+              <button className={ButtonContained({ isDark, css: { margin: '5px' } })} key={`${element}-${idx}`} onClick={() => useFilter(element)}>
                 {element.text} {element.count}
               </button>
             );
           }
 
           return (
-            <button className={ButtonOutline({ isDark, css: { margin: '0  5px' } })} key={`${element}-${idx}`} onClick={() => useFilter(element)}>
+            <button className={ButtonOutline({ isDark, css: { margin: '5px' } })} key={`${element}-${idx}`} onClick={() => useFilter(element)}>
               {element.text} {element.count}
             </button>
           );
