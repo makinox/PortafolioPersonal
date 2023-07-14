@@ -305,6 +305,21 @@ export const useProjectQuery = () => {
             gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
           }
         }
+        img31: file(relativePath: { eq: "projects/projects-img31.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
+          }
+        }
+        img32: file(relativePath: { eq: "projects/projects-img32.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
+          }
+        }
+        img33: file(relativePath: { eq: "projects/projects-img33.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 330, height: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
+          }
+        }
       }
     `
   );
