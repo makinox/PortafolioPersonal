@@ -4,14 +4,7 @@ export const Bar = styled.nav<{ isDark: boolean }>`
   position: absolute !important;
   z-index: 2;
   width: 100%;
-
-  ${(props) => {
-    if (props.isDark) {
-      return 'background-color: rgba(var(--dark-onPrimary), .7) !important;';
-    } else {
-      return 'background-color: rgba(var(--light-background), .7) !important;';
-    }
-  }}
+  background-color: transparent;
 
   & > section > div:nth-child(2) a {
     text-decoration: none;
@@ -33,6 +26,11 @@ export const Bar = styled.nav<{ isDark: boolean }>`
 
   & > section > div:nth-child(3) > div > div > div:first-of-type {
     margin-right: 4px;
+  }
+
+  & > section span.bar-lang-flag {
+    font-size: 25px;
+    margin-right: 10px;
   }
 
   @media (max-width: 370px) {
